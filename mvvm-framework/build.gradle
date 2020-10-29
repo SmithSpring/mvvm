@@ -88,4 +88,5 @@ dependencies {
     api 'com.gyf.immersionbar:immersionbar:3.0.0'
     api 'com.github.mamumu:mmDialog:1.2.0'
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15'
+    api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
 }
