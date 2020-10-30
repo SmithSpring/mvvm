@@ -373,7 +373,7 @@ ObservableList<>和ItemBinding<>的泛型是Item布局所对应的ItemViewModel
     binding:onLoadMoreCommand="@{viewModel.onLoadMoreCommand}"
     binding:layoutManager="@{LayoutManagers.linear()}"
     binding:lineManager="@{LineManagers.horizontal()}" />
-
+```
 ##### 2.2.4.3 头和尾
 > RecyclerView添加头部和尾部。
 
@@ -417,7 +417,7 @@ ObservableList<>和ItemBinding<>的泛型是Item布局所对应的ItemViewModel
             binding:itemBinding="@{viewModel.multipleItems}"
             binding:items="@{viewModel.headerFooterItems}"
             binding:lineManager="@{LineManagers.horizontal()}"/>
-
+```
 ##### 2.2.4.4 多布局
 > RecyclerView多item布局。
 
@@ -478,7 +478,7 @@ ObservableList<>和ItemBinding<>的泛型是Item布局所对应的ItemViewModel
             binding:itemBinding="@{viewModel.itemBinding}"
             binding:items="@{viewModel.observableList}"
             binding:lineManager="@{LineManagers.horizontal()}" />
-
+```
 ##### 2.2.4.4 多方向
 > RecyclerView同时存在VERTICAL和HORIZONTAL的item。
 
@@ -814,7 +814,13 @@ ImageUtils.compressWithRx(filePaths, new Subscriber() {
                         //TODO  对自定义更新view的特殊操作
                         };
 ```
-### 3.7、其他辅助类
+### 3.8、屏幕适配(框架已适配刘海屏)
+请在布局（xml）文件里面使用
+```java
+android:layout_marginRight="@dimen/base20dp"
+...
+```
+### 3.9、其他辅助类
 **ToastUtils：** 吐司工具类
 
 **SPUtils：** SharedPreferences工具类
