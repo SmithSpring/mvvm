@@ -308,7 +308,8 @@ public static void setImageUri(ImageView imageView, String url, int placeholderR
 很简单就自定义了一个ImageView图片加载的绑定，学会这种方式，可自定义扩展。
 > 如果你对这些感兴趣，可以下载源码，在binding包中可以看到各类控件的绑定实现方式
 
-##### 2.2.4、RecyclerView绑定
+#### 2.2.4、RecyclerView绑定
+##### 2.2.4.1 纯网络请求
 > RecyclerView也是很常用的一种控件，传统的方式需要针对各种业务要写各种Adapter，如果你使用了mvvm-framework，则可大大简化这种工作量，从此告别setAdapter()。
 
 在ViewModel中定义：
@@ -344,6 +345,153 @@ layoutManager控制是线性(包含水平和垂直)排列还是网格排列，li
 > 可以在请求到数据后，循环添加`observableList.add(new NetWorkItemViewModel(NetWorkViewModel.this, entity));`详细可以参考例子程序中NetWorkViewModel类。
 
 **注意：** 在以前的版本中，ItemViewModel是继承BaseViewModel，传入Context，新版本3.x中可继承ItemViewModel，传入当前页面的ViewModel
+
+##### 2.2.4.2 下拉刷新和上拉加载更多请求
+> RecyclerView下拉刷新和上拉加载更多。
+
+在ViewModel中定义：
+```java
+//给RecyclerView添加items
+public final ObservableList<NetWorkItemViewModel> observableList = new ObservableArrayList<>();
+//给RecyclerView添加ItemBinding
+public final ItemBinding<NetWorkItemViewModel> itemBinding = ItemBinding.of(BR.viewModel, R.layout.item_network);
+//下拉刷新
+public BindingCommand<Void> onRefreshCommand = new BindingCommand<Void>(() -> refreshEvent.setValue(BaseViewModel.REFRESH_STATUS));
+//上拉加载更多
+public BindingCommand<Void> onLoadMoreCommand = new BindingCommand<Void>(() -> refreshEvent.setValue(BaseViewModel.LOAD_MORE_STATUS));
+```
+ObservableList<>和ItemBinding<>的泛型是Item布局所对应的ItemViewModel
+
+在xml中绑定
+```xml
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    binding:itemBinding="@{viewModel.itemBinding}"
+    binding:items="@{viewModel.observableList}"
+    binding:onRefreshCommand="@{viewModel.onRefreshCommand}"
+    binding:onLoadMoreCommand="@{viewModel.onLoadMoreCommand}"
+    binding:layoutManager="@{LayoutManagers.linear()}"
+    binding:lineManager="@{LineManagers.horizontal()}" />
+
+##### 2.2.4.3 头和尾
+> RecyclerView添加头部和尾部。
+
+在ViewModel中定义：
+```java
+private HeaderItemViewModel headerViewModel = new HeaderItemViewModel(HeaderFooterViewModel.this);
+    private HeaderItemViewModel footerViewModel = new HeaderItemViewModel(HeaderFooterViewModel.this);
+
+    public HeaderFooterViewModel(@NonNull Application application) {
+        super(application);
+        headerViewModel.title.set("Header");
+        footerViewModel.title.set("Footer");
+    }
+
+    public ObservableList<NetWorkItem2ViewModel> observableList = new ObservableArrayList<>();
+
+    public MergeObservableList<Object> headerFooterItems = new MergeObservableList<>()
+            .insertItem(headerViewModel)
+            .insertList(observableList)
+            .insertItem(footerViewModel);
+
+    public final OnItemBind<Object> multipleItems = (itemBinding, position, item) -> {
+        if (Objects.equals(HeaderItemViewModel.class,item.getClass())) {
+            itemBinding.set(BR.item, R.layout.item_header_footer);
+        } else if (Objects.equals(NetWorkItem2ViewModel.class,item.getClass())) {
+            itemBinding.set(BR.viewModel, R.layout.item_network2);
+        }
+    };
+```
+ObservableList<>和ItemBinding<>的泛型是Item布局所对应的ItemViewModel
+
+在xml中绑定
+```xml
+<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_net"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fitsSystemWindows="true"
+            android:background="@color/white"
+            binding:rvManager="@{LayoutManagers.linear()}"
+            binding:itemBinding="@{viewModel.multipleItems}"
+            binding:items="@{viewModel.headerFooterItems}"
+            binding:lineManager="@{LineManagers.horizontal()}"/>
+
+##### 2.2.4.4 多布局
+> RecyclerView多item布局。
+
+在ViewModel中定义：
+```java
+public static final String MultiRecycleType_01 = "type01";
+    public static final String MultiRecycleType_02 = "type02";
+
+    public MultiRecycleViewModel(@NonNull Application application) {
+        super(application);
+
+        //添加布局1
+        MultiLayoutItemViewModel item = new MultiLayoutItemViewModel(this);
+
+        item.title.set("我是第一个布局");
+        item.multiItemType(MultiRecycleViewModel.MultiRecycleType_01);
+        this.observableList.add(item);
+
+        //添加布局2
+        for (int i =0;i<10;i++){
+            String text = "我是第" + i + "条";
+            MultiLayoutItemViewModel item2 = new MultiLayoutItemViewModel(this);
+            item2.title.set(text);
+            item2.multiItemType(MultiRecycleViewModel.MultiRecycleType_02);
+            this.observableList.add(item2);
+        }
+
+        //添加布局3
+        MultiLayoutItemViewModel item3 = new MultiLayoutItemViewModel(this);
+        item3.title.set("我是第三个布局");
+        item3.multiItemType(MultiRecycleViewModel.MultiRecycleType_01);
+        this.observableList.add(item3);
+    }
+
+    //给RecyclerView添加ObservableList
+    public ObservableList<MultiItemViewModel> observableList = new ObservableArrayList<>();
+    //RecyclerView多布局添加ItemBinding
+    public ItemBinding<MultiItemViewModel> itemBinding = ItemBinding.of((itemBinding, position, item) -> {
+        //通过item的类型, 动态设置Item加载的布局
+        String itemType = (String) item.getItemType();
+        if (MultiRecycleType_01.equals(itemType)) {
+            itemBinding.set(BR.viewModel, R.layout.item_multi_layout1);
+        } else if (MultiRecycleType_02.equals(itemType)) {
+            itemBinding.set(BR.viewModel, R.layout.item_multi_rv_left);
+        }
+    });
+```
+ObservableList<>和ItemBinding<>的泛型是Item布局所对应的ItemViewModel
+
+在xml中绑定
+```xml
+<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_multi"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            binding:rvManager="@{LayoutManagers.linear()}"
+            binding:itemBinding="@{viewModel.itemBinding}"
+            binding:items="@{viewModel.observableList}"
+            binding:lineManager="@{LineManagers.horizontal()}" />
+
+##### 2.2.4.4 多方向
+> RecyclerView同时存在VERTICAL和HORIZONTAL的item。
+
+```java
+GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2, LinearLayoutManager.VERTICAL,false);
+        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int i) {
+                //TODO
+            }
+        });
+binding.recycleview.setLayoutManager(gridLayoutManager);
+```
 
 更多RecyclerView、ListView、ViewPager等绑定方式，请参考 [https://github.com/evant/binding-collection-adapter](https://github.com/evant/binding-collection-adapter)
 
@@ -601,7 +749,7 @@ if (mBundle != null) {
 
 使用方法：
 
-例如请求相机权限，在ViewModel中调用
+例如请求相机权限，在Activity,Fragment,ViewModel中调用
 ```java
 //请求打开相机和读写内存卡权限
 requestPermissions(new IPermission() {
@@ -657,7 +805,16 @@ ImageUtils.compressWithRx(filePaths, new Subscriber() {
     }
 });
 ```
-### 3.6、其他辅助类
+### 3.7、版本更新 （一行代码解决）
+```java
+        XUpdate.newInstance().update(apkUrl, updateTitle, updateContent, isForce,
+                R.layout.custom_view_layout, R.mipmap.ic_launcher, null, null,
+                (view, updateConfig, uiConfig) ->
+                        {
+                        //TODO  对自定义更新view的特殊操作
+                        };
+```
+### 3.7、其他辅助类
 **ToastUtils：** 吐司工具类
 
 **SPUtils：** SharedPreferences工具类
@@ -725,9 +882,6 @@ CAP#1从?的捕获扩展Object
 
 ## 混淆
 例子程序中给出了最新的【mvvm-framework混淆规则】，包含mvvm-framework中依赖的所有第三方library，可以将规则直接拷贝到自己app的混淆规则中。在此基础上你只需要关注自己业务代码以及自己引入第三方的混淆，【mvvm-framework混淆规则】请参考app目录下的[proguard-rules.pro](./app/proguard-rules.pro)文件。
-
-## 组件化
-进阶Android组件化方案，请移步：[mvvm-frameworkComponent](https://github.com/goldze/mvvm-frameworkComponent)
 
 ## About
 **qqlixiong：** 本人喜欢尝试新的技术，以后发现有好用的东西，我将会在企业项目中实战，没有问题了就会把它引入到**mvvm-framework**中，一直维护着这套框架，谢谢各位朋友的支持。如果觉得这套框架不错的话，麻烦点个 **star**，你的支持则是我前进的动力！
