@@ -28,6 +28,11 @@ ext {
     ]
     //依赖第三方配置
     dependencies = [
+            "junit"                       : "junit:junit:4.12",
+            // androidTestImplementation
+            "testRunner"                  : 'androidx.test.ext:junit:1.1.1',
+            // androidTestImplementation
+            "espresso-core"               : 'androidx.test.espresso:espresso-core:3.1.0',
             //rxjava
             "rxjava"                               : "io.reactivex.rxjava3:rxjava:3.0.6",
             "rxandroid"                            : "io.reactivex.rxjava3:rxandroid:3.0.0",
