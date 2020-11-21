@@ -8,10 +8,15 @@ import android.view.WindowManager;
 
 import com.gyf.immersionbar.ImmersionBar;
 import com.lx.framework.bus.Messenger;
+import com.lx.framework.bus.event.eventbus.EventBusUtil;
+import com.lx.framework.bus.event.eventbus.MessageEvent;
 import com.lx.framework.permission.IPermission;
 import com.lx.framework.permission.RxPermission;
 import com.lx.framework.utils.Constant;
 import com.mumu.dialog.MMLoading;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -51,6 +56,9 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
         initStatusBar();
         //页面数据初始化方法
         initData();
+        if (isRegisterEventBus()) {
+            EventBusUtil.register(this);
+        }
         //页面事件监听的方法，一般用于ViewModel层转到View层的事件注册
         initViewObservable();
         //注册RxBus
@@ -127,6 +135,18 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
         if(binding != null){
             binding.unbind();
         }
+        if (isRegisterEventBus()) {
+            EventBusUtil.unregister(this);
+        }
+    }
+
+    /**
+     * 是否注册事件分发
+     *
+     * @return true绑定EventBus事件分发，默认不绑定，子类需要绑定的话复写此方法返回true.
+     */
+    protected boolean isRegisterEventBus() {
+        return false;
     }
 
     /**
@@ -352,5 +372,37 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
      */
     public <T extends ViewModel> T createViewModel(FragmentActivity activity, Class<T> cls) {
         return ViewModelProviders.of(activity).get(cls);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventBusCome(MessageEvent event) {
+        if (event != null) {
+            receiveEvent(event);
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onStickyEventBusCome(MessageEvent event) {
+        if (event != null) {
+            receiveStickyEvent(event);
+        }
+    }
+
+    /**
+     * 接收到分发到事件
+     *
+     * @param event 事件
+     */
+    protected void receiveEvent(MessageEvent event) {
+
+    }
+
+    /**
+     * 接受到分发的粘性事件
+     *
+     * @param event 粘性事件
+     */
+    protected void receiveStickyEvent(MessageEvent event) {
+
     }
 }

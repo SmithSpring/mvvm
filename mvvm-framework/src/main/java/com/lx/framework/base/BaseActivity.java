@@ -15,6 +15,8 @@ import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 
 import com.gyf.immersionbar.ImmersionBar;
+import com.lx.framework.bus.event.eventbus.EventBusUtil;
+import com.lx.framework.bus.event.eventbus.MessageEvent;
 import com.mumu.dialog.MMLoading;
 import com.trello.rxlifecycle4.components.support.RxAppCompatActivity;
 
@@ -26,6 +28,9 @@ import com.lx.framework.bus.Messenger;
 import com.lx.framework.permission.IPermission;
 import com.lx.framework.permission.RxPermission;
 import com.lx.framework.utils.Constant;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 
 /**
@@ -53,6 +58,9 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         initStatusBar();
         //页面数据初始化方法
         initData();
+        if (isRegisterEventBus()) {
+            EventBusUtil.register(this);
+        }
         //页面事件监听的方法，一般用于ViewModel层转到View层的事件注册
         initViewObservable();
         //注册RxBus
@@ -96,6 +104,15 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
     }
 
     /**
+     * 是否注册事件分发
+     *
+     * @return true绑定EventBus事件分发，默认不绑定，子类需要绑定的话复写此方法返回true.
+     */
+    protected boolean isRegisterEventBus() {
+        return false;
+    }
+
+    /**
      * 获取状态栏字体颜色
      */
     public boolean statusBarDarkFont() {
@@ -128,6 +145,9 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         }
         if(binding != null){
             binding.unbind();
+        }
+        if (isRegisterEventBus()) {
+            EventBusUtil.unregister(this);
         }
     }
 
@@ -354,5 +374,37 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
      */
     public <T extends ViewModel> T createViewModel(FragmentActivity activity, Class<T> cls) {
         return ViewModelProviders.of(activity).get(cls);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventBusCome(MessageEvent event) {
+        if (event != null) {
+            receiveEvent(event);
+        }
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onStickyEventBusCome(MessageEvent event) {
+        if (event != null) {
+            receiveStickyEvent(event);
+        }
+    }
+
+    /**
+     * 接收到分发到事件
+     *
+     * @param event 事件
+     */
+    protected void receiveEvent(MessageEvent event) {
+
+    }
+
+    /**
+     * 接受到分发的粘性事件
+     *
+     * @param event 粘性事件
+     */
+    protected void receiveStickyEvent(MessageEvent event) {
+
     }
 }
