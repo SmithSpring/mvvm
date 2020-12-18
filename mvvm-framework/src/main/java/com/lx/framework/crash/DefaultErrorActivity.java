@@ -23,10 +23,6 @@ import android.content.ClipboardManager;
 import android.content.DialogInterface;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.core.content.res.ResourcesCompat;
-import androidx.appcompat.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
@@ -34,26 +30,31 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lx.framework.BR;
 import com.lx.framework.R;
+import com.lx.framework.base.BaseActivity;
+import com.lx.framework.base.BaseViewModel;
+import com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding;
+
+import androidx.core.content.res.ResourcesCompat;
 
 
-public final class DefaultErrorActivity extends AppCompatActivity {
+public final class DefaultErrorActivity extends BaseActivity<CustomactivityoncrashDefaultErrorActivityBinding, BaseViewModel> {
 
     @SuppressLint("PrivateResource")
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        //This is needed to avoid a crash if the developer has not specified
-        //an app-level theme that extends Theme.AppCompat
+    public void initParam() {
+        super.initParam();
         TypedArray a = obtainStyledAttributes(R.styleable.AppCompatTheme);
         if (!a.hasValue(R.styleable.AppCompatTheme_windowActionBar)) {
             setTheme(R.style.Theme_AppCompat_Light_DarkActionBar);
         }
         a.recycle();
+    }
 
-        setContentView(R.layout.customactivityoncrash_default_error_activity);
-
+    @Override
+    public void initData() {
+        super.initData();
         //Close/restart button logic:
         //If a class if set, use restart.
         //Else, use close and just finish the app.
@@ -114,6 +115,11 @@ public final class DefaultErrorActivity extends AppCompatActivity {
         if (defaultErrorActivityDrawableId != null) {
             errorImageView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), defaultErrorActivityDrawableId, getTheme()));
         }
+    }
+
+    @Override
+    public int initContentView(Bundle savedInstanceState) {
+        return R.layout.customactivityoncrash_default_error_activity;
     }
 
     private void copyErrorToClipboard() {

@@ -2,24 +2,23 @@ package com.lx.framework.base;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.WindowManager;
 
-import com.trello.rxlifecycle4.components.support.RxAppCompatActivity;
+import com.lx.framework.R;
+import com.lx.framework.databinding.ActivityContainerBinding;
 
 import java.lang.ref.WeakReference;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import com.lx.framework.R;
 
 
 /**
  * 盛装Fragment的一个容器(代理)Activity
  * 普通界面只需要编写Fragment,使用此Activity盛装,这样就不需要每个界面都在AndroidManifest中注册一遍
  */
-public class ContainerActivity extends RxAppCompatActivity {
+public class ContainerActivity extends BaseActivity<ActivityContainerBinding,BaseViewModel> {
     private static final String FRAGMENT_TAG = "content_fragment_tag";
     public static final String FRAGMENT = "fragment";
     public static final String BUNDLE = "bundle";
@@ -27,9 +26,7 @@ public class ContainerActivity extends RxAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_container);
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = null;
         if (savedInstanceState != null) {
@@ -43,6 +40,17 @@ public class ContainerActivity extends RxAppCompatActivity {
         trans.replace(R.id.content, fragment);
         trans.commitAllowingStateLoss();
         mFragment = new WeakReference<>(fragment);
+    }
+
+    @Override
+    public void initParam() {
+        super.initParam();
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+    }
+
+    @Override
+    public int initContentView(Bundle savedInstanceState) {
+        return R.layout.activity_container;
     }
 
     @Override

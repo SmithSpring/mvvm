@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lx.framework.BR;
 import com.mumu.dialog.MMLoading;
 import com.trello.rxlifecycle4.components.support.RxFragment;
 import com.lx.framework.bus.Messenger;
@@ -85,7 +86,7 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
      * 注入绑定
      */
     private void initViewDataBinding() {
-        viewModelId = initVariableId();
+        viewModelId = BR.viewModel;
         viewModel = initViewModel();
         if (viewModel == null) {
             Class modelClass;
@@ -265,13 +266,6 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
      * @return 布局layout的id
      */
     public abstract int initContentView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState);
-
-    /**
-     * 初始化ViewModel的id
-     *
-     * @return BR的id
-     */
-    public abstract int initVariableId();
 
     /**
      * 初始化ViewModel

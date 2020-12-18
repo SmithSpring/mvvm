@@ -7,6 +7,7 @@ import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 
 import com.gyf.immersionbar.ImmersionBar;
+import com.lx.framework.BR;
 import com.lx.framework.bus.Messenger;
 import com.lx.framework.bus.event.eventbus.EventBusUtil;
 import com.lx.framework.bus.event.eventbus.MessageEvent;
@@ -155,7 +156,7 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
     private void initViewDataBinding(Bundle savedInstanceState) {
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
         binding = DataBindingUtil.setContentView(this, initContentView(savedInstanceState));
-        viewModelId = initVariableId();
+        viewModelId = BR.viewModel;
         viewModel = initViewModel();
         if (viewModel == null) {
             Class modelClass;
@@ -336,13 +337,6 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
      * @return 布局layout的id
      */
     public abstract int initContentView(Bundle savedInstanceState);
-
-    /**
-     * 初始化ViewModel的id
-     *
-     * @return BR的id
-     */
-    public abstract int initVariableId();
 
     /**
      * 初始化ViewModel
