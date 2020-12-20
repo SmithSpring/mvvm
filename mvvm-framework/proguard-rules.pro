@@ -26,7 +26,21 @@
 
 #------------------------------------------主项目混淆规则----------------------------------------------
 #实体类不参与混淆
--keep class com.lx.framework.** { *; }
+-keep class com.lx.framework.base.AppManager.** { *; }
+-keep class com.lx.framework.base.BaseModel.** { *; }
+-keep class com.lx.framework.base.BaseViewModel.** { *; }
+-keep class com.lx.framework.base.ItemViewModel.** { *; }
+-keep class com.lx.framework.base.MultiItemViewModel.** { *; }
+-keep class com.lx.framework.binding.command.** { *; }
+-keep class com.lx.framework.bus.** { *; }
+-keep class com.lx.framework.config.** { *; }
+-keep class com.lx.framework.crash.** { *; }
+-keep class com.lx.framework.http.** { *; }
+-keep class com.lx.framework.net.** { *; }
+-keep class com.lx.framework.permission.** { *; }
+-keep class com.lx.framework.update.** { *; }
+-keep class com.lx.framework.utils.** { *; }
+-keep class com.lx.framework.widget.** { *; }
 
 #tkrefreshlayout
 -keep class com.lcodecore.tkrefreshlayout.** { *; }
