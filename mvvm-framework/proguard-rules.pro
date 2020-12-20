@@ -27,7 +27,7 @@
 #------------------------------------------主项目混淆规则----------------------------------------------
 #实体类不参与混淆
 -keep class com.lx.framework.base.** { *; }
--keep class com.lx.framework.binding.command.** { *; }
+-keep class com.lx.framework.binding.** { *; }
 -keep class com.lx.framework.bus.** { *; }
 -keep class com.lx.framework.config.** { *; }
 -keep class com.lx.framework.crash.** { *; }
