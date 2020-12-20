@@ -50,7 +50,7 @@ public class ContainerActivity extends BaseActivity<ActivityContainerBinding,Bas
 
     @Override
     public int initContentView(Bundle savedInstanceState) {
-        return R.layout.activity_container;
+        return R.layout.aa;
     }
 
     @Override

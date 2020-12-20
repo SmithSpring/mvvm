@@ -30,7 +30,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.lx.framework.BR;
 import com.lx.framework.R;
 import com.lx.framework.base.BaseActivity;
 import com.lx.framework.base.BaseViewModel;
@@ -119,7 +118,7 @@ public final class DefaultErrorActivity extends BaseActivity<Customactivityoncra
 
     @Override
     public int initContentView(Bundle savedInstanceState) {
-        return R.layout.customactivityoncrash_default_error_activity;
+        return R.layout.ab;
     }
 
     private void copyErrorToClipboard() {
