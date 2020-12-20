@@ -26,7 +26,12 @@
 
 #------------------------------------------主项目混淆规则----------------------------------------------
 #实体类不参与混淆
--keep class com.lx.framework.** { *; }
+-keep class com.lx.framework.** {
+protected <fields>;
+public static <fields>;
+public <methods>;
+protected <methods>;
+}
 
 #tkrefreshlayout
 -keep class com.lcodecore.tkrefreshlayout.** { *; }

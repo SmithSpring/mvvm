@@ -1,7 +1,8 @@
 # compiler: R8
 # compiler_version: 2.0.99
-# pg_map_id: a783e4b
+# pg_map_id: a3c1067
 # common_typos_disable
+androidx.databinding.DataBindingComponent -> a:
 com.bumptech.glide.GeneratedAppGlideModuleImpl -> com.bumptech.glide.GeneratedAppGlideModuleImpl:
     17:22:void <init>() -> <init>
     26:27:void applyOptions(android.content.Context,com.bumptech.glide.GlideBuilder) -> applyOptions
@@ -13,14 +14,29 @@ com.bumptech.glide.GeneratedAppGlideModuleImpl -> com.bumptech.glide.GeneratedAp
 com.bumptech.glide.GeneratedRequestManagerFactory -> com.bumptech.glide.GeneratedRequestManagerFactory:
     14:14:void <init>() -> <init>
     19:19:com.bumptech.glide.RequestManager build(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context) -> build
-com.lx.framework.BR -> com.lx.framework.a:
-    int viewModel -> a
+com.lx.framework.BR -> com.lx.framework.BR:
     4:6:void <clinit>() -> <clinit>
     3:3:void <init>() -> <init>
-com.lx.framework.base.AppManager -> com.lx.framework.base.a:
-    java.util.Stack fragmentStack -> b
-    java.util.Stack activityStack -> a
-    com.lx.framework.base.AppManager instance -> c
+com.lx.framework.BuildConfig -> com.lx.framework.BuildConfig:
+    7:7:void <clinit>() -> <clinit>
+    6:6:void <init>() -> <init>
+com.lx.framework.DataBinderMapperImpl -> com.lx.framework.DataBinderMapperImpl:
+    26:31:void <clinit>() -> <clinit>
+    21:21:void <init>() -> <init>
+    93:97:java.util.List collectDependencies() -> collectDependencies
+    87:88:java.lang.String convertBrIdToString(int) -> convertBrIdToString
+    35:56:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View,int) -> getDataBinder
+    61:73:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View[],int) -> getDataBinder
+    78:82:int getLayoutId(java.lang.String) -> getLayoutId
+com.lx.framework.DataBinderMapperImpl$InnerBrLookup -> com.lx.framework.DataBinderMapperImpl$InnerBrLookup:
+    101:106:void <clinit>() -> <clinit>
+    100:100:void <init>() -> <init>
+com.lx.framework.DataBinderMapperImpl$InnerLayoutIdLookup -> com.lx.framework.DataBinderMapperImpl$InnerLayoutIdLookup:
+    110:115:void <clinit>() -> <clinit>
+    109:109:void <init>() -> <init>
+com.lx.framework.DataBindingInfo -> com.lx.framework.DataBindingInfo:
+    6:6:void <init>() -> <init>
+com.lx.framework.base.AppManager -> com.lx.framework.base.AppManager:
     19:20:void <init>() -> <init>
     187:199:void AppExit() -> AppExit
     47:51:void addActivity(android.app.Activity) -> addActivity
@@ -71,48 +87,40 @@ com.lx.framework.base.BaseActivity -> com.lx.framework.base.BaseActivity:
     320:326:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
     98:104:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
     121:121:boolean statusBarDarkFont() -> statusBarDarkFont
-com.lx.framework.base.BaseActivity$1 -> com.lx.framework.base.BaseActivity$a:
-    com.lx.framework.base.BaseActivity this$0 -> a
+com.lx.framework.base.BaseActivity$1 -> com.lx.framework.base.BaseActivity$1:
     198:198:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     198:198:void onChanged(java.lang.Object) -> onChanged
     201:202:void onChanged(java.lang.String) -> onChanged
-com.lx.framework.base.BaseActivity$2 -> com.lx.framework.base.BaseActivity$b:
-    com.lx.framework.base.BaseActivity this$0 -> a
+com.lx.framework.base.BaseActivity$2 -> com.lx.framework.base.BaseActivity$2:
     205:205:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     205:205:void onChanged(java.lang.Object) -> onChanged
     208:209:void onChanged(java.lang.Void) -> onChanged
-com.lx.framework.base.BaseActivity$3 -> com.lx.framework.base.BaseActivity$c:
-    com.lx.framework.base.BaseActivity this$0 -> a
+com.lx.framework.base.BaseActivity$3 -> com.lx.framework.base.BaseActivity$3:
     212:212:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     212:212:void onChanged(java.lang.Object) -> onChanged
     215:218:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseActivity$4 -> com.lx.framework.base.BaseActivity$d:
-    com.lx.framework.base.BaseActivity this$0 -> a
+com.lx.framework.base.BaseActivity$4 -> com.lx.framework.base.BaseActivity$4:
     220:220:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     220:220:void onChanged(java.lang.Object) -> onChanged
     223:226:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseActivity$5 -> com.lx.framework.base.BaseActivity$e:
-    com.lx.framework.base.BaseActivity this$0 -> a
+com.lx.framework.base.BaseActivity$5 -> com.lx.framework.base.BaseActivity$5:
     229:229:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     229:229:void onChanged(java.lang.Object) -> onChanged
     232:235:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseActivity$6 -> com.lx.framework.base.BaseActivity$f:
-    com.lx.framework.base.BaseActivity this$0 -> a
+com.lx.framework.base.BaseActivity$6 -> com.lx.framework.base.BaseActivity$6:
     238:238:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     238:238:void onChanged(java.lang.Object) -> onChanged
     241:242:void onChanged(java.lang.Void) -> onChanged
-com.lx.framework.base.BaseActivity$7 -> com.lx.framework.base.BaseActivity$g:
-    com.lx.framework.base.BaseActivity this$0 -> a
+com.lx.framework.base.BaseActivity$7 -> com.lx.framework.base.BaseActivity$7:
     245:245:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     245:245:void onChanged(java.lang.Object) -> onChanged
     248:249:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseApplication -> com.lx.framework.base.BaseApplication:
-    android.app.Application sInstance -> a
     16:16:void <init>() -> <init>
     74:77:android.app.Application getInstance() -> getInstance
     21:24:void onCreate() -> onCreate
     32:68:void setApplication(android.app.Application) -> setApplication
-com.lx.framework.base.BaseApplication$1 -> com.lx.framework.base.BaseApplication$a:
+com.lx.framework.base.BaseApplication$1 -> com.lx.framework.base.BaseApplication$1:
     36:36:void <init>() -> <init>
     40:41:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
     65:66:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
@@ -121,13 +129,8 @@ com.lx.framework.base.BaseApplication$1 -> com.lx.framework.base.BaseApplication
     61:61:void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
     45:45:void onActivityStarted(android.app.Activity) -> onActivityStarted
     57:57:void onActivityStopped(android.app.Activity) -> onActivityStopped
-com.lx.framework.base.BaseFragment -> com.lx.framework.base.b:
-    com.mumu.dialog.MMLoading mmLoading -> d
-    androidx.databinding.ViewDataBinding binding -> a
-    int viewModelId -> c
-    com.lx.framework.base.BaseViewModel viewModel -> b
+com.lx.framework.base.BaseFragment -> com.lx.framework.base.BaseFragment:
     32:32:void <init>() -> <init>
-    117:170:void registorUIChangeLiveDataCallBack() -> a
     310:310:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.Fragment,java.lang.Class) -> createViewModel
     191:194:void dismissDialog() -> dismissDialog
     291:291:void initData() -> initData
@@ -143,76 +146,65 @@ com.lx.framework.base.BaseFragment -> com.lx.framework.base.b:
     59:68:void onDestroyView() -> onDestroyView
     72:83:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
     253:256:void refreshLayout() -> refreshLayout
+    117:170:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
     197:198:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
     173:188:void showDialog(java.lang.String) -> showDialog
     206:207:void startActivity(java.lang.Class) -> startActivity
     216:221:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
     229:230:void startContainerActivity(java.lang.String) -> startContainerActivity
     239:245:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
-com.lx.framework.base.BaseFragment$1 -> com.lx.framework.base.b$a:
-    com.lx.framework.base.BaseFragment this$0 -> a
+com.lx.framework.base.BaseFragment$1 -> com.lx.framework.base.BaseFragment$1:
     117:117:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     117:117:void onChanged(java.lang.Object) -> onChanged
     120:121:void onChanged(java.lang.String) -> onChanged
-com.lx.framework.base.BaseFragment$2 -> com.lx.framework.base.b$b:
-    com.lx.framework.base.BaseFragment this$0 -> a
+com.lx.framework.base.BaseFragment$2 -> com.lx.framework.base.BaseFragment$2:
     124:124:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     124:124:void onChanged(java.lang.Object) -> onChanged
     127:128:void onChanged(java.lang.Void) -> onChanged
-com.lx.framework.base.BaseFragment$3 -> com.lx.framework.base.b$c:
-    com.lx.framework.base.BaseFragment this$0 -> a
+com.lx.framework.base.BaseFragment$3 -> com.lx.framework.base.BaseFragment$3:
     130:130:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     130:130:void onChanged(java.lang.Object) -> onChanged
     133:136:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseFragment$4 -> com.lx.framework.base.b$d:
-    com.lx.framework.base.BaseFragment this$0 -> a
+com.lx.framework.base.BaseFragment$4 -> com.lx.framework.base.BaseFragment$4:
     139:139:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     139:139:void onChanged(java.lang.Object) -> onChanged
     142:145:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseFragment$5 -> com.lx.framework.base.b$e:
-    com.lx.framework.base.BaseFragment this$0 -> a
+com.lx.framework.base.BaseFragment$5 -> com.lx.framework.base.BaseFragment$5:
     148:148:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     148:148:void onChanged(java.lang.Object) -> onChanged
     151:154:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseFragment$6 -> com.lx.framework.base.b$f:
-    com.lx.framework.base.BaseFragment this$0 -> a
+com.lx.framework.base.BaseFragment$6 -> com.lx.framework.base.BaseFragment$6:
     157:157:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     157:157:void onChanged(java.lang.Object) -> onChanged
     160:161:void onChanged(java.lang.Void) -> onChanged
-com.lx.framework.base.BaseFragment$7 -> com.lx.framework.base.b$g:
-    com.lx.framework.base.BaseFragment this$0 -> a
+com.lx.framework.base.BaseFragment$7 -> com.lx.framework.base.BaseFragment$7:
     164:164:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     164:164:void onChanged(java.lang.Object) -> onChanged
     167:168:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseFragmentActivity -> com.lx.framework.base.BaseFragmentActivity:
-    com.mumu.dialog.MMLoading mmLoading -> f
-    int viewModelId -> d
-    com.gyf.immersionbar.ImmersionBar mImmersionBar -> e
-    androidx.databinding.ViewDataBinding binding -> b
-    com.lx.framework.base.BaseViewModel viewModel -> c
     40:40:void <init>() -> <init>
-    118:121:void initOrientation() -> a
-    401:401:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> a
-    150:150:boolean isRegisterEventBus() -> b
-    410:410:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> b
-    196:249:void registorUIChangeLiveDataCallBack() -> c
     377:377:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
     274:277:void dismissDialog() -> dismissDialog
     88:88:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
     362:362:void initData() -> initData
+    118:121:void initOrientation() -> initOrientation
     332:332:void initParam() -> initParam
     70:75:void initStatusBar() -> initStatusBar
     347:347:int initVariableId() -> initVariableId
     158:180:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
     356:356:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
     367:367:void initViewObservable() -> initViewObservable
+    150:150:boolean isRegisterEventBus() -> isRegisterEventBus
     81:81:boolean isStatusBarEnabled() -> isStatusBarEnabled
     50:67:void onCreate(android.os.Bundle) -> onCreate
     130:142:void onDestroy() -> onDestroy
     382:385:void onEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onEventBusCome
     126:126:void onGlobalLayout() -> onGlobalLayout
     389:392:void onStickyEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onStickyEventBusCome
+    401:401:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveEvent
+    410:410:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveStickyEvent
     184:187:void refreshLayout() -> refreshLayout
+    196:249:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
     252:253:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
     256:271:void showDialog(java.lang.String) -> showDialog
     285:286:void startActivity(java.lang.Class) -> startActivity
@@ -221,54 +213,43 @@ com.lx.framework.base.BaseFragmentActivity -> com.lx.framework.base.BaseFragment
     318:324:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
     96:102:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
     110:110:boolean statusBarDarkFont() -> statusBarDarkFont
-com.lx.framework.base.BaseFragmentActivity$1 -> com.lx.framework.base.BaseFragmentActivity$a:
-    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+com.lx.framework.base.BaseFragmentActivity$1 -> com.lx.framework.base.BaseFragmentActivity$1:
     196:196:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
     196:196:void onChanged(java.lang.Object) -> onChanged
     199:200:void onChanged(java.lang.String) -> onChanged
-com.lx.framework.base.BaseFragmentActivity$2 -> com.lx.framework.base.BaseFragmentActivity$b:
-    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+com.lx.framework.base.BaseFragmentActivity$2 -> com.lx.framework.base.BaseFragmentActivity$2:
     203:203:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
     203:203:void onChanged(java.lang.Object) -> onChanged
     206:207:void onChanged(java.lang.Void) -> onChanged
-com.lx.framework.base.BaseFragmentActivity$3 -> com.lx.framework.base.BaseFragmentActivity$c:
-    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+com.lx.framework.base.BaseFragmentActivity$3 -> com.lx.framework.base.BaseFragmentActivity$3:
     210:210:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
     210:210:void onChanged(java.lang.Object) -> onChanged
     213:216:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseFragmentActivity$4 -> com.lx.framework.base.BaseFragmentActivity$d:
-    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+com.lx.framework.base.BaseFragmentActivity$4 -> com.lx.framework.base.BaseFragmentActivity$4:
     218:218:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
     218:218:void onChanged(java.lang.Object) -> onChanged
     221:224:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseFragmentActivity$5 -> com.lx.framework.base.BaseFragmentActivity$e:
-    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+com.lx.framework.base.BaseFragmentActivity$5 -> com.lx.framework.base.BaseFragmentActivity$5:
     227:227:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
     227:227:void onChanged(java.lang.Object) -> onChanged
     230:233:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseFragmentActivity$6 -> com.lx.framework.base.BaseFragmentActivity$f:
-    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+com.lx.framework.base.BaseFragmentActivity$6 -> com.lx.framework.base.BaseFragmentActivity$6:
     236:236:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
     236:236:void onChanged(java.lang.Object) -> onChanged
     239:240:void onChanged(java.lang.Void) -> onChanged
-com.lx.framework.base.BaseFragmentActivity$7 -> com.lx.framework.base.BaseFragmentActivity$g:
-    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+com.lx.framework.base.BaseFragmentActivity$7 -> com.lx.framework.base.BaseFragmentActivity$7:
     243:243:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
     243:243:void onChanged(java.lang.Object) -> onChanged
     246:247:void onChanged(java.lang.Void) -> onChanged
-com.lx.framework.base.BaseModel -> com.lx.framework.base.c:
+com.lx.framework.base.BaseModel -> com.lx.framework.base.BaseModel:
     8:9:void <init>() -> <init>
     14:14:void onCleared() -> onCleared
 com.lx.framework.base.BaseViewModel -> com.lx.framework.base.BaseViewModel:
-    com.lx.framework.base.BaseViewModel$UIChangeLiveData uc -> b
-    io.reactivex.rxjava3.disposables.CompositeDisposable mCompositeDisposable -> d
-    java.lang.ref.WeakReference lifecycle -> c
-    com.lx.framework.base.BaseModel model -> a
     39:40:void <init>(android.app.Application) -> <init>
     43:46:void <init>(android.app.Application,com.lx.framework.base.BaseModel) -> <init>
-    49:53:void addSubscribe(io.reactivex.rxjava3.disposables.Disposable) -> a
     28:28:void accept(java.lang.Object) -> accept
     206:207:void accept(io.reactivex.rxjava3.disposables.Disposable) -> accept
+    49:53:void addSubscribe(io.reactivex.rxjava3.disposables.Disposable) -> addSubscribe
     84:85:void dismissDialog() -> dismissDialog
     146:147:void finish() -> finish
     65:65:com.trello.rxlifecycle4.LifecycleProvider getLifecycleProvider() -> getLifecycleProvider
@@ -292,29 +273,19 @@ com.lx.framework.base.BaseViewModel -> com.lx.framework.base.BaseViewModel:
     103:109:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
     117:118:void startContainerActivity(java.lang.String) -> startContainerActivity
     127:133:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
-com.lx.framework.base.BaseViewModel$ParameterField -> com.lx.framework.base.BaseViewModel$a:
-    java.lang.String CLASS -> a
-    java.lang.String BUNDLE -> c
-    java.lang.String CANONICAL_NAME -> b
+com.lx.framework.base.BaseViewModel$ParameterField -> com.lx.framework.base.BaseViewModel$ParameterField:
     260:262:void <clinit>() -> <clinit>
     259:259:void <init>() -> <init>
-com.lx.framework.base.BaseViewModel$UIChangeLiveData -> com.lx.framework.base.BaseViewModel$b:
-    com.lx.framework.bus.event.SingleLiveEvent startActivityEvent -> d
-    com.lx.framework.bus.event.SingleLiveEvent startContainerActivityEvent -> e
-    com.lx.framework.bus.event.SingleLiveEvent finishEvent -> f
-    com.lx.framework.bus.event.SingleLiveEvent onBackPressedEvent -> g
-    com.lx.framework.bus.event.SingleLiveEvent showDialogEvent -> b
-    com.lx.framework.bus.event.SingleLiveEvent dismissDialogEvent -> c
-    com.lx.framework.bus.event.SingleLiveEvent requestPermissionEvent -> h
+com.lx.framework.base.BaseViewModel$UIChangeLiveData -> com.lx.framework.base.BaseViewModel$UIChangeLiveData:
     209:209:void <init>(com.lx.framework.base.BaseViewModel) -> <init>
-    209:209:com.lx.framework.bus.event.SingleLiveEvent access$000(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> a
-    209:209:com.lx.framework.bus.event.SingleLiveEvent access$100(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> b
-    209:209:com.lx.framework.bus.event.SingleLiveEvent access$200(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> c
+    209:209:com.lx.framework.bus.event.SingleLiveEvent access$000(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> access$000
+    209:209:com.lx.framework.bus.event.SingleLiveEvent access$100(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> access$100
+    209:209:com.lx.framework.bus.event.SingleLiveEvent access$200(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> access$200
+    209:209:com.lx.framework.bus.event.SingleLiveEvent access$300(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> access$300
+    209:209:com.lx.framework.bus.event.SingleLiveEvent access$400(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> access$400
+    209:209:com.lx.framework.bus.event.SingleLiveEvent access$500(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> access$500
+    209:209:com.lx.framework.bus.event.SingleLiveEvent access$600(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> access$600
     247:250:com.lx.framework.bus.event.SingleLiveEvent createLiveData(com.lx.framework.bus.event.SingleLiveEvent) -> createLiveData
-    209:209:com.lx.framework.bus.event.SingleLiveEvent access$300(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> d
-    209:209:com.lx.framework.bus.event.SingleLiveEvent access$400(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> e
-    209:209:com.lx.framework.bus.event.SingleLiveEvent access$500(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> f
-    209:209:com.lx.framework.bus.event.SingleLiveEvent access$600(com.lx.framework.base.BaseViewModel$UIChangeLiveData) -> g
     227:227:com.lx.framework.bus.event.SingleLiveEvent getDismissDialogEvent() -> getDismissDialogEvent
     239:239:com.lx.framework.bus.event.SingleLiveEvent getFinishEvent() -> getFinishEvent
     243:243:com.lx.framework.bus.event.SingleLiveEvent getOnBackPressedEvent() -> getOnBackPressedEvent
@@ -331,13 +302,16 @@ com.lx.framework.base.ContainerActivity -> com.lx.framework.base.ContainerActivi
     91:99:void onBackPressed() -> onBackPressed
     29:43:void onCreate(android.os.Bundle) -> onCreate
     58:60:void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
-com.lx.framework.base.IBaseViewModel -> com.lx.framework.base.d:
 com.lx.framework.base.IBaseViewModel_LifecycleAdapter -> com.lx.framework.base.IBaseViewModel_LifecycleAdapter:
-    com.lx.framework.base.IBaseViewModel mReceiver -> a
     12:14:void <init>(com.lx.framework.base.IBaseViewModel) -> <init>
     19:62:void callMethods(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event,boolean,androidx.lifecycle.MethodCallsLogger) -> callMethods
+com.lx.framework.base.ItemViewModel -> com.lx.framework.base.ItemViewModel:
+    14:16:void <init>(com.lx.framework.base.BaseViewModel) -> <init>
+com.lx.framework.base.MultiItemViewModel -> com.lx.framework.base.MultiItemViewModel:
+    24:25:void <init>(com.lx.framework.base.BaseViewModel) -> <init>
+    16:16:java.lang.Object getItemType() -> getItemType
+    20:21:void multiItemType(java.lang.Object) -> multiItemType
 com.lx.framework.base.RxAppCompatFragmentActivity -> com.lx.framework.base.RxAppCompatFragmentActivity:
-    io.reactivex.rxjava3.subjects.BehaviorSubject lifecycleSubject -> a
     23:27:void <init>() -> <init>
     23:32:void <init>(int) -> <init>
     52:52:com.trello.rxlifecycle4.LifecycleTransformer bindToLifecycle() -> bindToLifecycle
@@ -350,12 +324,244 @@ com.lx.framework.base.RxAppCompatFragmentActivity -> com.lx.framework.base.RxApp
     72:74:void onResume() -> onResume
     65:67:void onStart() -> onStart
     86:88:void onStop() -> onStop
-com.lx.framework.binding.command.BindingAction -> a:
-com.lx.framework.binding.command.BindingConsumer -> b:
-com.lx.framework.bus.Messenger -> c:
-    com.lx.framework.bus.Messenger defaultInstance -> c
-    java.util.HashMap recipientsStrictAction -> b
-    java.util.HashMap recipientsOfSubclassesAction -> a
+com.lx.framework.base.ViewModelFactory -> com.lx.framework.base.ViewModelFactory:
+    34:36:void <init>(android.app.Application) -> <init>
+    40:64:androidx.lifecycle.ViewModel create(java.lang.Class) -> create
+    23:30:com.lx.framework.base.ViewModelFactory getInstance(android.app.Application) -> getInstance
+com.lx.framework.binding.command.BindingCommand -> com.lx.framework.binding.command.BindingCommand:
+    13:15:void <init>(com.lx.framework.binding.command.BindingAction) -> <init>
+    20:22:void <init>(com.lx.framework.binding.command.BindingConsumer) -> <init>
+    28:31:void <init>(com.lx.framework.binding.command.BindingAction,com.lx.framework.binding.command.BindingFunction) -> <init>
+    37:40:void <init>(com.lx.framework.binding.command.BindingConsumer,com.lx.framework.binding.command.BindingFunction) -> <init>
+    68:71:boolean canExecute0() -> canExecute0
+    46:49:void execute() -> execute
+    57:60:void execute(java.lang.Object) -> execute
+com.lx.framework.binding.command.ResponseCommand -> com.lx.framework.binding.command.ResponseCommand:
+    21:23:void <init>(com.lx.framework.binding.command.BindingFunction) -> <init>
+    26:28:void <init>(io.reactivex.rxjava3.functions.Function) -> <init>
+    31:34:void <init>(com.lx.framework.binding.command.BindingFunction,com.lx.framework.binding.command.BindingFunction) -> <init>
+    37:40:void <init>(io.reactivex.rxjava3.functions.Function,com.lx.framework.binding.command.BindingFunction) -> <init>
+    51:54:boolean canExecute() -> canExecute
+    44:47:java.lang.Object execute() -> execute
+    59:62:java.lang.Object execute(java.lang.Object) -> execute
+com.lx.framework.binding.viewadapter.checkbox.ViewAdapter -> com.lx.framework.binding.viewadapter.checkbox.ViewAdapter:
+    13:13:void <init>() -> <init>
+    20:26:void setCheckedChanged(android.widget.CheckBox,com.lx.framework.binding.command.BindingCommand) -> setCheckedChanged
+com.lx.framework.binding.viewadapter.checkbox.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.checkbox.ViewAdapter$1:
+    20:20:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    23:24:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.lx.framework.binding.viewadapter.edittext.ViewAdapter -> com.lx.framework.binding.viewadapter.edittext.ViewAdapter:
+    16:16:void <init>() -> <init>
+    36:54:void addTextChangedListener(android.widget.EditText,com.lx.framework.binding.command.BindingCommand) -> addTextChangedListener
+    22:29:void requestFocusCommand(android.widget.EditText,java.lang.Boolean) -> requestFocusCommand
+com.lx.framework.binding.viewadapter.edittext.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.edittext.ViewAdapter$1:
+    36:36:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    52:52:void afterTextChanged(android.text.Editable) -> afterTextChanged
+    40:40:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    44:47:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+com.lx.framework.binding.viewadapter.image.ViewAdapter -> com.lx.framework.binding.viewadapter.image.ViewAdapter:
+    16:16:void <init>() -> <init>
+    19:28:void setImageUri(android.widget.ImageView,java.lang.String,android.graphics.drawable.Drawable) -> setImageUri
+com.lx.framework.binding.viewadapter.listview.ViewAdapter -> com.lx.framework.binding.viewadapter.listview.ViewAdapter:
+    18:18:void <init>() -> <init>
+    49:57:void onItemClickCommand(android.widget.ListView,com.lx.framework.binding.command.BindingCommand) -> onItemClickCommand
+    62:64:void onLoadMoreCommand(android.widget.ListView,com.lx.framework.binding.command.BindingCommand) -> onLoadMoreCommand
+    25:44:void onScrollChangeCommand(android.widget.ListView,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> onScrollChangeCommand
+com.lx.framework.binding.viewadapter.listview.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.listview.ViewAdapter$1:
+    25:25:void <init>(com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> <init>
+    38:41:void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
+    30:34:void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
+com.lx.framework.binding.viewadapter.listview.ViewAdapter$2 -> com.lx.framework.binding.viewadapter.listview.ViewAdapter$2:
+    49:49:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    52:55:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.lx.framework.binding.viewadapter.listview.ViewAdapter$ListViewScrollDataWrapper -> com.lx.framework.binding.viewadapter.listview.ViewAdapter$ListViewScrollDataWrapper:
+    107:112:void <init>(int,int,int,int) -> <init>
+com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener -> com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener:
+    67:81:void <init>(android.widget.ListView,com.lx.framework.binding.command.BindingCommand) -> <init>
+    90:98:void onScroll(android.widget.AbsListView,int,int,int) -> onScroll
+    86:86:void onScrollStateChanged(android.widget.AbsListView,int) -> onScrollStateChanged
+com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener$1 -> com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener$1:
+    75:75:void <init>(com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener,com.lx.framework.binding.command.BindingCommand) -> <init>
+    75:75:void accept(java.lang.Object) -> accept
+    78:79:void accept(java.lang.Integer) -> accept
+com.lx.framework.binding.viewadapter.mswitch.ViewAdapter -> com.lx.framework.binding.viewadapter.mswitch.ViewAdapter:
+    14:14:void <init>() -> <init>
+    33:41:void onCheckedChangeCommand(android.widget.Switch,com.lx.framework.binding.command.BindingCommand) -> onCheckedChangeCommand
+    22:23:void setSwitchState(android.widget.Switch,boolean) -> setSwitchState
+com.lx.framework.binding.viewadapter.mswitch.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.mswitch.ViewAdapter$1:
+    34:34:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    37:38:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter -> com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter:
+    13:13:void <init>() -> <init>
+    16:23:void onCheckedChangedCommand(android.widget.RadioGroup,com.lx.framework.binding.command.BindingCommand) -> onCheckedChangedCommand
+com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter$1:
+    16:16:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    19:21:void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+com.lx.framework.binding.viewadapter.recyclerview.DividerLine -> com.lx.framework.binding.viewadapter.recyclerview.DividerLine:
+    16:20:void <clinit>() -> <clinit>
+    26:41:void <init>(android.content.Context) -> <init>
+    44:46:void <init>(android.content.Context,com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode) -> <init>
+    49:51:void <init>(android.content.Context,int,com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode) -> <init>
+    161:162:int dip2px(android.content.Context,float) -> dip2px
+    127:145:void drawHorizontal(android.graphics.Canvas,androidx.recyclerview.widget.RecyclerView,androidx.recyclerview.widget.RecyclerView$State) -> drawHorizontal
+    105:117:void drawVertical(android.graphics.Canvas,androidx.recyclerview.widget.RecyclerView,androidx.recyclerview.widget.RecyclerView$State) -> drawVertical
+    54:54:int getDividerSize() -> getDividerSize
+    149:151:void getItemOffsets(android.graphics.Rect,android.view.View,androidx.recyclerview.widget.RecyclerView,androidx.recyclerview.widget.RecyclerView$State) -> getItemOffsets
+    62:62:com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode getMode() -> getMode
+    79:95:void onDrawOver(android.graphics.Canvas,androidx.recyclerview.widget.RecyclerView,androidx.recyclerview.widget.RecyclerView$State) -> onDrawOver
+    58:59:void setDividerSize(int) -> setDividerSize
+    66:67:void setMode(com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode) -> setMode
+com.lx.framework.binding.viewadapter.recyclerview.DividerLine$1 -> com.lx.framework.binding.viewadapter.recyclerview.DividerLine$1:
+    83:83:void <clinit>() -> <clinit>
+com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode -> com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode:
+    31:32:void <clinit>() -> <clinit>
+    31:31:void <init>(java.lang.String,int) -> <init>
+    31:31:com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode valueOf(java.lang.String) -> valueOf
+    31:31:com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode[] values() -> values
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers:
+    13:14:void <init>() -> <init>
+    48:48:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory grid(int) -> grid
+    60:60:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory grid(int,int,boolean) -> grid
+    24:24:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory linear() -> linear
+    36:36:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory linear(int,boolean) -> linear
+    72:72:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory staggeredGrid(int,int) -> staggeredGrid
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$1 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$1:
+    24:24:void <init>() -> <init>
+    27:27:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2:
+    36:36:void <init>(int,boolean) -> <init>
+    39:39:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$3 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$3:
+    48:48:void <init>(int) -> <init>
+    51:51:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$4 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$4:
+    60:60:void <init>(int,int,boolean) -> <init>
+    63:63:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$5 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$5:
+    72:72:void <init>(int,int) -> <init>
+    75:75:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LineManagers -> com.lx.framework.binding.viewadapter.recyclerview.LineManagers:
+    10:11:void <init>() -> <init>
+    19:19:com.lx.framework.binding.viewadapter.recyclerview.LineManagers$LineManagerFactory both() -> both
+    28:28:com.lx.framework.binding.viewadapter.recyclerview.LineManagers$LineManagerFactory horizontal() -> horizontal
+    37:37:com.lx.framework.binding.viewadapter.recyclerview.LineManagers$LineManagerFactory vertical() -> vertical
+com.lx.framework.binding.viewadapter.recyclerview.LineManagers$1 -> com.lx.framework.binding.viewadapter.recyclerview.LineManagers$1:
+    19:19:void <init>() -> <init>
+    22:22:androidx.recyclerview.widget.RecyclerView$ItemDecoration create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LineManagers$2 -> com.lx.framework.binding.viewadapter.recyclerview.LineManagers$2:
+    28:28:void <init>() -> <init>
+    31:31:androidx.recyclerview.widget.RecyclerView$ItemDecoration create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LineManagers$3 -> com.lx.framework.binding.viewadapter.recyclerview.LineManagers$3:
+    37:37:void <init>() -> <init>
+    40:40:androidx.recyclerview.widget.RecyclerView$ItemDecoration create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter -> com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter:
+    16:16:void <init>() -> <init>
+    59:62:void onLoadMoreCommand(androidx.recyclerview.widget.RecyclerView,com.lx.framework.binding.command.BindingCommand) -> onLoadMoreCommand
+    33:54:void onScrollChangeCommand(androidx.recyclerview.widget.RecyclerView,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> onScrollChangeCommand
+    66:67:void setItemAnimator(androidx.recyclerview.widget.RecyclerView,androidx.recyclerview.widget.RecyclerView$ItemAnimator) -> setItemAnimator
+    20:21:void setLayoutManager(androidx.recyclerview.widget.RecyclerView,com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory) -> setLayoutManager
+    25:26:void setLineManager(androidx.recyclerview.widget.RecyclerView,com.lx.framework.binding.viewadapter.recyclerview.LineManagers$LineManagerFactory) -> setLineManager
+com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$1:
+    33:33:void <init>(com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> <init>
+    46:51:void onScrollStateChanged(androidx.recyclerview.widget.RecyclerView,int) -> onScrollStateChanged
+    38:42:void onScrolled(androidx.recyclerview.widget.RecyclerView,int,int) -> onScrolled
+com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$OnScrollListener -> com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$OnScrollListener:
+    71:84:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    101:102:void onScrollStateChanged(androidx.recyclerview.widget.RecyclerView,int) -> onScrollStateChanged
+    88:97:void onScrolled(androidx.recyclerview.widget.RecyclerView,int,int) -> onScrolled
+com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$OnScrollListener$1 -> com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$OnScrollListener$1:
+    78:78:void <init>(com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$OnScrollListener,com.lx.framework.binding.command.BindingCommand) -> <init>
+    78:78:void accept(java.lang.Object) -> accept
+    81:82:void accept(java.lang.Integer) -> accept
+com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$ScrollDataWrapper -> com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$ScrollDataWrapper:
+    112:116:void <init>(float,float,int) -> <init>
+com.lx.framework.binding.viewadapter.scrollview.ViewAdapter -> com.lx.framework.binding.viewadapter.scrollview.ViewAdapter:
+    13:13:void <init>() -> <init>
+    18:26:void onScrollChangeCommand(androidx.core.widget.NestedScrollView,com.lx.framework.binding.command.BindingCommand) -> onScrollChangeCommand
+    31:39:void onScrollChangeCommand(android.widget.ScrollView,com.lx.framework.binding.command.BindingCommand) -> onScrollChangeCommand
+com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$1:
+    18:18:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    21:24:void onScrollChange(androidx.core.widget.NestedScrollView,int,int,int,int) -> onScrollChange
+com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$2 -> com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$2:
+    31:31:void <init>(com.lx.framework.binding.command.BindingCommand,android.widget.ScrollView) -> <init>
+    34:37:void onScrollChanged() -> onScrollChanged
+com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$NestScrollDataWrapper -> com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$NestScrollDataWrapper:
+    57:62:void <init>(int,int,int,int) -> <init>
+com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$ScrollDataWrapper -> com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$ScrollDataWrapper:
+    45:48:void <init>(float,float) -> <init>
+com.lx.framework.binding.viewadapter.spinner.ViewAdapter -> com.lx.framework.binding.viewadapter.spinner.ViewAdapter:
+    18:18:void <init>() -> <init>
+    29:68:void onItemSelectedCommand(android.widget.Spinner,java.util.List,java.lang.String,int,int,com.lx.framework.binding.command.BindingCommand) -> onItemSelectedCommand
+com.lx.framework.binding.viewadapter.spinner.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.spinner.ViewAdapter$1:
+    45:45:void <init>(java.util.List,com.lx.framework.binding.command.BindingCommand) -> <init>
+    48:51:void onItemSelected(android.widget.AdapterView,android.view.View,int,long) -> onItemSelected
+    56:56:void onNothingSelected(android.widget.AdapterView) -> onNothingSelected
+com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter -> com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter:
+    16:16:void <init>() -> <init>
+    34:42:void onLoadMoreCommand(com.scwang.smartrefresh.layout.SmartRefreshLayout,com.lx.framework.binding.command.BindingCommand) -> onLoadMoreCommand
+    20:28:void onRefreshCommand(com.scwang.smartrefresh.layout.SmartRefreshLayout,com.lx.framework.binding.command.BindingCommand) -> onRefreshCommand
+com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter$1:
+    20:20:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    23:26:void onRefresh(com.scwang.smartrefresh.layout.api.RefreshLayout) -> onRefresh
+com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter$2 -> com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter$2:
+    34:34:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    37:40:void onLoadMore(com.scwang.smartrefresh.layout.api.RefreshLayout) -> onLoadMore
+com.lx.framework.binding.viewadapter.view.ViewAdapter -> com.lx.framework.binding.viewadapter.view.ViewAdapter:
+    18:18:void <init>() -> <init>
+    111:115:void isVisible(android.view.View,java.lang.Boolean) -> isVisible
+    31:49:void onClickCommand(android.view.View,com.lx.framework.binding.command.BindingCommand,boolean) -> onClickCommand
+    97:103:void onFocusChangeCommand(android.view.View,com.lx.framework.binding.command.BindingCommand) -> onFocusChangeCommand
+    57:64:void onLongClickCommand(android.view.View,com.lx.framework.binding.command.BindingCommand) -> onLongClickCommand
+    119:125:void onTouchCommand(android.view.View,com.lx.framework.binding.command.BindingCommand) -> onTouchCommand
+    74:77:void replyCurrentView(android.view.View,com.lx.framework.binding.command.BindingCommand) -> replyCurrentView
+    84:90:void requestFocusCommand(android.view.View,java.lang.Boolean) -> requestFocusCommand
+    137:141:void setBottomMargin(android.view.View,int) -> setBottomMargin
+    145:149:void setLeftMargin(android.view.View,int) -> setLeftMargin
+    161:164:void setMargin(android.view.View,int) -> setMargin
+    200:204:void setPadding(android.view.View,int) -> setPadding
+    192:196:void setPaddingBottom(android.view.View,int) -> setPaddingBottom
+    168:172:void setPaddingLeft(android.view.View,int) -> setPaddingLeft
+    176:180:void setPaddingRight(android.view.View,int) -> setPaddingRight
+    184:188:void setPaddingTop(android.view.View,int) -> setPaddingTop
+    153:157:void setRightMargin(android.view.View,int) -> setRightMargin
+    129:133:void setTopMargin(android.view.View,int) -> setTopMargin
+com.lx.framework.binding.viewadapter.view.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.view.ViewAdapter$1:
+    33:33:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    33:33:void accept(java.lang.Object) -> accept
+    36:37:void accept(kotlin.Unit) -> accept
+com.lx.framework.binding.viewadapter.view.ViewAdapter$2 -> com.lx.framework.binding.viewadapter.view.ViewAdapter$2:
+    42:42:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    42:42:void accept(java.lang.Object) -> accept
+    45:46:void accept(kotlin.Unit) -> accept
+com.lx.framework.binding.viewadapter.view.ViewAdapter$3 -> com.lx.framework.binding.viewadapter.view.ViewAdapter$3:
+    58:58:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    58:58:void accept(java.lang.Object) -> accept
+    61:62:void accept(kotlin.Unit) -> accept
+com.lx.framework.binding.viewadapter.view.ViewAdapter$4 -> com.lx.framework.binding.viewadapter.view.ViewAdapter$4:
+    97:97:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    97:97:void accept(java.lang.Object) -> accept
+    100:101:void accept(java.lang.Boolean) -> accept
+com.lx.framework.binding.viewadapter.view.ViewAdapter$5 -> com.lx.framework.binding.viewadapter.view.ViewAdapter$5:
+    119:119:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
+    119:119:void accept(java.lang.Object) -> accept
+    122:123:void accept(android.view.MotionEvent) -> accept
+com.lx.framework.binding.viewadapter.viewgroup.ViewAdapter -> com.lx.framework.binding.viewadapter.viewgroup.ViewAdapter:
+    15:15:void <init>() -> <init>
+    19:28:void addViews(android.view.ViewGroup,me.tatarka.bindingcollectionadapter2.ItemBinding,androidx.databinding.ObservableList) -> addViews
+com.lx.framework.binding.viewadapter.viewpager.ViewAdapter -> com.lx.framework.binding.viewadapter.viewpager.ViewAdapter:
+    11:11:void <init>() -> <init>
+    17:43:void onScrollChangeCommand(androidx.viewpager.widget.ViewPager,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> onScrollChangeCommand
+com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$1:
+    17:17:void <init>(com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> <init>
+    36:40:void onPageScrollStateChanged(int) -> onPageScrollStateChanged
+    22:25:void onPageScrolled(int,float,int) -> onPageScrolled
+    29:32:void onPageSelected(int) -> onPageSelected
+com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$ViewPagerDataWrapper -> com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$ViewPagerDataWrapper:
+    51:56:void <init>(float,float,int,int) -> <init>
+com.lx.framework.binding.viewadapter.webview.ViewAdapter -> com.lx.framework.binding.viewadapter.webview.ViewAdapter:
+    10:10:void <init>() -> <init>
+    13:16:void loadHtml(android.webkit.WebView,java.lang.String) -> loadHtml
+com.lx.framework.bus.Messenger -> com.lx.framework.bus.Messenger:
     17:17:void <init>() -> <init>
     470:481:boolean classImplements(java.lang.reflect.Type,java.lang.reflect.Type) -> classImplements
     209:211:void cleanup() -> cleanup
@@ -388,20 +594,43 @@ com.lx.framework.bus.Messenger -> c:
     385:406:void unregisterFromLists(java.lang.Object,com.lx.framework.binding.command.BindingAction,java.util.HashMap) -> unregisterFromLists
     414:437:void unregisterFromLists(java.lang.Object,java.lang.Object,com.lx.framework.binding.command.BindingConsumer,java.util.HashMap,java.lang.Class) -> unregisterFromLists
     444:467:void unregisterFromLists(java.lang.Object,java.lang.Object,com.lx.framework.binding.command.BindingAction,java.util.HashMap) -> unregisterFromLists
-com.lx.framework.bus.Messenger$NotMsgType -> c$a:
+com.lx.framework.bus.Messenger$NotMsgType -> com.lx.framework.bus.Messenger$NotMsgType:
     621:621:void <init>() -> <init>
-com.lx.framework.bus.Messenger$WeakActionAndToken -> c$b:
-    com.lx.framework.bus.WeakAction action -> a
-    java.lang.Object token -> b
+com.lx.framework.bus.Messenger$WeakActionAndToken -> com.lx.framework.bus.Messenger$WeakActionAndToken:
     599:602:void <init>(com.lx.framework.bus.Messenger,com.lx.framework.bus.WeakAction,java.lang.Object) -> <init>
     605:605:com.lx.framework.bus.WeakAction getAction() -> getAction
     613:613:java.lang.Object getToken() -> getToken
     609:610:void setAction(com.lx.framework.bus.WeakAction) -> setAction
     617:618:void setToken(java.lang.Object) -> setToken
-com.lx.framework.bus.WeakAction -> d:
-    com.lx.framework.binding.command.BindingAction action -> a
-    com.lx.framework.binding.command.BindingConsumer consumer -> b
-    java.lang.ref.WeakReference reference -> c
+com.lx.framework.bus.RxBus -> com.lx.framework.bus.RxBus:
+    23:26:void <init>() -> <init>
+    29:36:com.lx.framework.bus.RxBus getDefault() -> getDefault
+    103:105:java.lang.Object getStickyEvent(java.lang.Class) -> getStickyEvent
+    57:57:boolean hasObservers() -> hasObservers
+    43:44:void post(java.lang.Object) -> post
+    72:76:void postSticky(java.lang.Object) -> postSticky
+    121:124:void removeAllStickyEvents() -> removeAllStickyEvents
+    112:114:java.lang.Object removeStickyEvent(java.lang.Class) -> removeStickyEvent
+    61:62:void reset() -> reset
+    50:50:io.reactivex.rxjava3.core.Observable toObservable(java.lang.Class) -> toObservable
+    82:96:io.reactivex.rxjava3.core.Observable toObservableSticky(java.lang.Class) -> toObservableSticky
+com.lx.framework.bus.RxBus$1 -> com.lx.framework.bus.RxBus$1:
+    87:87:void <init>(com.lx.framework.bus.RxBus,java.lang.Class,java.lang.Object) -> <init>
+    90:91:void subscribe(io.reactivex.rxjava3.core.ObservableEmitter) -> subscribe
+com.lx.framework.bus.RxBusSubscriber -> com.lx.framework.bus.RxBusSubscriber:
+    9:9:void <init>() -> <init>
+    22:22:void onComplete() -> onComplete
+    26:27:void onError(java.lang.Throwable) -> onError
+    14:18:void onNext(java.lang.Object) -> onNext
+com.lx.framework.bus.RxSubscriptions -> com.lx.framework.bus.RxSubscriptions:
+    10:10:void <clinit>() -> <clinit>
+    9:9:void <init>() -> <init>
+    17:20:void add(io.reactivex.rxjava3.disposables.Disposable) -> add
+    29:30:void clear() -> clear
+    33:34:void dispose() -> dispose
+    13:13:boolean isDisposed() -> isDisposed
+    23:26:void remove(io.reactivex.rxjava3.disposables.Disposable) -> remove
+com.lx.framework.bus.WeakAction -> com.lx.framework.bus.WeakAction:
     19:23:void <init>(java.lang.Object,com.lx.framework.binding.command.BindingAction) -> <init>
     25:28:void <init>(java.lang.Object,com.lx.framework.binding.command.BindingConsumer) -> <init>
     31:34:void execute() -> execute
@@ -411,40 +640,50 @@ com.lx.framework.bus.WeakAction -> d:
     70:73:java.lang.Object getTarget() -> getTarget
     59:65:boolean isLive() -> isLive
     44:48:void markForDeletion() -> markForDeletion
-com.lx.framework.bus.event.SingleLiveEvent -> e:
-    java.util.concurrent.atomic.AtomicBoolean mPending -> a
+com.lx.framework.bus.event.SingleLiveEvent -> com.lx.framework.bus.event.SingleLiveEvent:
     39:43:void <init>() -> <init>
-    39:39:java.util.concurrent.atomic.AtomicBoolean access$000(com.lx.framework.bus.event.SingleLiveEvent) -> a
+    39:39:java.util.concurrent.atomic.AtomicBoolean access$000(com.lx.framework.bus.event.SingleLiveEvent) -> access$000
     74:75:void call() -> call
     48:61:void observe(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Observer) -> observe
     65:67:void setValue(java.lang.Object) -> setValue
-com.lx.framework.bus.event.SingleLiveEvent$1 -> e$a:
-    androidx.lifecycle.Observer val$observer -> a
-    com.lx.framework.bus.event.SingleLiveEvent this$0 -> b
+com.lx.framework.bus.event.SingleLiveEvent$1 -> com.lx.framework.bus.event.SingleLiveEvent$1:
     53:53:void <init>(com.lx.framework.bus.event.SingleLiveEvent,androidx.lifecycle.Observer) -> <init>
     56:59:void onChanged(java.lang.Object) -> onChanged
-com.lx.framework.bus.event.eventbus.EventBusUtil -> f:
+com.lx.framework.bus.event.SnackbarMessage -> com.lx.framework.bus.event.SnackbarMessage:
+    30:30:void <init>() -> <init>
+    33:42:void observe(androidx.lifecycle.LifecycleOwner,com.lx.framework.bus.event.SnackbarMessage$SnackbarObserver) -> observe
+com.lx.framework.bus.event.SnackbarMessage$1 -> com.lx.framework.bus.event.SnackbarMessage$1:
+    33:33:void <init>(com.lx.framework.bus.event.SnackbarMessage,com.lx.framework.bus.event.SnackbarMessage$SnackbarObserver) -> <init>
+    33:33:void onChanged(java.lang.Object) -> onChanged
+    36:40:void onChanged(java.lang.Integer) -> onChanged
+com.lx.framework.bus.event.eventbus.EventBusUtil -> com.lx.framework.bus.event.eventbus.EventBusUtil:
     5:5:void <init>() -> <init>
     7:8:void register(java.lang.Object) -> register
     15:16:void sendEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> sendEvent
     19:20:void sendStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> sendStickyEvent
     11:12:void unregister(java.lang.Object) -> unregister
-com.lx.framework.bus.event.eventbus.MessageEvent -> g:
-    java.lang.Object data -> b
-    int code -> a
+com.lx.framework.bus.event.eventbus.MessageEvent -> com.lx.framework.bus.event.eventbus.MessageEvent:
     7:9:void <init>(int) -> <init>
     11:14:void <init>(int,java.lang.Object) -> <init>
     17:17:int getCode() -> getCode
     25:25:java.lang.Object getData() -> getData
     21:22:void setCode(int) -> setCode
     29:30:void setData(java.lang.Object) -> setData
-com.lx.framework.config.GlideOptions -> com.lx.framework.config.a:
-    com.lx.framework.config.GlideOptions noAnimation5 -> f
-    com.lx.framework.config.GlideOptions noTransformation4 -> e
-    com.lx.framework.config.GlideOptions centerInsideTransform1 -> b
-    com.lx.framework.config.GlideOptions fitCenterTransform0 -> a
-    com.lx.framework.config.GlideOptions circleCropTransform3 -> d
-    com.lx.framework.config.GlideOptions centerCropTransform2 -> c
+com.lx.framework.config.GlideApp -> com.lx.framework.config.GlideApp:
+    28:29:void <init>() -> <init>
+    52:52:com.bumptech.glide.Glide get(android.content.Context) -> get
+    36:36:java.io.File getPhotoCacheDir(android.content.Context) -> getPhotoCacheDir
+    44:44:java.io.File getPhotoCacheDir(android.content.Context,java.lang.String) -> getPhotoCacheDir
+    62:63:void init(com.bumptech.glide.Glide) -> init
+    71:72:void init(android.content.Context,com.bumptech.glide.GlideBuilder) -> init
+    80:81:void tearDown() -> tearDown
+    88:88:com.lx.framework.config.GlideRequests with(android.content.Context) -> with
+    96:96:com.lx.framework.config.GlideRequests with(android.app.Activity) -> with
+    104:104:com.lx.framework.config.GlideRequests with(androidx.fragment.app.FragmentActivity) -> with
+    112:112:com.lx.framework.config.GlideRequests with(androidx.fragment.app.Fragment) -> with
+    121:121:com.lx.framework.config.GlideRequests with(android.app.Fragment) -> with
+    129:129:com.lx.framework.config.GlideRequests with(android.view.View) -> with
+com.lx.framework.config.GlideOptions -> com.lx.framework.config.GlideOptions:
     32:32:void <init>() -> <init>
     31:31:com.bumptech.glide.request.RequestOptions apply(com.bumptech.glide.request.RequestOptions) -> apply
     605:605:com.lx.framework.config.GlideOptions apply(com.bumptech.glide.request.RequestOptions) -> apply
@@ -563,10 +802,9 @@ com.lx.framework.config.GlideOptions -> com.lx.framework.config.a:
     322:322:com.lx.framework.config.GlideOptions useAnimationPool(boolean) -> useAnimationPool
     31:31:com.bumptech.glide.request.RequestOptions useUnlimitedSourceGeneratorsPool(boolean) -> useUnlimitedSourceGeneratorsPool
     315:315:com.lx.framework.config.GlideOptions useUnlimitedSourceGeneratorsPool(boolean) -> useUnlimitedSourceGeneratorsPool
-com.lx.framework.config.GlideRequest -> com.lx.framework.config.b:
+com.lx.framework.config.GlideRequest -> com.lx.framework.config.GlideRequest:
     57:58:void <init>(java.lang.Class,com.bumptech.glide.RequestBuilder) -> <init>
     62:63:void <init>(com.bumptech.glide.Glide,com.bumptech.glide.RequestManager,java.lang.Class,android.content.Context) -> <init>
-    69:69:com.lx.framework.config.GlideRequest getDownloadOnlyRequest() -> a
     51:51:com.bumptech.glide.RequestBuilder addListener(com.bumptech.glide.request.RequestListener) -> addListener
     677:677:com.lx.framework.config.GlideRequest addListener(com.bumptech.glide.request.RequestListener) -> addListener
     51:51:com.bumptech.glide.RequestBuilder apply(com.bumptech.glide.request.RequestOptions) -> apply
@@ -595,6 +833,7 @@ com.lx.framework.config.GlideRequest -> com.lx.framework.config.b:
     386:391:com.lx.framework.config.GlideRequest format(com.bumptech.glide.load.DecodeFormat) -> format
     372:377:com.lx.framework.config.GlideRequest frame(long) -> frame
     51:51:com.bumptech.glide.RequestBuilder getDownloadOnlyRequest() -> getDownloadOnlyRequest
+    69:69:com.lx.framework.config.GlideRequest getDownloadOnlyRequest() -> getDownloadOnlyRequest
     51:51:com.bumptech.glide.RequestBuilder listener(com.bumptech.glide.request.RequestListener) -> listener
     670:670:com.lx.framework.config.GlideRequest listener(com.bumptech.glide.request.RequestListener) -> listener
     51:51:com.bumptech.glide.RequestBuilder load(android.graphics.Bitmap) -> load
@@ -655,7 +894,7 @@ com.lx.framework.config.GlideRequest -> com.lx.framework.config.b:
     663:663:com.lx.framework.config.GlideRequest transition(com.bumptech.glide.TransitionOptions) -> transition
     106:111:com.lx.framework.config.GlideRequest useAnimationPool(boolean) -> useAnimationPool
     92:97:com.lx.framework.config.GlideRequest useUnlimitedSourceGeneratorsPool(boolean) -> useUnlimitedSourceGeneratorsPool
-com.lx.framework.config.GlideRequests -> com.lx.framework.config.c:
+com.lx.framework.config.GlideRequests -> com.lx.framework.config.GlideRequests:
     38:39:void <init>(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context) -> <init>
     34:34:com.bumptech.glide.RequestManager applyDefaultRequestOptions(com.bumptech.glide.request.RequestOptions) -> applyDefaultRequestOptions
     51:51:com.lx.framework.config.GlideRequests applyDefaultRequestOptions(com.bumptech.glide.request.RequestOptions) -> applyDefaultRequestOptions
@@ -747,6 +986,21 @@ com.lx.framework.crash.CaocConfig -> com.lx.framework.crash.CaocConfig:
     77:78:void setShowErrorDetails(boolean) -> setShowErrorDetails
     85:86:void setShowRestartButton(boolean) -> setShowRestartButton
     93:94:void setTrackActivities(boolean) -> setTrackActivities
+com.lx.framework.crash.CaocConfig$Builder -> com.lx.framework.crash.CaocConfig$Builder:
+    141:141:void <init>() -> <init>
+    296:297:void apply() -> apply
+    175:176:com.lx.framework.crash.CaocConfig$Builder backgroundMode(int) -> backgroundMode
+    146:163:com.lx.framework.crash.CaocConfig$Builder create() -> create
+    187:188:com.lx.framework.crash.CaocConfig$Builder enabled(boolean) -> enabled
+    257:258:com.lx.framework.crash.CaocConfig$Builder errorActivity(java.lang.Class) -> errorActivity
+    247:248:com.lx.framework.crash.CaocConfig$Builder errorDrawable(java.lang.Integer) -> errorDrawable
+    282:287:com.lx.framework.crash.CaocConfig$Builder eventListener(com.lx.framework.crash.CustomActivityOnCrash$EventListener) -> eventListener
+    292:292:com.lx.framework.crash.CaocConfig get() -> get
+    236:237:com.lx.framework.crash.CaocConfig$Builder minTimeBetweenCrashesMs(int) -> minTimeBetweenCrashesMs
+    268:269:com.lx.framework.crash.CaocConfig$Builder restartActivity(java.lang.Class) -> restartActivity
+    199:200:com.lx.framework.crash.CaocConfig$Builder showErrorDetails(boolean) -> showErrorDetails
+    213:214:com.lx.framework.crash.CaocConfig$Builder showRestartButton(boolean) -> showRestartButton
+    224:225:com.lx.framework.crash.CaocConfig$Builder trackActivities(boolean) -> trackActivities
 com.lx.framework.crash.CaocInitProvider -> com.lx.framework.crash.CaocInitProvider:
     28:28:void <init>() -> <init>
     55:55:int delete(android.net.Uri,java.lang.String,java.lang.String[]) -> delete
@@ -756,28 +1010,23 @@ com.lx.framework.crash.CaocInitProvider -> com.lx.framework.crash.CaocInitProvid
     38:38:android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String) -> query
     60:60:int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[]) -> update
 com.lx.framework.crash.CustomActivityOnCrash -> com.lx.framework.crash.CustomActivityOnCrash:
-    java.util.Deque activityLog -> c
-    android.app.Application application -> a
-    java.lang.ref.WeakReference lastActivityCreated -> d
-    boolean isInBackground -> e
-    com.lx.framework.crash.CaocConfig config -> b
     75:78:void <clinit>() -> <clinit>
     51:51:void <init>() -> <init>
-    51:51:com.lx.framework.crash.CaocConfig access$000() -> a
-    51:51:boolean access$200(android.content.Context) -> a
-    51:51:void access$300(android.content.Context,long) -> a
-    51:51:boolean access$500(java.lang.Throwable,java.lang.Class) -> a
-    51:51:boolean access$602(boolean) -> a
-    51:51:java.lang.ref.WeakReference access$902(java.lang.ref.WeakReference) -> a
-    51:51:android.app.Application access$100() -> b
-    51:51:java.lang.Class access$400(android.content.Context) -> b
-    51:51:void access$1000() -> c
-    51:51:java.lang.Class access$800(android.content.Context) -> c
+    51:51:com.lx.framework.crash.CaocConfig access$000() -> access$000
+    51:51:android.app.Application access$100() -> access$100
+    51:51:void access$1000() -> access$1000
+    51:51:boolean access$200(android.content.Context) -> access$200
+    51:51:void access$300(android.content.Context,long) -> access$300
+    51:51:java.lang.Class access$400(android.content.Context) -> access$400
+    51:51:boolean access$500(java.lang.Throwable,java.lang.Class) -> access$500
+    51:51:boolean access$600() -> access$600
+    51:51:boolean access$602(boolean) -> access$602
+    51:51:java.util.Deque access$700() -> access$700
+    51:51:java.lang.Class access$800(android.content.Context) -> access$800
+    51:51:java.lang.ref.WeakReference access$900() -> access$900
+    51:51:java.lang.ref.WeakReference access$902(java.lang.ref.WeakReference) -> access$902
     504:511:java.lang.String capitalize(java.lang.String) -> capitalize
     379:384:void closeApplication(android.app.Activity,com.lx.framework.crash.CaocConfig) -> closeApplication
-    51:51:boolean access$600() -> d
-    51:51:java.util.Deque access$700() -> e
-    51:51:java.lang.ref.WeakReference access$900() -> f
     289:289:java.lang.String getActivityLogFromIntent(android.content.Intent) -> getActivityLogFromIntent
     303:332:java.lang.String getAllErrorDetailsFromIntent(android.content.Context,android.content.Intent) -> getAllErrorDetailsFromIntent
     443:459:java.lang.String getBuildDateAsString(android.content.Context,java.text.DateFormat) -> getBuildDateAsString
@@ -800,13 +1049,10 @@ com.lx.framework.crash.CustomActivityOnCrash -> com.lx.framework.crash.CustomAct
     347:363:void restartApplicationWithIntent(android.app.Activity,android.content.Intent,com.lx.framework.crash.CaocConfig) -> restartApplicationWithIntent
     408:409:void setConfig(com.lx.framework.crash.CaocConfig) -> setConfig
     655:656:void setLastCrashTimestamp(android.content.Context,long) -> setLastCrashTimestamp
-com.lx.framework.crash.CustomActivityOnCrash$1 -> com.lx.framework.crash.CustomActivityOnCrash$a:
-    java.lang.Thread$UncaughtExceptionHandler val$oldHandler -> a
+com.lx.framework.crash.CustomActivityOnCrash$1 -> com.lx.framework.crash.CustomActivityOnCrash$1:
     105:105:void <init>(java.lang.Thread$UncaughtExceptionHandler) -> <init>
     108:190:void uncaughtException(java.lang.Thread,java.lang.Throwable) -> uncaughtException
-com.lx.framework.crash.CustomActivityOnCrash$2 -> com.lx.framework.crash.CustomActivityOnCrash$b:
-    java.text.DateFormat dateFormat -> b
-    int currentlyStartedActivities -> a
+com.lx.framework.crash.CustomActivityOnCrash$2 -> com.lx.framework.crash.CustomActivityOnCrash$2:
     192:194:void <init>() -> <init>
     198:208:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
     245:248:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
@@ -822,29 +1068,126 @@ com.lx.framework.crash.DefaultErrorActivity -> com.lx.framework.crash.DefaultErr
     122:122:int initContentView(android.os.Bundle) -> initContentView
     57:118:void initData() -> initData
     47:53:void initParam() -> initParam
-com.lx.framework.crash.DefaultErrorActivity$1 -> com.lx.framework.crash.DefaultErrorActivity$a:
-    com.lx.framework.crash.DefaultErrorActivity this$0 -> b
-    com.lx.framework.crash.CaocConfig val$config -> a
+com.lx.framework.crash.DefaultErrorActivity$1 -> com.lx.framework.crash.DefaultErrorActivity$1:
     68:68:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
     71:72:void onClick(android.view.View) -> onClick
-com.lx.framework.crash.DefaultErrorActivity$2 -> com.lx.framework.crash.DefaultErrorActivity$b:
-    com.lx.framework.crash.DefaultErrorActivity this$0 -> b
-    com.lx.framework.crash.CaocConfig val$config -> a
+com.lx.framework.crash.DefaultErrorActivity$2 -> com.lx.framework.crash.DefaultErrorActivity$2:
     75:75:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
     78:79:void onClick(android.view.View) -> onClick
-com.lx.framework.crash.DefaultErrorActivity$3 -> com.lx.framework.crash.DefaultErrorActivity$c:
-    com.lx.framework.crash.DefaultErrorActivity this$0 -> a
+com.lx.framework.crash.DefaultErrorActivity$3 -> com.lx.framework.crash.DefaultErrorActivity$3:
     86:86:void <init>(com.lx.framework.crash.DefaultErrorActivity) -> <init>
     91:106:void onClick(android.view.View) -> onClick
-com.lx.framework.crash.DefaultErrorActivity$3$1 -> com.lx.framework.crash.DefaultErrorActivity$c$a:
-    com.lx.framework.crash.DefaultErrorActivity$3 this$1 -> a
+com.lx.framework.crash.DefaultErrorActivity$3$1 -> com.lx.framework.crash.DefaultErrorActivity$3$1:
     96:96:void <init>(com.lx.framework.crash.DefaultErrorActivity$3) -> <init>
     99:101:void onClick(android.content.DialogInterface,int) -> onClick
-com.lx.framework.http.ExceptionHandle -> com.lx.framework.http.a:
+com.lx.framework.databinding.ActivityContainerBinding -> com.lx.framework.databinding.ActivityContainerBinding:
+    27:29:void <init>(java.lang.Object,android.view.View,int,android.widget.FrameLayout) -> <init>
+    78:78:com.lx.framework.databinding.ActivityContainerBinding bind(android.view.View) -> bind
+    90:90:com.lx.framework.databinding.ActivityContainerBinding bind(android.view.View,java.lang.Object) -> bind
+    35:35:com.lx.framework.base.BaseViewModel getViewModel() -> getViewModel
+    41:41:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean) -> inflate
+    55:55:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object) -> inflate
+    60:60:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater) -> inflate
+    74:74:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater,java.lang.Object) -> inflate
+com.lx.framework.databinding.ActivityContainerBindingImpl -> com.lx.framework.databinding.ActivityContainerBindingImpl:
+    15:17:void <clinit>() -> <clinit>
+    25:26:void <init>(androidx.databinding.DataBindingComponent,android.view.View) -> <init>
+    28:90:void <init>(androidx.databinding.DataBindingComponent,android.view.View,java.lang.Object[]) -> <init>
+    80:86:void executeBindings() -> executeBindings
+    47:52:boolean hasPendingBindings() -> hasPendingBindings
+    39:43:void invalidateAll() -> invalidateAll
+    73:75:boolean onFieldChange(int,java.lang.Object,int) -> onFieldChange
+    57:64:boolean setVariable(int,java.lang.Object) -> setVariable
+    68:69:void setViewModel(com.lx.framework.base.BaseViewModel) -> setViewModel
+com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding -> com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding:
+    36:40:void <init>(java.lang.Object,android.view.View,int,android.widget.ImageView,android.widget.Button,android.widget.Button) -> <init>
+    91:91:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding bind(android.view.View) -> bind
+    104:104:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding bind(android.view.View,java.lang.Object) -> bind
+    46:46:com.lx.framework.base.BaseViewModel getViewModel() -> getViewModel
+    52:52:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean) -> inflate
+    67:67:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object) -> inflate
+    73:73:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater) -> inflate
+    87:87:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater,java.lang.Object) -> inflate
+com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBindingImpl -> com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBindingImpl:
+    15:20:void <clinit>() -> <clinit>
+    30:31:void <init>(androidx.databinding.DataBindingComponent,android.view.View) -> <init>
+    33:98:void <init>(androidx.databinding.DataBindingComponent,android.view.View,java.lang.Object[]) -> <init>
+    88:94:void executeBindings() -> executeBindings
+    55:60:boolean hasPendingBindings() -> hasPendingBindings
+    47:51:void invalidateAll() -> invalidateAll
+    81:83:boolean onFieldChange(int,java.lang.Object,int) -> onFieldChange
+    65:72:boolean setVariable(int,java.lang.Object) -> setVariable
+    76:77:void setViewModel(com.lx.framework.base.BaseViewModel) -> setViewModel
+com.lx.framework.http.ApiDisposableObserver -> com.lx.framework.http.ApiDisposableObserver:
+    14:14:void <init>() -> <init>
+    20:20:void onComplete() -> onComplete
+    24:33:void onError(java.lang.Throwable) -> onError
+    49:50:void onNext(java.lang.Object) -> onNext
+    37:45:void onStart() -> onStart
+com.lx.framework.http.DownLoadManager -> com.lx.framework.http.DownLoadManager:
+    30:32:void <init>() -> <init>
+    63:73:void buildNetWork() -> buildNetWork
+    40:43:com.lx.framework.http.DownLoadManager getInstance() -> getInstance
+    48:60:void load(java.lang.String,com.lx.framework.http.download.ProgressCallBack) -> load
+com.lx.framework.http.DownLoadManager$1 -> com.lx.framework.http.DownLoadManager$1:
+    52:52:void <init>(com.lx.framework.http.DownLoadManager,com.lx.framework.http.download.ProgressCallBack) -> <init>
+    52:52:void accept(java.lang.Object) -> accept
+    55:56:void accept(okhttp3.ResponseBody) -> accept
+com.lx.framework.http.ExceptionHandle -> com.lx.framework.http.ExceptionHandle:
     19:19:void <init>() -> <init>
     30:86:com.lx.framework.http.ResponseThrowable handleException(java.lang.Throwable) -> handleException
+com.lx.framework.http.ExceptionHandle$ERROR -> com.lx.framework.http.ExceptionHandle$ERROR:
+    94:94:void <init>(com.lx.framework.http.ExceptionHandle) -> <init>
+com.lx.framework.http.NetworkUtil -> com.lx.framework.http.NetworkUtil:
+    18:23:void <clinit>() -> <clinit>
+    17:17:void <init>() -> <init>
+    98:113:boolean connectionNetwork() -> connectionNetwork
+    47:61:java.lang.String getLocalIpAddress() -> getLocalIpAddress
+    72:90:int getNetState(android.content.Context) -> getNetState
+    154:163:boolean is2G(android.content.Context) -> is2G
+    122:129:boolean is3G(android.content.Context) -> is3G
+    32:39:boolean isNetworkAvailable(android.content.Context) -> isNetworkAvailable
+    138:145:boolean isWifi(android.content.Context) -> isWifi
+    170:176:boolean isWifiEnabled(android.content.Context) -> isWifiEnabled
 com.lx.framework.http.ResponseThrowable -> com.lx.framework.http.ResponseThrowable:
     12:14:void <init>(java.lang.Throwable,int) -> <init>
+com.lx.framework.http.cookie.CookieJarImpl -> com.lx.framework.http.cookie.CookieJarImpl:
+    18:23:void <init>(com.lx.framework.http.cookie.store.CookieStore) -> <init>
+    36:36:com.lx.framework.http.cookie.store.CookieStore getCookieStore() -> getCookieStore
+    32:32:java.util.List loadForRequest(okhttp3.HttpUrl) -> loadForRequest
+    27:28:void saveFromResponse(okhttp3.HttpUrl,java.util.List) -> saveFromResponse
+com.lx.framework.http.cookie.store.MemoryCookieStore -> com.lx.framework.http.cookie.store.MemoryCookieStore:
+    14:16:void <init>() -> <init>
+    58:63:java.util.List getAllCookie() -> getAllCookie
+    68:71:java.util.List getCookie(okhttp3.HttpUrl) -> getCookie
+    48:53:java.util.List loadCookie(okhttp3.HttpUrl) -> loadCookie
+    87:88:boolean removeAllCookie() -> removeAllCookie
+    76:77:boolean removeCookie(okhttp3.HttpUrl,okhttp3.Cookie) -> removeCookie
+    82:82:boolean removeCookie(okhttp3.HttpUrl) -> removeCookie
+    20:31:void saveCookie(okhttp3.HttpUrl,java.util.List) -> saveCookie
+    35:44:void saveCookie(okhttp3.HttpUrl,okhttp3.Cookie) -> saveCookie
+com.lx.framework.http.cookie.store.PersistentCookieStore -> com.lx.framework.http.cookie.store.PersistentCookieStore:
+    37:60:void <init>(android.content.Context) -> <init>
+    245:253:java.lang.String byteArrayToHexString(byte[]) -> byteArrayToHexString
+    224:235:okhttp3.Cookie decodeCookie(java.lang.String) -> decodeCookie
+    205:214:java.lang.String encodeCookie(com.lx.framework.http.cookie.store.SerializableHttpCookie) -> encodeCookie
+    184:187:java.util.List getAllCookie() -> getAllCookie
+    192:195:java.util.List getCookie(okhttp3.HttpUrl) -> getCookie
+    63:63:java.lang.String getCookieToken(okhttp3.Cookie) -> getCookieToken
+    263:268:byte[] hexStringToByteArray(java.lang.String) -> hexStringToByteArray
+    68:68:boolean isCookieExpired(okhttp3.Cookie) -> isCookieExpired
+    74:85:java.util.List loadCookie(okhttp3.HttpUrl) -> loadCookie
+    175:178:boolean removeAllCookie() -> removeAllCookie
+    136:149:boolean removeCookie(okhttp3.HttpUrl,okhttp3.Cookie) -> removeCookie
+    155:169:boolean removeCookie(okhttp3.HttpUrl) -> removeCookie
+    91:102:void saveCookie(okhttp3.HttpUrl,java.util.List) -> saveCookie
+    106:115:void saveCookie(okhttp3.HttpUrl,okhttp3.Cookie) -> saveCookie
+    125:131:void saveCookie(okhttp3.HttpUrl,okhttp3.Cookie,java.lang.String) -> saveCookie
+com.lx.framework.http.cookie.store.SerializableHttpCookie -> com.lx.framework.http.cookie.store.SerializableHttpCookie:
+    16:18:void <init>(okhttp3.Cookie) -> <init>
+    21:25:okhttp3.Cookie getCookie() -> getCookie
+    41:59:void readObject(java.io.ObjectInputStream) -> readObject
+    29:38:void writeObject(java.io.ObjectOutputStream) -> writeObject
 com.lx.framework.http.download.DownLoadStateBean -> com.lx.framework.http.download.DownLoadStateBean:
     70:70:void <clinit>() -> <clinit>
     17:20:void <init>(long,long) -> <init>
@@ -858,43 +1201,173 @@ com.lx.framework.http.download.DownLoadStateBean -> com.lx.framework.http.downlo
     49:50:void setTag(java.lang.String) -> setTag
     33:34:void setTotal(long) -> setTotal
     59:62:void writeToParcel(android.os.Parcel,int) -> writeToParcel
-com.lx.framework.http.download.DownLoadStateBean$1 -> com.lx.framework.http.download.DownLoadStateBean$a:
+com.lx.framework.http.download.DownLoadStateBean$1 -> com.lx.framework.http.download.DownLoadStateBean$1:
     70:70:void <init>() -> <init>
     70:70:java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
     73:73:com.lx.framework.http.download.DownLoadStateBean createFromParcel(android.os.Parcel) -> createFromParcel
     70:70:java.lang.Object[] newArray(int) -> newArray
     78:78:com.lx.framework.http.download.DownLoadStateBean[] newArray(int) -> newArray
-com.lx.framework.permission.IPermission -> h:
-com.lx.framework.permission.RxPermission -> i:
+com.lx.framework.http.download.DownLoadSubscriber -> com.lx.framework.http.download.DownLoadSubscriber:
+    13:15:void <init>(com.lx.framework.http.download.ProgressCallBack) -> <init>
+    26:28:void onComplete() -> onComplete
+    32:34:void onError(java.lang.Throwable) -> onError
+    38:40:void onNext(java.lang.Object) -> onNext
+    19:22:void onStart() -> onStart
+com.lx.framework.http.download.ProgressCallBack -> com.lx.framework.http.download.ProgressCallBack:
+    28:32:void <init>(java.lang.String,java.lang.String) -> <init>
+    42:42:void onCompleted() -> onCompleted
+    39:39:void onStart() -> onStart
+    47:77:void saveFile(okhttp3.ResponseBody) -> saveFile
+    83:93:void subscribeLoadProgress() -> subscribeLoadProgress
+    99:100:void unsubscribe() -> unsubscribe
+com.lx.framework.http.download.ProgressCallBack$1 -> com.lx.framework.http.download.ProgressCallBack$1:
+    85:85:void <init>(com.lx.framework.http.download.ProgressCallBack) -> <init>
+    85:85:void accept(java.lang.Object) -> accept
+    88:89:void accept(com.lx.framework.http.download.DownLoadStateBean) -> accept
+com.lx.framework.http.download.ProgressResponseBody -> com.lx.framework.http.download.ProgressResponseBody:
+    24:26:void <init>(okhttp3.ResponseBody) -> <init>
+    28:31:void <init>(okhttp3.ResponseBody,java.lang.String) -> <init>
+    18:18:java.lang.String access$000(com.lx.framework.http.download.ProgressResponseBody) -> access$000
+    40:40:long contentLength() -> contentLength
+    35:35:okhttp3.MediaType contentType() -> contentType
+    45:48:okio.BufferedSource source() -> source
+    52:52:okio.Source source(okio.Source) -> source
+com.lx.framework.http.download.ProgressResponseBody$1 -> com.lx.framework.http.download.ProgressResponseBody$1:
+    52:53:void <init>(com.lx.framework.http.download.ProgressResponseBody,okio.Source) -> <init>
+    57:61:long read(okio.Buffer,long) -> read
+com.lx.framework.http.interceptor.BaseInterceptor -> com.lx.framework.http.interceptor.BaseInterceptor:
+    20:22:void <init>(java.util.Map) -> <init>
+    26:61:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.http.interceptor.CacheInterceptor -> com.lx.framework.http.interceptor.CacheInterceptor:
+    21:23:void <init>(android.content.Context) -> <init>
+    27:49:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.http.interceptor.ProgressInterceptor -> com.lx.framework.http.interceptor.ProgressInterceptor:
+    13:13:void <init>() -> <init>
+    17:20:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.http.interceptor.logging.I -> com.lx.framework.http.interceptor.logging.I:
+    13:14:void <init>() -> <init>
+    18:27:void log(int,java.lang.String,java.lang.String) -> log
+com.lx.framework.http.interceptor.logging.Level -> com.lx.framework.http.interceptor.logging.Level:
+    7:39:void <clinit>() -> <clinit>
+    7:7:void <init>(java.lang.String,int) -> <init>
+    7:7:com.lx.framework.http.interceptor.logging.Level valueOf(java.lang.String) -> valueOf
+    7:7:com.lx.framework.http.interceptor.logging.Level[] values() -> values
+com.lx.framework.http.interceptor.logging.Logger -> com.lx.framework.http.interceptor.logging.Logger:
+    12:12:void <clinit>() -> <clinit>
+com.lx.framework.http.interceptor.logging.Logger$1 -> com.lx.framework.http.interceptor.logging.Logger$1:
+    12:12:void <init>() -> <init>
+    15:16:void log(int,java.lang.String,java.lang.String) -> log
+com.lx.framework.http.interceptor.logging.LoggingInterceptor -> com.lx.framework.http.interceptor.logging.LoggingInterceptor:
+    24:24:void <init>(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder,com.lx.framework.http.interceptor.logging.LoggingInterceptor$1) -> <init>
+    29:32:void <init>(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder) -> <init>
+    36:104:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder -> com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder:
+    110:110:void <clinit>() -> <clinit>
+    112:121:void <init>() -> <init>
+    108:108:boolean access$000(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder) -> access$000
+    154:155:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder addHeader(java.lang.String,java.lang.String) -> addHeader
+    231:231:com.lx.framework.http.interceptor.logging.LoggingInterceptor build() -> build
+    132:132:okhttp3.Headers getHeaders() -> getHeaders
+    128:128:com.lx.framework.http.interceptor.logging.Level getLevel() -> getLevel
+    144:144:com.lx.framework.http.interceptor.logging.Logger getLogger() -> getLogger
+    136:139:java.lang.String getTag(boolean) -> getTag
+    124:124:int getType() -> getType
+    216:217:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder log(int) -> log
+    206:207:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder loggable(boolean) -> loggable
+    226:227:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder logger(com.lx.framework.http.interceptor.logging.Logger) -> logger
+    186:187:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder request(java.lang.String) -> request
+    197:198:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder response(java.lang.String) -> response
+    164:165:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder setLevel(com.lx.framework.http.interceptor.logging.Level) -> setLevel
+    175:176:com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder tag(java.lang.String) -> tag
+com.lx.framework.http.interceptor.logging.Printer -> com.lx.framework.http.interceptor.logging.Printer:
+    24:28:void <clinit>() -> <clinit>
+    46:47:void <init>() -> <init>
+    203:210:java.lang.String bodyToString(okhttp3.Request) -> bodyToString
+    162:181:java.lang.String dotHeaders(java.lang.String) -> dotHeaders
+    217:229:java.lang.String getJsonString(java.lang.String) -> getJsonString
+    134:138:java.lang.String[] getRequest(okhttp3.Request,com.lx.framework.http.interceptor.logging.Level) -> getRequest
+    144:150:java.lang.String[] getResponse(java.lang.String,long,int,boolean,com.lx.framework.http.interceptor.logging.Level,java.util.List) -> getResponse
+    51:51:boolean isEmpty(java.lang.String) -> isEmpty
+    185:199:void logLines(int,java.lang.String,java.lang.String[],com.lx.framework.http.interceptor.logging.Logger,boolean) -> logLines
+    96:117:void printFileRequest(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder,okhttp3.Request) -> printFileRequest
+    121:130:void printFileResponse(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder,long,boolean,int,java.lang.String,java.util.List) -> printFileResponse
+    55:77:void printJsonRequest(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder,okhttp3.Request) -> printJsonRequest
+    81:93:void printJsonResponse(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder,long,boolean,int,java.lang.String,java.lang.String,java.util.List) -> printJsonResponse
+    154:158:java.lang.String slashSegments(java.util.List) -> slashSegments
+com.lx.framework.net.HttpsUtils -> com.lx.framework.net.HttpsUtils:
+    131:147:void <clinit>() -> <clinit>
+    25:25:void <init>() -> <init>
+    122:127:javax.net.ssl.X509TrustManager chooseTrustManager(javax.net.ssl.TrustManager[]) -> chooseTrustManager
+    33:33:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory() -> getSslSocketFactory
+    38:38:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(javax.net.ssl.X509TrustManager) -> getSslSocketFactory
+    43:43:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream[]) -> getSslSocketFactory
+    48:48:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream,java.lang.String,java.io.InputStream[]) -> getSslSocketFactory
+    53:53:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream,java.lang.String,javax.net.ssl.X509TrustManager) -> getSslSocketFactory
+    57:77:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactoryBase(javax.net.ssl.X509TrustManager,java.io.InputStream,java.lang.String,java.io.InputStream[]) -> getSslSocketFactoryBase
+    83:92:javax.net.ssl.KeyManager[] prepareKeyManager(java.io.InputStream,java.lang.String) -> prepareKeyManager
+    96:118:javax.net.ssl.TrustManager[] prepareTrustManager(java.io.InputStream[]) -> prepareTrustManager
+com.lx.framework.net.HttpsUtils$1 -> com.lx.framework.net.HttpsUtils$1:
+    131:131:void <init>() -> <init>
+    134:134:void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    138:138:void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+    142:142:java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+com.lx.framework.net.HttpsUtils$2 -> com.lx.framework.net.HttpsUtils$2:
+    147:147:void <init>() -> <init>
+    150:150:boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+com.lx.framework.net.HttpsUtils$SSLParams -> com.lx.framework.net.HttpsUtils$SSLParams:
+    27:27:void <init>() -> <init>
+com.lx.framework.net.MyInterceptor -> com.lx.framework.net.MyInterceptor:
+    16:18:void <init>(java.util.Map) -> <init>
+    22:52:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.net.RetrofitClient -> com.lx.framework.net.RetrofitClient:
+    42:42:void <init>(com.lx.framework.net.RetrofitClient$1) -> <init>
+    64:65:void <init>() -> <init>
+    67:129:void <init>(java.lang.String,java.util.Map) -> <init>
+    42:42:void access$200(com.lx.framework.net.RetrofitClient,okhttp3.RequestBody) -> access$200
+    133:136:java.lang.Object create(java.lang.Class) -> create
+    141:146:java.lang.Object execute(io.reactivex.rxjava3.core.Observable,io.reactivex.rxjava3.core.Observer) -> execute
+    60:60:com.lx.framework.net.RetrofitClient getInstance() -> getInstance
+    56:57:void init(java.lang.String) -> init
+    150:162:void printParams(okhttp3.RequestBody) -> printParams
+com.lx.framework.net.RetrofitClient$1 -> com.lx.framework.net.RetrofitClient$1:
+    93:93:void <init>(com.lx.framework.net.RetrofitClient) -> <init>
+    97:114:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.net.RetrofitClient$SingletonHolder -> com.lx.framework.net.RetrofitClient$SingletonHolder:
+    52:52:void <clinit>() -> <clinit>
+    51:51:void <init>() -> <init>
+    51:51:com.lx.framework.net.RetrofitClient access$100() -> access$100
+com.lx.framework.permission.RxPermission -> com.lx.framework.permission.RxPermission:
     16:16:void <init>() -> <init>
     71:76:boolean hasAlwaysDeniedPermission(androidx.fragment.app.FragmentActivity,java.util.List) -> hasAlwaysDeniedPermission
     19:68:void requestPermission(java.lang.Object,com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
-com.lx.framework.permission.RxPermission$1 -> i$a:
-    com.tbruyelle.rxpermissions3.RxPermissions val$rxPermissions -> b
-    java.lang.Object val$object -> c
-    java.lang.String[] val$permission -> d
-    com.lx.framework.permission.IPermission val$iPermission -> a
+com.lx.framework.permission.RxPermission$1 -> com.lx.framework.permission.RxPermission$1:
     27:27:void <init>(com.lx.framework.permission.IPermission,com.tbruyelle.rxpermissions3.RxPermissions,java.lang.Object,java.lang.String[]) -> <init>
     27:27:void accept(java.lang.Object) -> accept
     30:40:void accept(java.lang.Boolean) -> accept
-com.lx.framework.permission.RxPermission$1$1 -> i$a$a:
-    com.lx.framework.permission.RxPermission$1 this$0 -> a
+com.lx.framework.permission.RxPermission$1$1 -> com.lx.framework.permission.RxPermission$1$1:
     33:33:void <init>(com.lx.framework.permission.RxPermission$1) -> <init>
     33:33:void accept(java.lang.Object) -> accept
     36:37:void accept(java.lang.Boolean) -> accept
-com.lx.framework.permission.RxPermission$2 -> i$b:
-    com.tbruyelle.rxpermissions3.RxPermissions val$rxPermissions -> b
-    java.lang.Object val$object -> c
-    java.lang.String[] val$permission -> d
-    com.lx.framework.permission.IPermission val$iPermission -> a
+com.lx.framework.permission.RxPermission$2 -> com.lx.framework.permission.RxPermission$2:
     49:49:void <init>(com.lx.framework.permission.IPermission,com.tbruyelle.rxpermissions3.RxPermissions,java.lang.Object,java.lang.String[]) -> <init>
     49:49:void accept(java.lang.Object) -> accept
     52:62:void accept(java.lang.Boolean) -> accept
-com.lx.framework.permission.RxPermission$2$1 -> i$b$a:
-    com.lx.framework.permission.RxPermission$2 this$0 -> a
+com.lx.framework.permission.RxPermission$2$1 -> com.lx.framework.permission.RxPermission$2$1:
     55:55:void <init>(com.lx.framework.permission.RxPermission$2) -> <init>
     55:55:void accept(java.lang.Object) -> accept
     58:59:void accept(java.lang.Boolean) -> accept
+com.lx.framework.update.XUpdate -> com.lx.framework.update.XUpdate:
+    18:18:void <init>(com.lx.framework.update.XUpdate$1) -> <init>
+    20:21:void <init>() -> <init>
+    28:28:com.lx.framework.update.XUpdate newInstance() -> newInstance
+    47:81:void update(java.lang.String,java.lang.String,java.lang.String,boolean,int,int,listener.OnBtnClickListener,listener.OnBtnClickListener,com.lx.framework.update.OnUpdateListener) -> update
+com.lx.framework.update.XUpdate$1 -> com.lx.framework.update.XUpdate$1:
+    62:62:void <init>(com.lx.framework.update.XUpdate,java.lang.String,java.lang.String,boolean,com.lx.framework.update.OnUpdateListener) -> <init>
+    65:74:void onInitUpdateUi(android.view.View,model.UpdateConfig,model.UiConfig) -> onInitUpdateUi
+com.lx.framework.update.XUpdate$Inner -> com.lx.framework.update.XUpdate$Inner:
+    24:24:void <clinit>() -> <clinit>
+    23:23:void <init>() -> <init>
+    23:23:com.lx.framework.update.XUpdate access$100() -> access$100
 com.lx.framework.utils.AppInfoUtil -> com.lx.framework.utils.AppInfoUtil:
     10:10:void <init>() -> <init>
     47:73:int compareVersion(java.lang.String,java.lang.String) -> compareVersion
