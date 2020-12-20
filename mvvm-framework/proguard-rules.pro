@@ -26,11 +26,7 @@
 
 #------------------------------------------主项目混淆规则----------------------------------------------
 #实体类不参与混淆
--keep class com.lx.framework.base.AppManager.** { *; }
--keep class com.lx.framework.base.BaseModel.** { *; }
--keep class com.lx.framework.base.BaseViewModel.** { *; }
--keep class com.lx.framework.base.ItemViewModel.** { *; }
--keep class com.lx.framework.base.MultiItemViewModel.** { *; }
+-keep class com.lx.framework.base.** { *; }
 -keep class com.lx.framework.binding.command.** { *; }
 -keep class com.lx.framework.bus.** { *; }
 -keep class com.lx.framework.config.** { *; }
