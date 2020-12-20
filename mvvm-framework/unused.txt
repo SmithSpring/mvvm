@@ -1,3 +1,4 @@
+com.lx.framework.net.HttpsUtils$SSLParams
 com.lx.framework.bus.RxBusSubscriber
 com.lx.framework.http.download.ProgressCallBack$1
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$Orientation
@@ -5,22 +6,27 @@ com.lx.framework.binding.viewadapter.spinner.ViewAdapter
 com.lx.framework.http.DownLoadManager$ApiService
 com.lx.framework.binding.viewadapter.image.ViewAdapter
 com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter
+com.lx.framework.net.HttpsUtils$2
 com.lx.framework.binding.viewadapter.scrollview.ViewAdapter
 com.lx.framework.binding.viewadapter.recyclerview.LineManagers
 com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$NestScrollDataWrapper
 com.lx.framework.binding.viewadapter.listview.ViewAdapter$ListViewScrollDataWrapper
-com.lx.framework.BR
 com.lx.framework.bus.event.SnackbarMessage
 com.lx.framework.http.download.ProgressCallBack
+com.lx.framework.databinding.ActivityContainerBindingImpl
+com.lx.framework.net.MyInterceptor
 com.lx.framework.DataBinderMapperImpl$InnerLayoutIdLookup
 com.lx.framework.http.download.DownLoadSubscriber
 com.lx.framework.http.DownLoadManager$1
+com.lx.framework.net.RetrofitClient$1
 com.lx.framework.http.NetworkUtil
+com.lx.framework.databinding.ActivityContainerBinding
 com.lx.framework.http.cookie.store.PersistentCookieStore
 com.lx.framework.update.XUpdate$Inner
 com.lx.framework.base.ItemViewModel
 com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener
 com.lx.framework.http.ExceptionHandle$ERROR
+com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding
 com.lx.framework.bus.RxBus
 com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$ScrollDataWrapper
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory
@@ -33,6 +39,7 @@ com.lx.framework.binding.viewadapter.mswitch.ViewAdapter$1
 com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener$1
 com.lx.framework.binding.viewadapter.recyclerview.LineManagers$LineManagerFactory
 com.lx.framework.binding.viewadapter.listview.ViewAdapter
+com.lx.framework.net.HttpsUtils
 com.lx.framework.binding.viewadapter.viewgroup.ViewAdapter
 androidx.databinding.DataBindingComponent
 com.lx.framework.binding.viewadapter.mswitch.ViewAdapter
@@ -41,6 +48,7 @@ com.lx.framework.bus.RxBus$1
 com.lx.framework.http.cookie.store.CookieStore
 com.lx.framework.http.interceptor.logging.Logger
 androidx.databinding.library.baseAdapters.BR
+com.lx.framework.net.RetrofitClient
 me.tatarka.bindingcollectionadapter2.recyclerview.BR
 com.lx.framework.crash.CustomActivityOnCrash:
     private static final java.lang.String TAG
@@ -78,6 +86,7 @@ com.lx.framework.http.interceptor.logging.LoggingInterceptor$1
 com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$1
 com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter$2
 com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$1
+com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBindingImpl
 com.lx.framework.binding.viewadapter.viewpager.ViewAdapter
 com.lx.framework.binding.command.BindingFunction
 com.lx.framework.DataBinderMapperImpl$InnerBrLookup
@@ -91,10 +100,6 @@ com.lx.framework.bus.WeakAction:
     private boolean isLive
     private java.lang.Object target
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2
-com.lx.framework.base.ContainerActivity:
-    private static final java.lang.String FRAGMENT_TAG
-    public static final java.lang.String FRAGMENT
-    public static final java.lang.String BUNDLE
 com.lx.framework.binding.viewadapter.recyclerview.LineManagers$3
 com.lx.framework.binding.viewadapter.swiperefresh.ViewAdapter
 com.lx.framework.http.download.ProgressResponseBody
@@ -113,6 +118,7 @@ com.lx.framework.http.cookie.CookieJarImpl
 com.lx.framework.update.XUpdate$1
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$3
 com.lx.framework.binding.viewadapter.recyclerview.LineManagers$2
+com.lx.framework.net.RetrofitClient$SingletonHolder
 com.lx.framework.binding.viewadapter.recyclerview.DividerLine$1
 com.lx.framework.binding.viewadapter.spinner.ViewAdapter$1
 com.lx.framework.http.interceptor.logging.I
@@ -148,9 +154,12 @@ com.lx.framework.base.IBaseViewModel:
     public abstract void removeRxBus()
 com.lx.framework.binding.viewadapter.scrollview.ViewAdapter$1
 com.lx.framework.binding.viewadapter.view.ViewAdapter$1
+com.lx.framework.net.HttpsUtils$1
 com.lx.framework.DataBinderMapperImpl
 com.lx.framework.BuildConfig
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$5
+com.lx.framework.BR:
+    public static int _all
 com.lx.framework.base.BaseViewModel$UIChangeLiveData:
     final synthetic com.lx.framework.base.BaseViewModel this$0
 com.lx.framework.bus.Messenger$WeakActionAndToken:

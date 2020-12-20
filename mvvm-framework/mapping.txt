@@ -1,6 +1,6 @@
 # compiler: R8
 # compiler_version: 2.0.99
-# pg_map_id: 9b423f0
+# pg_map_id: a783e4b
 # common_typos_disable
 com.bumptech.glide.GeneratedAppGlideModuleImpl -> com.bumptech.glide.GeneratedAppGlideModuleImpl:
     17:22:void <init>() -> <init>
@@ -13,6 +13,10 @@ com.bumptech.glide.GeneratedAppGlideModuleImpl -> com.bumptech.glide.GeneratedAp
 com.bumptech.glide.GeneratedRequestManagerFactory -> com.bumptech.glide.GeneratedRequestManagerFactory:
     14:14:void <init>() -> <init>
     19:19:com.bumptech.glide.RequestManager build(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context) -> build
+com.lx.framework.BR -> com.lx.framework.a:
+    int viewModel -> a
+    4:6:void <clinit>() -> <clinit>
+    3:3:void <init>() -> <init>
 com.lx.framework.base.AppManager -> com.lx.framework.base.a:
     java.util.Stack fragmentStack -> b
     java.util.Stack activityStack -> a
@@ -36,71 +40,72 @@ com.lx.framework.base.AppManager -> com.lx.framework.base.a:
     57:60:void removeActivity(android.app.Activity) -> removeActivity
     154:157:void removeFragment(androidx.fragment.app.Fragment) -> removeFragment
 com.lx.framework.base.BaseActivity -> com.lx.framework.base.BaseActivity:
-    com.mumu.dialog.MMLoading mmLoading -> e
-    com.gyf.immersionbar.ImmersionBar mImmersionBar -> d
-    androidx.databinding.ViewDataBinding binding -> a
-    int viewModelId -> c
-    com.lx.framework.base.BaseViewModel viewModel -> b
-    36:36:void <init>() -> <init>
-    111:114:void initOrientation() -> a
-    177:230:void registorUIChangeLiveDataCallBack() -> b
-    356:356:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
-    255:258:void dismissDialog() -> dismissDialog
-    81:81:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
-    341:341:void initData() -> initData
-    313:313:void initParam() -> initParam
-    63:68:void initStatusBar() -> initStatusBar
-    139:161:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
-    335:335:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
-    346:346:void initViewObservable() -> initViewObservable
-    74:74:boolean isStatusBarEnabled() -> isStatusBarEnabled
-    46:60:void onCreate(android.os.Bundle) -> onCreate
-    123:132:void onDestroy() -> onDestroy
-    119:119:void onGlobalLayout() -> onGlobalLayout
-    165:168:void refreshLayout() -> refreshLayout
-    233:234:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
-    237:252:void showDialog(java.lang.String) -> showDialog
-    266:267:void startActivity(java.lang.Class) -> startActivity
-    276:281:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
-    289:290:void startContainerActivity(java.lang.String) -> startContainerActivity
-    299:305:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
-    89:95:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
-    103:103:boolean statusBarDarkFont() -> statusBarDarkFont
+    42:42:void <init>() -> <init>
+    379:379:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
+    276:279:void dismissDialog() -> dismissDialog
+    90:90:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
+    364:364:void initData() -> initData
+    129:132:void initOrientation() -> initOrientation
+    334:334:void initParam() -> initParam
+    72:77:void initStatusBar() -> initStatusBar
+    349:349:int initVariableId() -> initVariableId
+    160:182:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
+    358:358:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
+    369:369:void initViewObservable() -> initViewObservable
+    113:113:boolean isRegisterEventBus() -> isRegisterEventBus
+    83:83:boolean isStatusBarEnabled() -> isStatusBarEnabled
+    52:69:void onCreate(android.os.Bundle) -> onCreate
+    141:153:void onDestroy() -> onDestroy
+    384:387:void onEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onEventBusCome
+    137:137:void onGlobalLayout() -> onGlobalLayout
+    391:394:void onStickyEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onStickyEventBusCome
+    403:403:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveEvent
+    412:412:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveStickyEvent
+    186:189:void refreshLayout() -> refreshLayout
+    198:251:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
+    254:255:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
+    258:273:void showDialog(java.lang.String) -> showDialog
+    287:288:void startActivity(java.lang.Class) -> startActivity
+    297:302:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
+    310:311:void startContainerActivity(java.lang.String) -> startContainerActivity
+    320:326:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
+    98:104:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
+    121:121:boolean statusBarDarkFont() -> statusBarDarkFont
 com.lx.framework.base.BaseActivity$1 -> com.lx.framework.base.BaseActivity$a:
     com.lx.framework.base.BaseActivity this$0 -> a
-    177:177:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    177:177:void onChanged(java.lang.Object) -> onChanged
-    180:181:void onChanged(java.lang.String) -> onChanged
+    198:198:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    198:198:void onChanged(java.lang.Object) -> onChanged
+    201:202:void onChanged(java.lang.String) -> onChanged
 com.lx.framework.base.BaseActivity$2 -> com.lx.framework.base.BaseActivity$b:
     com.lx.framework.base.BaseActivity this$0 -> a
-    184:184:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    184:184:void onChanged(java.lang.Object) -> onChanged
-    187:188:void onChanged(java.lang.Void) -> onChanged
+    205:205:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    205:205:void onChanged(java.lang.Object) -> onChanged
+    208:209:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseActivity$3 -> com.lx.framework.base.BaseActivity$c:
     com.lx.framework.base.BaseActivity this$0 -> a
-    191:191:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    191:191:void onChanged(java.lang.Object) -> onChanged
-    194:197:void onChanged(java.util.Map) -> onChanged
+    212:212:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    212:212:void onChanged(java.lang.Object) -> onChanged
+    215:218:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseActivity$4 -> com.lx.framework.base.BaseActivity$d:
     com.lx.framework.base.BaseActivity this$0 -> a
-    199:199:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    199:199:void onChanged(java.lang.Object) -> onChanged
-    202:205:void onChanged(java.util.Map) -> onChanged
+    220:220:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    220:220:void onChanged(java.lang.Object) -> onChanged
+    223:226:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseActivity$5 -> com.lx.framework.base.BaseActivity$e:
     com.lx.framework.base.BaseActivity this$0 -> a
-    208:208:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    208:208:void onChanged(java.lang.Object) -> onChanged
-    211:214:void onChanged(java.util.Map) -> onChanged
+    229:229:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    229:229:void onChanged(java.lang.Object) -> onChanged
+    232:235:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseActivity$6 -> com.lx.framework.base.BaseActivity$f:
     com.lx.framework.base.BaseActivity this$0 -> a
-    217:217:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    217:217:void onChanged(java.lang.Object) -> onChanged
-    220:221:void onChanged(java.lang.Void) -> onChanged
+    238:238:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    238:238:void onChanged(java.lang.Object) -> onChanged
+    241:242:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseActivity$7 -> com.lx.framework.base.BaseActivity$g:
     com.lx.framework.base.BaseActivity this$0 -> a
-    224:224:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    224:224:void onChanged(java.lang.Object) -> onChanged
-    227:228:void onChanged(java.lang.Void) -> onChanged
+    245:245:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    245:245:void onChanged(java.lang.Object) -> onChanged
+    248:249:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseApplication -> com.lx.framework.base.BaseApplication:
     android.app.Application sInstance -> a
     16:16:void <init>() -> <init>
@@ -121,63 +126,136 @@ com.lx.framework.base.BaseFragment -> com.lx.framework.base.b:
     androidx.databinding.ViewDataBinding binding -> a
     int viewModelId -> c
     com.lx.framework.base.BaseViewModel viewModel -> b
-    31:31:void <init>() -> <init>
-    116:169:void registorUIChangeLiveDataCallBack() -> a
-    307:307:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.Fragment,java.lang.Class) -> createViewModel
-    190:193:void dismissDialog() -> dismissDialog
-    288:288:void initData() -> initData
-    260:260:void initParam() -> initParam
-    88:108:void initViewDataBinding() -> initViewDataBinding
-    282:282:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
-    293:293:void initViewObservable() -> initViewObservable
-    296:296:boolean isBackPressed() -> isBackPressed
-    40:42:void onCreate(android.os.Bundle) -> onCreate
-    52:53:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
-    46:47:void onDestroy() -> onDestroy
-    58:67:void onDestroyView() -> onDestroyView
-    71:82:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    252:255:void refreshLayout() -> refreshLayout
-    196:197:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
-    172:187:void showDialog(java.lang.String) -> showDialog
-    205:206:void startActivity(java.lang.Class) -> startActivity
-    215:220:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
-    228:229:void startContainerActivity(java.lang.String) -> startContainerActivity
-    238:244:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
+    32:32:void <init>() -> <init>
+    117:170:void registorUIChangeLiveDataCallBack() -> a
+    310:310:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.Fragment,java.lang.Class) -> createViewModel
+    191:194:void dismissDialog() -> dismissDialog
+    291:291:void initData() -> initData
+    261:261:void initParam() -> initParam
+    269:269:int initVariableId() -> initVariableId
+    89:109:void initViewDataBinding() -> initViewDataBinding
+    285:285:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
+    296:296:void initViewObservable() -> initViewObservable
+    299:299:boolean isBackPressed() -> isBackPressed
+    41:43:void onCreate(android.os.Bundle) -> onCreate
+    53:54:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    47:48:void onDestroy() -> onDestroy
+    59:68:void onDestroyView() -> onDestroyView
+    72:83:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
+    253:256:void refreshLayout() -> refreshLayout
+    197:198:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
+    173:188:void showDialog(java.lang.String) -> showDialog
+    206:207:void startActivity(java.lang.Class) -> startActivity
+    216:221:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
+    229:230:void startContainerActivity(java.lang.String) -> startContainerActivity
+    239:245:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
 com.lx.framework.base.BaseFragment$1 -> com.lx.framework.base.b$a:
     com.lx.framework.base.BaseFragment this$0 -> a
-    116:116:void <init>(com.lx.framework.base.BaseFragment) -> <init>
-    116:116:void onChanged(java.lang.Object) -> onChanged
-    119:120:void onChanged(java.lang.String) -> onChanged
+    117:117:void <init>(com.lx.framework.base.BaseFragment) -> <init>
+    117:117:void onChanged(java.lang.Object) -> onChanged
+    120:121:void onChanged(java.lang.String) -> onChanged
 com.lx.framework.base.BaseFragment$2 -> com.lx.framework.base.b$b:
     com.lx.framework.base.BaseFragment this$0 -> a
-    123:123:void <init>(com.lx.framework.base.BaseFragment) -> <init>
-    123:123:void onChanged(java.lang.Object) -> onChanged
-    126:127:void onChanged(java.lang.Void) -> onChanged
+    124:124:void <init>(com.lx.framework.base.BaseFragment) -> <init>
+    124:124:void onChanged(java.lang.Object) -> onChanged
+    127:128:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseFragment$3 -> com.lx.framework.base.b$c:
     com.lx.framework.base.BaseFragment this$0 -> a
-    129:129:void <init>(com.lx.framework.base.BaseFragment) -> <init>
-    129:129:void onChanged(java.lang.Object) -> onChanged
-    132:135:void onChanged(java.util.Map) -> onChanged
+    130:130:void <init>(com.lx.framework.base.BaseFragment) -> <init>
+    130:130:void onChanged(java.lang.Object) -> onChanged
+    133:136:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseFragment$4 -> com.lx.framework.base.b$d:
     com.lx.framework.base.BaseFragment this$0 -> a
-    138:138:void <init>(com.lx.framework.base.BaseFragment) -> <init>
-    138:138:void onChanged(java.lang.Object) -> onChanged
-    141:144:void onChanged(java.util.Map) -> onChanged
+    139:139:void <init>(com.lx.framework.base.BaseFragment) -> <init>
+    139:139:void onChanged(java.lang.Object) -> onChanged
+    142:145:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseFragment$5 -> com.lx.framework.base.b$e:
     com.lx.framework.base.BaseFragment this$0 -> a
-    147:147:void <init>(com.lx.framework.base.BaseFragment) -> <init>
-    147:147:void onChanged(java.lang.Object) -> onChanged
-    150:153:void onChanged(java.util.Map) -> onChanged
+    148:148:void <init>(com.lx.framework.base.BaseFragment) -> <init>
+    148:148:void onChanged(java.lang.Object) -> onChanged
+    151:154:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseFragment$6 -> com.lx.framework.base.b$f:
     com.lx.framework.base.BaseFragment this$0 -> a
-    156:156:void <init>(com.lx.framework.base.BaseFragment) -> <init>
-    156:156:void onChanged(java.lang.Object) -> onChanged
-    159:160:void onChanged(java.lang.Void) -> onChanged
+    157:157:void <init>(com.lx.framework.base.BaseFragment) -> <init>
+    157:157:void onChanged(java.lang.Object) -> onChanged
+    160:161:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseFragment$7 -> com.lx.framework.base.b$g:
     com.lx.framework.base.BaseFragment this$0 -> a
-    163:163:void <init>(com.lx.framework.base.BaseFragment) -> <init>
-    163:163:void onChanged(java.lang.Object) -> onChanged
-    166:167:void onChanged(java.lang.Void) -> onChanged
+    164:164:void <init>(com.lx.framework.base.BaseFragment) -> <init>
+    164:164:void onChanged(java.lang.Object) -> onChanged
+    167:168:void onChanged(java.lang.Void) -> onChanged
+com.lx.framework.base.BaseFragmentActivity -> com.lx.framework.base.BaseFragmentActivity:
+    com.mumu.dialog.MMLoading mmLoading -> f
+    int viewModelId -> d
+    com.gyf.immersionbar.ImmersionBar mImmersionBar -> e
+    androidx.databinding.ViewDataBinding binding -> b
+    com.lx.framework.base.BaseViewModel viewModel -> c
+    40:40:void <init>() -> <init>
+    118:121:void initOrientation() -> a
+    401:401:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> a
+    150:150:boolean isRegisterEventBus() -> b
+    410:410:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> b
+    196:249:void registorUIChangeLiveDataCallBack() -> c
+    377:377:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
+    274:277:void dismissDialog() -> dismissDialog
+    88:88:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
+    362:362:void initData() -> initData
+    332:332:void initParam() -> initParam
+    70:75:void initStatusBar() -> initStatusBar
+    347:347:int initVariableId() -> initVariableId
+    158:180:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
+    356:356:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
+    367:367:void initViewObservable() -> initViewObservable
+    81:81:boolean isStatusBarEnabled() -> isStatusBarEnabled
+    50:67:void onCreate(android.os.Bundle) -> onCreate
+    130:142:void onDestroy() -> onDestroy
+    382:385:void onEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onEventBusCome
+    126:126:void onGlobalLayout() -> onGlobalLayout
+    389:392:void onStickyEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onStickyEventBusCome
+    184:187:void refreshLayout() -> refreshLayout
+    252:253:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
+    256:271:void showDialog(java.lang.String) -> showDialog
+    285:286:void startActivity(java.lang.Class) -> startActivity
+    295:300:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
+    308:309:void startContainerActivity(java.lang.String) -> startContainerActivity
+    318:324:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
+    96:102:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
+    110:110:boolean statusBarDarkFont() -> statusBarDarkFont
+com.lx.framework.base.BaseFragmentActivity$1 -> com.lx.framework.base.BaseFragmentActivity$a:
+    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+    196:196:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    196:196:void onChanged(java.lang.Object) -> onChanged
+    199:200:void onChanged(java.lang.String) -> onChanged
+com.lx.framework.base.BaseFragmentActivity$2 -> com.lx.framework.base.BaseFragmentActivity$b:
+    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+    203:203:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    203:203:void onChanged(java.lang.Object) -> onChanged
+    206:207:void onChanged(java.lang.Void) -> onChanged
+com.lx.framework.base.BaseFragmentActivity$3 -> com.lx.framework.base.BaseFragmentActivity$c:
+    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+    210:210:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    210:210:void onChanged(java.lang.Object) -> onChanged
+    213:216:void onChanged(java.util.Map) -> onChanged
+com.lx.framework.base.BaseFragmentActivity$4 -> com.lx.framework.base.BaseFragmentActivity$d:
+    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+    218:218:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    218:218:void onChanged(java.lang.Object) -> onChanged
+    221:224:void onChanged(java.util.Map) -> onChanged
+com.lx.framework.base.BaseFragmentActivity$5 -> com.lx.framework.base.BaseFragmentActivity$e:
+    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+    227:227:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    227:227:void onChanged(java.lang.Object) -> onChanged
+    230:233:void onChanged(java.util.Map) -> onChanged
+com.lx.framework.base.BaseFragmentActivity$6 -> com.lx.framework.base.BaseFragmentActivity$f:
+    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+    236:236:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    236:236:void onChanged(java.lang.Object) -> onChanged
+    239:240:void onChanged(java.lang.Void) -> onChanged
+com.lx.framework.base.BaseFragmentActivity$7 -> com.lx.framework.base.BaseFragmentActivity$g:
+    com.lx.framework.base.BaseFragmentActivity this$0 -> a
+    243:243:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    243:243:void onChanged(java.lang.Object) -> onChanged
+    246:247:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseModel -> com.lx.framework.base.c:
     8:9:void <init>() -> <init>
     14:14:void onCleared() -> onCleared
@@ -246,17 +324,32 @@ com.lx.framework.base.BaseViewModel$UIChangeLiveData -> com.lx.framework.base.Ba
     235:235:com.lx.framework.bus.event.SingleLiveEvent getStartContainerActivityEvent() -> getStartContainerActivityEvent
     255:256:void observe(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Observer) -> observe
 com.lx.framework.base.ContainerActivity -> com.lx.framework.base.ContainerActivity:
-    java.lang.ref.WeakReference mFragment -> a
-    22:22:void <init>() -> <init>
-    55:78:androidx.fragment.app.Fragment initFromIntent(android.content.Intent) -> a
-    83:91:void onBackPressed() -> onBackPressed
-    30:46:void onCreate(android.os.Bundle) -> onCreate
-    50:52:void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    21:21:void <init>() -> <init>
+    53:53:int initContentView(android.os.Bundle) -> initContentView
+    63:86:androidx.fragment.app.Fragment initFromIntent(android.content.Intent) -> initFromIntent
+    47:49:void initParam() -> initParam
+    91:99:void onBackPressed() -> onBackPressed
+    29:43:void onCreate(android.os.Bundle) -> onCreate
+    58:60:void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
 com.lx.framework.base.IBaseViewModel -> com.lx.framework.base.d:
 com.lx.framework.base.IBaseViewModel_LifecycleAdapter -> com.lx.framework.base.IBaseViewModel_LifecycleAdapter:
     com.lx.framework.base.IBaseViewModel mReceiver -> a
     12:14:void <init>(com.lx.framework.base.IBaseViewModel) -> <init>
     19:62:void callMethods(androidx.lifecycle.LifecycleOwner,androidx.lifecycle.Lifecycle$Event,boolean,androidx.lifecycle.MethodCallsLogger) -> callMethods
+com.lx.framework.base.RxAppCompatFragmentActivity -> com.lx.framework.base.RxAppCompatFragmentActivity:
+    io.reactivex.rxjava3.subjects.BehaviorSubject lifecycleSubject -> a
+    23:27:void <init>() -> <init>
+    23:32:void <init>(int) -> <init>
+    52:52:com.trello.rxlifecycle4.LifecycleTransformer bindToLifecycle() -> bindToLifecycle
+    21:21:com.trello.rxlifecycle4.LifecycleTransformer bindUntilEvent(java.lang.Object) -> bindUntilEvent
+    45:45:com.trello.rxlifecycle4.LifecycleTransformer bindUntilEvent(com.trello.rxlifecycle4.android.ActivityEvent) -> bindUntilEvent
+    38:38:io.reactivex.rxjava3.core.Observable lifecycle() -> lifecycle
+    58:60:void onCreate(android.os.Bundle) -> onCreate
+    93:95:void onDestroy() -> onDestroy
+    79:81:void onPause() -> onPause
+    72:74:void onResume() -> onResume
+    65:67:void onStart() -> onStart
+    86:88:void onStop() -> onStop
 com.lx.framework.binding.command.BindingAction -> a:
 com.lx.framework.binding.command.BindingConsumer -> b:
 com.lx.framework.bus.Messenger -> c:
@@ -330,6 +423,21 @@ com.lx.framework.bus.event.SingleLiveEvent$1 -> e$a:
     com.lx.framework.bus.event.SingleLiveEvent this$0 -> b
     53:53:void <init>(com.lx.framework.bus.event.SingleLiveEvent,androidx.lifecycle.Observer) -> <init>
     56:59:void onChanged(java.lang.Object) -> onChanged
+com.lx.framework.bus.event.eventbus.EventBusUtil -> f:
+    5:5:void <init>() -> <init>
+    7:8:void register(java.lang.Object) -> register
+    15:16:void sendEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> sendEvent
+    19:20:void sendStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> sendStickyEvent
+    11:12:void unregister(java.lang.Object) -> unregister
+com.lx.framework.bus.event.eventbus.MessageEvent -> g:
+    java.lang.Object data -> b
+    int code -> a
+    7:9:void <init>(int) -> <init>
+    11:14:void <init>(int,java.lang.Object) -> <init>
+    17:17:int getCode() -> getCode
+    25:25:java.lang.Object getData() -> getData
+    21:22:void setCode(int) -> setCode
+    29:30:void setData(java.lang.Object) -> setData
 com.lx.framework.config.GlideOptions -> com.lx.framework.config.a:
     com.lx.framework.config.GlideOptions noAnimation5 -> f
     com.lx.framework.config.GlideOptions noTransformation4 -> e
@@ -708,28 +816,30 @@ com.lx.framework.crash.CustomActivityOnCrash$2 -> com.lx.framework.crash.CustomA
     212:215:void onActivityStarted(android.app.Activity) -> onActivityStarted
     234:236:void onActivityStopped(android.app.Activity) -> onActivityStopped
 com.lx.framework.crash.DefaultErrorActivity -> com.lx.framework.crash.DefaultErrorActivity:
-    40:40:void <init>() -> <init>
-    40:40:void access$000(com.lx.framework.crash.DefaultErrorActivity) -> a
-    120:125:void copyErrorToClipboard() -> copyErrorToClipboard
-    45:117:void onCreate(android.os.Bundle) -> onCreate
+    42:42:void <init>() -> <init>
+    42:42:void access$000(com.lx.framework.crash.DefaultErrorActivity) -> access$000
+    126:131:void copyErrorToClipboard() -> copyErrorToClipboard
+    122:122:int initContentView(android.os.Bundle) -> initContentView
+    57:118:void initData() -> initData
+    47:53:void initParam() -> initParam
 com.lx.framework.crash.DefaultErrorActivity$1 -> com.lx.framework.crash.DefaultErrorActivity$a:
     com.lx.framework.crash.DefaultErrorActivity this$0 -> b
     com.lx.framework.crash.CaocConfig val$config -> a
-    67:67:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
-    70:71:void onClick(android.view.View) -> onClick
+    68:68:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
+    71:72:void onClick(android.view.View) -> onClick
 com.lx.framework.crash.DefaultErrorActivity$2 -> com.lx.framework.crash.DefaultErrorActivity$b:
     com.lx.framework.crash.DefaultErrorActivity this$0 -> b
     com.lx.framework.crash.CaocConfig val$config -> a
-    74:74:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
-    77:78:void onClick(android.view.View) -> onClick
+    75:75:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
+    78:79:void onClick(android.view.View) -> onClick
 com.lx.framework.crash.DefaultErrorActivity$3 -> com.lx.framework.crash.DefaultErrorActivity$c:
     com.lx.framework.crash.DefaultErrorActivity this$0 -> a
-    85:85:void <init>(com.lx.framework.crash.DefaultErrorActivity) -> <init>
-    90:105:void onClick(android.view.View) -> onClick
+    86:86:void <init>(com.lx.framework.crash.DefaultErrorActivity) -> <init>
+    91:106:void onClick(android.view.View) -> onClick
 com.lx.framework.crash.DefaultErrorActivity$3$1 -> com.lx.framework.crash.DefaultErrorActivity$c$a:
     com.lx.framework.crash.DefaultErrorActivity$3 this$1 -> a
-    95:95:void <init>(com.lx.framework.crash.DefaultErrorActivity$3) -> <init>
-    98:100:void onClick(android.content.DialogInterface,int) -> onClick
+    96:96:void <init>(com.lx.framework.crash.DefaultErrorActivity$3) -> <init>
+    99:101:void onClick(android.content.DialogInterface,int) -> onClick
 com.lx.framework.http.ExceptionHandle -> com.lx.framework.http.a:
     19:19:void <init>() -> <init>
     30:86:com.lx.framework.http.ResponseThrowable handleException(java.lang.Throwable) -> handleException
@@ -754,12 +864,12 @@ com.lx.framework.http.download.DownLoadStateBean$1 -> com.lx.framework.http.down
     73:73:com.lx.framework.http.download.DownLoadStateBean createFromParcel(android.os.Parcel) -> createFromParcel
     70:70:java.lang.Object[] newArray(int) -> newArray
     78:78:com.lx.framework.http.download.DownLoadStateBean[] newArray(int) -> newArray
-com.lx.framework.permission.IPermission -> f:
-com.lx.framework.permission.RxPermission -> g:
+com.lx.framework.permission.IPermission -> h:
+com.lx.framework.permission.RxPermission -> i:
     16:16:void <init>() -> <init>
     71:76:boolean hasAlwaysDeniedPermission(androidx.fragment.app.FragmentActivity,java.util.List) -> hasAlwaysDeniedPermission
     19:68:void requestPermission(java.lang.Object,com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
-com.lx.framework.permission.RxPermission$1 -> g$a:
+com.lx.framework.permission.RxPermission$1 -> i$a:
     com.tbruyelle.rxpermissions3.RxPermissions val$rxPermissions -> b
     java.lang.Object val$object -> c
     java.lang.String[] val$permission -> d
@@ -767,12 +877,12 @@ com.lx.framework.permission.RxPermission$1 -> g$a:
     27:27:void <init>(com.lx.framework.permission.IPermission,com.tbruyelle.rxpermissions3.RxPermissions,java.lang.Object,java.lang.String[]) -> <init>
     27:27:void accept(java.lang.Object) -> accept
     30:40:void accept(java.lang.Boolean) -> accept
-com.lx.framework.permission.RxPermission$1$1 -> g$a$a:
+com.lx.framework.permission.RxPermission$1$1 -> i$a$a:
     com.lx.framework.permission.RxPermission$1 this$0 -> a
     33:33:void <init>(com.lx.framework.permission.RxPermission$1) -> <init>
     33:33:void accept(java.lang.Object) -> accept
     36:37:void accept(java.lang.Boolean) -> accept
-com.lx.framework.permission.RxPermission$2 -> g$b:
+com.lx.framework.permission.RxPermission$2 -> i$b:
     com.tbruyelle.rxpermissions3.RxPermissions val$rxPermissions -> b
     java.lang.Object val$object -> c
     java.lang.String[] val$permission -> d
@@ -780,7 +890,7 @@ com.lx.framework.permission.RxPermission$2 -> g$b:
     49:49:void <init>(com.lx.framework.permission.IPermission,com.tbruyelle.rxpermissions3.RxPermissions,java.lang.Object,java.lang.String[]) -> <init>
     49:49:void accept(java.lang.Object) -> accept
     52:62:void accept(java.lang.Boolean) -> accept
-com.lx.framework.permission.RxPermission$2$1 -> g$b$a:
+com.lx.framework.permission.RxPermission$2$1 -> i$b$a:
     com.lx.framework.permission.RxPermission$2 this$0 -> a
     55:55:void <init>(com.lx.framework.permission.RxPermission$2) -> <init>
     55:55:void accept(java.lang.Object) -> accept
@@ -839,6 +949,91 @@ com.lx.framework.utils.DES -> com.lx.framework.utils.DES:
     11:11:void <init>() -> <init>
     30:40:java.lang.String decryptDES(java.lang.String,java.lang.String) -> decryptDES
     17:26:java.lang.String encryptDES(java.lang.String,java.lang.String) -> encryptDES
+com.lx.framework.utils.FileUtils -> com.lx.framework.utils.FileUtils:
+    32:32:void <clinit>() -> <clinit>
+    66:67:void <init>() -> <init>
+    43:47:void copyAssetsDir(android.content.Context,java.lang.String,java.lang.String) -> copyAssetsDir
+    50:64:void copyFile(java.io.InputStream,java.lang.String) -> copyFile
+    256:256:boolean createFileByDeleteOldFile(java.lang.String) -> createFileByDeleteOldFile
+    266:274:boolean createFileByDeleteOldFile(java.io.File) -> createFileByDeleteOldFile
+    208:208:boolean createOrExistsDir(java.lang.String) -> createOrExistsDir
+    218:218:boolean createOrExistsDir(java.io.File) -> createOrExistsDir
+    228:228:boolean createOrExistsFile(java.lang.String) -> createOrExistsFile
+    238:245:boolean createOrExistsFile(java.io.File) -> createOrExistsFile
+    285:285:boolean delete(java.lang.String) -> delete
+    295:299:boolean delete(java.io.File) -> delete
+    344:344:boolean deleteAllInDir(java.lang.String) -> deleteAllInDir
+    354:354:boolean deleteAllInDir(java.io.File) -> deleteAllInDir
+    309:324:boolean deleteDir(java.io.File) -> deleteDir
+    334:334:boolean deleteFile(java.io.File) -> deleteFile
+    369:369:boolean deleteFilesInDir(java.lang.String) -> deleteFilesInDir
+    379:379:boolean deleteFilesInDir(java.io.File) -> deleteFilesInDir
+    396:396:boolean deleteFilesInDirWithFilter(java.lang.String,java.io.FileFilter) -> deleteFilesInDirWithFilter
+    407:424:boolean deleteFilesInDirWithFilter(java.io.File,java.io.FileFilter) -> deleteFilesInDirWithFilter
+    929:941:long getDirLength(java.io.File) -> getDirLength
+    1029:1030:java.lang.String getDirName(java.io.File) -> getDirName
+    1040:1042:java.lang.String getDirName(java.lang.String) -> getDirName
+    77:77:java.io.File getFileByPath(java.lang.String) -> getFileByPath
+    697:697:java.lang.String getFileCharsetSimple(java.lang.String) -> getFileCharsetSimple
+    707:731:java.lang.String getFileCharsetSimple(java.io.File) -> getFileCharsetSimple
+    1105:1106:java.lang.String getFileExtension(java.io.File) -> getFileExtension
+    1116:1120:java.lang.String getFileExtension(java.lang.String) -> getFileExtension
+    676:676:long getFileLastModified(java.lang.String) -> getFileLastModified
+    686:687:long getFileLastModified(java.io.File) -> getFileLastModified
+    951:965:long getFileLength(java.lang.String) -> getFileLength
+    975:976:long getFileLength(java.io.File) -> getFileLength
+    855:855:int getFileLines(java.lang.String) -> getFileLines
+    865:895:int getFileLines(java.io.File) -> getFileLines
+    986:986:byte[] getFileMD5(java.lang.String) -> getFileMD5
+    996:1019:byte[] getFileMD5(java.io.File) -> getFileMD5
+    1052:1053:java.lang.String getFileName(java.io.File) -> getFileName
+    1063:1065:java.lang.String getFileName(java.lang.String) -> getFileName
+    1075:1076:java.lang.String getFileNameNoExtension(java.io.File) -> getFileNameNoExtension
+    1086:1095:java.lang.String getFileNameNoExtension(java.lang.String) -> getFileNameNoExtension
+    1172:1183:long getFsAvailableSize(java.lang.String) -> getFsAvailableSize
+    1151:1162:long getFsTotalSize(java.lang.String) -> getFsTotalSize
+    905:905:long getLength(java.lang.String) -> getLength
+    915:919:long getLength(java.io.File) -> getLength
+    168:168:boolean isDir(java.lang.String) -> isDir
+    178:178:boolean isDir(java.io.File) -> isDir
+    188:188:boolean isFile(java.lang.String) -> isFile
+    198:198:boolean isFile(java.io.File) -> isFile
+    87:91:boolean isFileExists(java.io.File) -> isFileExists
+    101:106:boolean isFileExists(java.lang.String) -> isFileExists
+    110:125:boolean isFileExistsApi29(java.lang.String) -> isFileExistsApi29
+    742:742:boolean isUtf8(java.lang.String) -> isUtf8
+    752:776:boolean isUtf8(java.io.File) -> isUtf8
+    789:845:int isUtf8(byte[]) -> isUtf8
+    435:435:java.util.List listFilesInDir(java.lang.String) -> listFilesInDir
+    446:446:java.util.List listFilesInDir(java.io.File) -> listFilesInDir
+    458:458:java.util.List listFilesInDir(java.lang.String,java.util.Comparator) -> listFilesInDir
+    470:470:java.util.List listFilesInDir(java.io.File,java.util.Comparator) -> listFilesInDir
+    481:481:java.util.List listFilesInDir(java.lang.String,boolean) -> listFilesInDir
+    492:492:java.util.List listFilesInDir(java.io.File,boolean) -> listFilesInDir
+    506:506:java.util.List listFilesInDir(java.lang.String,boolean,java.util.Comparator) -> listFilesInDir
+    520:520:java.util.List listFilesInDir(java.io.File,boolean,java.util.Comparator) -> listFilesInDir
+    538:538:java.util.List listFilesInDirWithFilter(java.lang.String,java.io.FileFilter) -> listFilesInDirWithFilter
+    551:551:java.util.List listFilesInDirWithFilter(java.io.File,java.io.FileFilter) -> listFilesInDirWithFilter
+    566:566:java.util.List listFilesInDirWithFilter(java.lang.String,java.io.FileFilter,java.util.Comparator) -> listFilesInDirWithFilter
+    581:581:java.util.List listFilesInDirWithFilter(java.io.File,java.io.FileFilter,java.util.Comparator) -> listFilesInDirWithFilter
+    595:595:java.util.List listFilesInDirWithFilter(java.lang.String,java.io.FileFilter,boolean) -> listFilesInDirWithFilter
+    609:609:java.util.List listFilesInDirWithFilter(java.io.File,java.io.FileFilter,boolean) -> listFilesInDirWithFilter
+    626:626:java.util.List listFilesInDirWithFilter(java.lang.String,java.io.FileFilter,boolean,java.util.Comparator) -> listFilesInDirWithFilter
+    642:646:java.util.List listFilesInDirWithFilter(java.io.File,java.io.FileFilter,boolean,java.util.Comparator) -> listFilesInDirWithFilter
+    652:665:java.util.List listFilesInDirWithFilterInner(java.io.File,java.io.FileFilter,boolean) -> listFilesInDirWithFilterInner
+    1129:1130:void notifySystemToScan(java.lang.String) -> notifySystemToScan
+    1138:1142:void notifySystemToScan(java.io.File) -> notifySystemToScan
+    136:136:boolean rename(java.lang.String,java.lang.String) -> rename
+    148:158:boolean rename(java.io.File,java.lang.String) -> rename
+com.lx.framework.utils.FileUtils$1 -> com.lx.framework.utils.FileUtils$1:
+    354:354:void <init>() -> <init>
+    357:357:boolean accept(java.io.File) -> accept
+com.lx.framework.utils.FileUtils$2 -> com.lx.framework.utils.FileUtils$2:
+    379:379:void <init>() -> <init>
+    382:382:boolean accept(java.io.File) -> accept
+com.lx.framework.utils.FileUtils$3 -> com.lx.framework.utils.FileUtils$3:
+    520:520:void <init>() -> <init>
+    523:523:boolean accept(java.io.File) -> accept
 com.lx.framework.utils.ImageUtils -> com.lx.framework.utils.ImageUtils:
     734:734:void <clinit>() -> <clinit>
     61:61:void <init>() -> <init>
@@ -1203,3 +1398,96 @@ com.lx.framework.widget.ControlDistributeLinearLayout -> com.lx.framework.widget
     42:42:boolean isDistributeEvent() -> isDistributeEvent
     38:38:boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
     46:47:void setDistributeEvent(boolean) -> setDistributeEvent
+com.lx.framework.widget.PinchImageView -> com.lx.framework.widget.PinchImageView:
+    102:775:void <init>(android.content.Context) -> <init>
+    102:775:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    102:775:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    23:23:android.graphics.RectF access$000(com.lx.framework.widget.PinchImageView) -> access$000
+    23:23:android.graphics.RectF access$002(com.lx.framework.widget.PinchImageView,android.graphics.RectF) -> access$002
+    23:23:int access$100(com.lx.framework.widget.PinchImageView) -> access$100
+    23:23:com.lx.framework.widget.PinchImageView$ScaleAnimator access$200(com.lx.framework.widget.PinchImageView) -> access$200
+    23:23:void access$300(com.lx.framework.widget.PinchImageView,float,float) -> access$300
+    23:23:android.view.View$OnLongClickListener access$400(com.lx.framework.widget.PinchImageView) -> access$400
+    23:23:void access$500(com.lx.framework.widget.PinchImageView,float,float) -> access$500
+    23:23:android.view.View$OnClickListener access$600(com.lx.framework.widget.PinchImageView) -> access$600
+    23:23:boolean access$700(com.lx.framework.widget.PinchImageView,float,float) -> access$700
+    23:23:android.graphics.Matrix access$800(com.lx.framework.widget.PinchImageView) -> access$800
+    23:23:void access$900(com.lx.framework.widget.PinchImageView) -> access$900
+    444:465:void addOuterMatrixChangedListener(com.lx.framework.widget.PinchImageView$OuterMatrixChangedListener) -> addOuterMatrixChangedListener
+    562:566:float calculateNextScale(float,float) -> calculateNextScale
+    252:265:boolean canScrollHorizontally(int) -> canScrollHorizontally
+    276:289:boolean canScrollVertically(int) -> canScrollVertically
+    1198:1206:void cancelAllAnimator() -> cancelAllAnimator
+    503:526:void dispatchOuterMatrixChanged() -> dispatchOuterMatrixChanged
+    1019:1083:void doubleTap(float,float) -> doubleTap
+    1183:1192:void fling(float,float) -> fling
+    183:186:android.graphics.Matrix getCurrentImageMatrix(android.graphics.Matrix) -> getCurrentImageMatrix
+    200:217:android.graphics.RectF getImageBound(android.graphics.RectF) -> getImageBound
+    150:166:android.graphics.Matrix getInnerMatrix(android.graphics.Matrix) -> getInnerMatrix
+    227:230:android.graphics.RectF getMask() -> getMask
+    545:545:float getMaxScale() -> getMaxScale
+    132:137:android.graphics.Matrix getOuterMatrix(android.graphics.Matrix) -> getOuterMatrix
+    242:242:int getPinchMode() -> getPinchMode
+    590:591:void initView() -> initView
+    630:631:boolean isReady() -> isReady
+    603:617:void onDraw(android.graphics.Canvas) -> onDraw
+    811:876:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    308:325:void outerMatrixTo(android.graphics.Matrix,long) -> outerMatrixTo
+    473:493:void removeOuterMatrixChangedListener(com.lx.framework.widget.PinchImageView$OuterMatrixChangedListener) -> removeOuterMatrixChangedListener
+    370:387:void reset() -> reset
+    966:973:void saveScaleContext(float,float,float,float) -> saveScaleContext
+    987:1003:void scale(android.graphics.PointF,float,float,android.graphics.PointF) -> scale
+    1092:1169:void scaleEnd() -> scaleEnd
+    889:946:boolean scrollBy(float,float) -> scrollBy
+    63:64:void setOnClickListener(android.view.View$OnClickListener) -> setOnClickListener
+    69:70:void setOnLongClickListener(android.view.View$OnLongClickListener) -> setOnLongClickListener
+    595:595:void setScaleType(android.widget.ImageView$ScaleType) -> setScaleType
+    340:360:void zoomMaskTo(android.graphics.RectF,long) -> zoomMaskTo
+com.lx.framework.widget.PinchImageView$1 -> com.lx.framework.widget.PinchImageView$1:
+    775:775:void <init>(com.lx.framework.widget.PinchImageView) -> <init>
+    794:797:boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
+    779:782:boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+    787:790:void onLongPress(android.view.MotionEvent) -> onLongPress
+    802:805:boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+com.lx.framework.widget.PinchImageView$FlingAnimator -> com.lx.framework.widget.PinchImageView$FlingAnimator:
+    1229:1235:void <init>(com.lx.framework.widget.PinchImageView,float,float) -> <init>
+    1240:1248:void onAnimationUpdate(android.animation.ValueAnimator) -> onAnimationUpdate
+com.lx.framework.widget.PinchImageView$MaskAnimator -> com.lx.framework.widget.PinchImageView$MaskAnimator:
+    656:689:void <init>(com.lx.framework.widget.PinchImageView,android.graphics.RectF,android.graphics.RectF,long) -> <init>
+    694:706:void onAnimationUpdate(android.animation.ValueAnimator) -> onAnimationUpdate
+com.lx.framework.widget.PinchImageView$MathUtils -> com.lx.framework.widget.PinchImageView$MathUtils:
+    1461:1491:void <clinit>() -> <clinit>
+    1456:1456:void <init>() -> <init>
+    1608:1618:void calculateRectTranslateMatrix(android.graphics.RectF,android.graphics.RectF,android.graphics.Matrix) -> calculateRectTranslateMatrix
+    1630:1746:void calculateScaledRectInContainer(android.graphics.RectF,float,float,android.widget.ImageView$ScaleType,android.graphics.RectF) -> calculateScaledRectInContainer
+    1552:1552:float[] getCenterPoint(float,float,float,float) -> getCenterPoint
+    1537:1539:float getDistance(float,float,float,float) -> getDistance
+    1562:1567:float[] getMatrixScale(android.graphics.Matrix) -> getMatrixScale
+    1582:1593:float[] inverseMatrixPoint(float[],android.graphics.Matrix) -> inverseMatrixPoint
+    1485:1486:void matrixGiven(android.graphics.Matrix) -> matrixGiven
+    1467:1467:android.graphics.Matrix matrixTake() -> matrixTake
+    1474:1478:android.graphics.Matrix matrixTake(android.graphics.Matrix) -> matrixTake
+    1524:1525:void rectFGiven(android.graphics.RectF) -> rectFGiven
+    1497:1497:android.graphics.RectF rectFTake() -> rectFTake
+    1504:1506:android.graphics.RectF rectFTake(float,float,float,float) -> rectFTake
+    1513:1517:android.graphics.RectF rectFTake(android.graphics.RectF) -> rectFTake
+com.lx.framework.widget.PinchImageView$MatrixPool -> com.lx.framework.widget.PinchImageView$MatrixPool:
+    1414:1415:void <init>(int) -> <init>
+    1411:1411:java.lang.Object newInstance() -> newInstance
+    1419:1419:android.graphics.Matrix newInstance() -> newInstance
+    1411:1411:java.lang.Object resetInstance(java.lang.Object) -> resetInstance
+    1424:1425:android.graphics.Matrix resetInstance(android.graphics.Matrix) -> resetInstance
+com.lx.framework.widget.PinchImageView$ObjectsPool -> com.lx.framework.widget.PinchImageView$ObjectsPool:
+    1347:1350:void <init>(int) -> <init>
+    1385:1388:void given(java.lang.Object) -> given
+    1366:1370:java.lang.Object take() -> take
+com.lx.framework.widget.PinchImageView$RectFPool -> com.lx.framework.widget.PinchImageView$RectFPool:
+    1435:1436:void <init>(int) -> <init>
+    1432:1432:java.lang.Object newInstance() -> newInstance
+    1440:1440:android.graphics.RectF newInstance() -> newInstance
+    1432:1432:java.lang.Object resetInstance(java.lang.Object) -> resetInstance
+    1445:1446:android.graphics.RectF resetInstance(android.graphics.RectF) -> resetInstance
+com.lx.framework.widget.PinchImageView$ScaleAnimator -> com.lx.framework.widget.PinchImageView$ScaleAnimator:
+    1282:1283:void <init>(com.lx.framework.widget.PinchImageView,android.graphics.Matrix,android.graphics.Matrix) -> <init>
+    1261:1301:void <init>(com.lx.framework.widget.PinchImageView,android.graphics.Matrix,android.graphics.Matrix,long) -> <init>
+    1306:1315:void onAnimationUpdate(android.animation.ValueAnimator) -> onAnimationUpdate

@@ -26,15 +26,11 @@
 
 #------------------------------------------主项目混淆规则----------------------------------------------
 #实体类不参与混淆
--keep class com.lx.framework.entity.** { *; }
--keep class com.lx.framework.utils.** { *; }
+-keep class com.lx.framework.** { *; }
 
 #tkrefreshlayout
 -keep class com.lcodecore.tkrefreshlayout.** { *; }
 -dontwarn com.lcodecore.tkrefreshlayout.**
-
-
--keep class com.lx.framework.http.BaseResponse { *; }
 
 #-------------------------------------------------------------------------
 
@@ -133,17 +129,11 @@
 #----------------------------------------------------------------------------
 
 #---------------------------------4.反射相关的类和方法-----------------------
--keep public class * extends com.lx.framework.base.BaseActivity{ *; }
--keep public class * extends com.lx.framework.base.BaseFragment{ *; }
--keep public class * extends com.lx.framework.binding.command.BindingCommand{ *; }
--keep public class * extends com.lx.framework.binding.command.ResponseCommand{ *; }
 
 
 #----------------------------------------------------------------------------
 
 #---------------------------------5.自定义控件------------------------------
-
--keep class com.lx.framework.widget.** { *; }
 
 #----------------------------------------------------------------------------
 #---------------------------------6.其他定制区-------------------------------
