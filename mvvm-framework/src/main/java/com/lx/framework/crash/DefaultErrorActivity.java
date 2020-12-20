@@ -33,12 +33,12 @@ import android.widget.Toast;
 import com.lx.framework.R;
 import com.lx.framework.base.BaseActivity;
 import com.lx.framework.base.BaseViewModel;
-import com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding;
+import com.lx.framework.databinding.AbBinding;
 
 import androidx.core.content.res.ResourcesCompat;
 
 
-public final class DefaultErrorActivity extends BaseActivity<CustomactivityoncrashDefaultErrorActivityBinding, BaseViewModel> {
+public final class DefaultErrorActivity extends BaseActivity<AbBinding, BaseViewModel> {
 
     @SuppressLint("PrivateResource")
     @Override
