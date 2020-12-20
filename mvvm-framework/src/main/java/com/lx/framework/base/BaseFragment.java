@@ -86,7 +86,7 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
      * 注入绑定
      */
     private void initViewDataBinding() {
-        viewModelId = BR.viewModel;
+        viewModelId = initVariableId();
         viewModel = initViewModel();
         if (viewModel == null) {
             Class modelClass;
@@ -258,6 +258,15 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
     @Override
     public void initParam() {
 
+    }
+
+    /**
+     * 初始化ViewModel的id
+     *
+     * @return BR的id
+     */
+    public int initVariableId(){
+        return BR.viewModel;
     }
 
     /**

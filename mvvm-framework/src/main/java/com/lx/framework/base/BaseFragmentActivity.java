@@ -156,7 +156,7 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
     private void initViewDataBinding(Bundle savedInstanceState) {
         //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
         binding = DataBindingUtil.setContentView(this, initContentView(savedInstanceState));
-        viewModelId = BR.viewModel;
+        viewModelId = initVariableId();
         viewModel = initViewModel();
         if (viewModel == null) {
             Class modelClass;
@@ -337,6 +337,15 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
      * @return 布局layout的id
      */
     public abstract int initContentView(Bundle savedInstanceState);
+
+    /**
+     * 初始化ViewModel的id
+     *
+     * @return BR的id
+     */
+    public int initVariableId(){
+        return BR.viewModel;
+    }
 
     /**
      * 初始化ViewModel
