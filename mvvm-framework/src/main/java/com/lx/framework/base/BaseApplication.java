@@ -5,6 +5,7 @@ import android.app.Application;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import me.jessyan.autosize.AutoSizeConfig;
 import update.UpdateAppUtils;
 
 import com.lx.framework.utils.Utils;
@@ -19,6 +20,7 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        AutoSizeConfig.getInstance().setCustomFragment(true);
         UpdateAppUtils.init(this);
         setApplication(this);
     }

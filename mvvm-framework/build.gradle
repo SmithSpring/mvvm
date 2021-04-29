@@ -90,4 +90,5 @@ dependencies {
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15'
     api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
     api 'org.greenrobot:eventbus:3.2.0'
+    api 'me.jessyan:autosize:1.2.1'
 }
