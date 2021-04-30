@@ -1,5 +1,12 @@
 package com.lx.framework.utils;
 
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.TextUtils;
+import android.text.style.ForegroundColorSpan;
+
+import androidx.annotation.ColorInt;
+
 /**
  * Created by lx on 2017/5/14.
  * 字符串相关工具类
@@ -18,6 +25,23 @@ public final class StringUtils {
      */
     public static boolean isEmpty(final CharSequence s) {
         return s == null || s.length() == 0;
+    }
+
+    /**
+     * 动态改变文本中的某些字体颜色
+     *
+     * @param str        文本
+     * @param colorResId 颜色资源
+     * @param start      开始位置(从0开始数，包括首尾)
+     * @param end        结束位置（从结尾1开始数，不包括结束位）
+     * @return
+     */
+    public static SpannableStringBuilder getRepayNumBuilder(String str, @ColorInt int colorResId, int start, int end) {
+        if (TextUtils.isEmpty(str)) return new SpannableStringBuilder("");
+        SpannableStringBuilder builder = new SpannableStringBuilder(str);
+        KLog.e("lixiong","匹配的字体颜色  str.length() : "+str.length()+" ,start : "+start+"  ,end : "+end);
+        builder.setSpan(new ForegroundColorSpan(colorResId), start, str.length() - end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        return builder;
     }
 
     /**
