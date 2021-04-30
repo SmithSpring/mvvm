@@ -98,7 +98,6 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         //在BaseActivity里初始化
         mImmersionBar = ImmersionBar.with(this)
                 .statusBarDarkFont(statusBarDarkFont())    //默认状态栏字体颜色为黑色
-                .statusBarColor(statusBarColor())
                 .keyboardEnable(false, WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN
                         | WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);  //解决软键盘与底部输入框冲突问题，默认为false，还有一个重载方法，可以指定软键盘mode
         //必须设置View树布局变化监听，否则软键盘无法顶上去，还有模式必须是SOFT_INPUT_ADJUST_PAN
@@ -113,10 +112,6 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
      */
     protected boolean isRegisterEventBus() {
         return false;
-    }
-
-    public int statusBarColor(){
-        return R.color.white;
     }
 
     /**
