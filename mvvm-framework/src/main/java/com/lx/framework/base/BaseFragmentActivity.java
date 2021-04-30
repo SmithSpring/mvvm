@@ -105,7 +105,7 @@ public abstract class BaseFragmentActivity<V extends ViewDataBinding, VM extends
     }
 
     public int statusBarColor(){
-        return R.color.design_default_color_primary;
+        return R.color.colorPrimary;
     }
 
     /**
