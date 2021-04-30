@@ -39,7 +39,6 @@ public final class StringUtils {
     public static SpannableStringBuilder getRepayNumBuilder(String str, @ColorInt int colorResId, int start, int end) {
         if (TextUtils.isEmpty(str)) return new SpannableStringBuilder("");
         SpannableStringBuilder builder = new SpannableStringBuilder(str);
-        KLog.e("lixiong","匹配的字体颜色  str.length() : "+str.length()+" ,start : "+start+"  ,end : "+end);
         builder.setSpan(new ForegroundColorSpan(colorResId), start, str.length() - end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         return builder;
     }
