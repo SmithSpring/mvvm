@@ -34,7 +34,6 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import okio.Buffer;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
@@ -121,7 +120,8 @@ public class RetrofitClient {
                 .build();
         retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
-                .addConverterFactory(GsonConverterFactory.create())
+//                .addConverterFactory(GsonConverterFactory.create())      //默认的解析
+                .addConverterFactory(GsonDConverterFactory.create())      //自定义解析
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                 .baseUrl(url)
                 .build();
