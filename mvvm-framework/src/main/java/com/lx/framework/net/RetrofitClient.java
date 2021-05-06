@@ -118,6 +118,7 @@ public class RetrofitClient {
                 .connectionPool(new ConnectionPool(8, 15, TimeUnit.SECONDS))
                 .proxy(Proxy.NO_PROXY)
                 .build();
+
         retrofit = new Retrofit.Builder()
                 .client(okHttpClient)
 //                .addConverterFactory(GsonConverterFactory.create())      //默认的解析
