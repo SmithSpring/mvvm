@@ -169,10 +169,19 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
         });
     }
 
-    public void showDialog(String title) {
+    public void showDialog(){
+        showDialog("加载中...",true);
+    }
+
+    public void showDialog(String title){
+        showDialog(title,true);
+    }
+
+    public void showDialog(String title,boolean isShowMessage) {
         if (mmLoading == null) {
             MMLoading.Builder builder = new MMLoading.Builder(getContext())
                     .setMessage(title)
+                    .setShowMessage(isShowMessage)
                     .setCancelable(false)
                     .setCancelOutside(false);
             mmLoading = builder.create();
@@ -180,6 +189,7 @@ public abstract class BaseFragment<V extends ViewDataBinding, VM extends BaseVie
             mmLoading.dismiss();
             MMLoading.Builder builder = new MMLoading.Builder(getContext())
                     .setMessage(title)
+                    .setShowMessage(isShowMessage)
                     .setCancelable(false)
                     .setCancelOutside(false);
             mmLoading = builder.create();
