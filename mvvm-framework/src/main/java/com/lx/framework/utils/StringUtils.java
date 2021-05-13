@@ -93,6 +93,21 @@ public final class StringUtils {
     }
 
     /**
+     * 移除小数
+     *
+     * @param s
+     * @return
+     */
+    public static String removeDecimal(String s) {
+        if (TextUtils.isEmpty(s)) return "";
+        if (s.contains(".")) {
+            return s.substring(0, s.lastIndexOf("."));
+        } else {
+            return s;
+        }
+    }
+
+    /**
      * 判断两字符串忽略大小写是否相等
      *
      * @param a 待校验字符串a
