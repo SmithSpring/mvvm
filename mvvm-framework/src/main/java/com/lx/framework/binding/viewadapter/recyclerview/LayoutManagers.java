@@ -1,5 +1,7 @@
 package com.lx.framework.binding.viewadapter.recyclerview;
 
+import com.xiaofeng.flowlayoutmanager.FlowLayoutManager;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -73,6 +75,15 @@ public class LayoutManagers {
             @Override
             public RecyclerView.LayoutManager create(RecyclerView recyclerView) {
                 return new StaggeredGridLayoutManager(spanCount, orientation);
+            }
+        };
+    }
+
+    public static LayoutManagerFactory flow() {
+        return new LayoutManagerFactory() {
+            @Override
+            public RecyclerView.LayoutManager create(RecyclerView recyclerView) {
+                return new FlowLayoutManager();
             }
         };
     }
