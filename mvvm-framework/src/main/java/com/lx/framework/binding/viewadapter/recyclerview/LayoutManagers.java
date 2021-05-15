@@ -79,15 +79,6 @@ public class LayoutManagers {
         };
     }
 
-    public static LayoutManagerFactory flow() {
-        return new LayoutManagerFactory() {
-            @Override
-            public RecyclerView.LayoutManager create(RecyclerView recyclerView) {
-                return new FlowLayoutManager();
-            }
-        };
-    }
-
     @IntDef({LinearLayoutManager.HORIZONTAL, LinearLayoutManager.VERTICAL})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Orientation {
