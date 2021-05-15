@@ -1,7 +1,5 @@
 package com.lx.framework.binding.viewadapter.recyclerview;
 
-import com.xiaofeng.flowlayoutmanager.FlowLayoutManager;
-
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
