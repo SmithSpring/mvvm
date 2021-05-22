@@ -38,13 +38,13 @@ public class AppInfoUtil {
         return localVersion;
     }
 
-
     /**
-     *  比较版本号的大小,前者大则返回一个正数,后者大返回一个负数,相等则返回0
+     * 比较版本号的大小,前者大则返回一个正数,后者大返回一个负数,相等则返回0
+     * @param version1    本地的版本号
+     * @param version2    服务器的版本号
+     * @return
      */
     public static int compareVersion(String version1, String version2) {
-
-        KLog.e("lixiong","本地的版本号："+version1+" ,服务器的版本号 ："+version2);
         if (version1 == null || version2 == null) {
             return 0;
         }

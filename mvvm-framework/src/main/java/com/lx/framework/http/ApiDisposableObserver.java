@@ -35,10 +35,8 @@ public abstract class ApiDisposableObserver<T> extends DisposableObserver<T> {
     @Override
     public void onStart() {
         super.onStart();
-        KLog.d("lixiong","http is start");
         // if  NetworkAvailable no !   must to call onCompleted
         if (!NetworkUtil.isNetworkAvailable(Utils.getContext())) {
-            KLog.d("lixiong","无网络，读取缓存数据");
             onError("网络错误");
             onComplete();
         }
