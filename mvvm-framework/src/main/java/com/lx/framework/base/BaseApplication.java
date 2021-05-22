@@ -9,6 +9,9 @@ import me.jessyan.autosize.AutoSizeConfig;
 import update.UpdateAppUtils;
 
 import com.lx.framework.utils.Utils;
+import com.lx.framework.utils.album.GlideAlbumLoader;
+import com.yanzhenjie.album.Album;
+import com.yanzhenjie.album.AlbumConfig;
 
 /**
  * Created by lx on 2017/6/15.
@@ -23,6 +26,7 @@ public class BaseApplication extends Application {
         AutoSizeConfig.getInstance().setCustomFragment(true);
         UpdateAppUtils.init(this);
         setApplication(this);
+        Album.initialize(AlbumConfig.newBuilder(this).setAlbumLoader(new GlideAlbumLoader()).build());
     }
 
     /**

@@ -91,4 +91,5 @@ dependencies {
     api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
     api 'org.greenrobot:eventbus:3.2.0'
     api 'me.jessyan:autosize:1.2.1'
+    api 'com.yanzhenjie:album:2.1.3'
 }
