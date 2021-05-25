@@ -1,11 +1,9 @@
 package com.lx.framework.binding.viewadapter.mswitch;
 
-import androidx.databinding.BindingAdapter;
-
-import android.widget.CompoundButton;
-import android.widget.Switch;
-
 import com.lx.framework.binding.command.BindingCommand;
+import com.suke.widget.SwitchButton;
+
+import androidx.databinding.BindingAdapter;
 
 /**
  * Created by lx on 2017/6/18.
@@ -18,7 +16,7 @@ public class ViewAdapter {
      * @param mSwitch Switch控件
      */
     @BindingAdapter("switchState")
-    public static void setSwitchState(Switch mSwitch, boolean isChecked) {
+    public static void setSwitchState(SwitchButton mSwitch, boolean isChecked) {
         mSwitch.setChecked(isChecked);
     }
 
@@ -29,14 +27,9 @@ public class ViewAdapter {
      * @param changeListener 事件绑定命令
      */
     @BindingAdapter("onCheckedChangeCommand")
-    public static void onCheckedChangeCommand(final Switch mSwitch, final BindingCommand<Boolean> changeListener) {
+    public static void onCheckedChangeCommand(final SwitchButton mSwitch, final BindingCommand<Boolean> changeListener) {
         if (changeListener != null) {
-            mSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    changeListener.execute(isChecked);
-                }
-            });
+            mSwitch.setOnCheckedChangeListener((view, isChecked) -> changeListener.execute(isChecked));
         }
     }
 }
