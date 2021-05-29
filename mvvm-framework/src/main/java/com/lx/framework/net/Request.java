@@ -2,6 +2,7 @@ package com.lx.framework.net;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.text.TextUtils;
 
 import com.lx.framework.base.BaseViewModel;
 import com.lx.framework.http.ResponseThrowable;
@@ -31,7 +32,10 @@ public class Request<T, K> {
                     iResponse.onError(throwable.message);
                     if (throwable.getCause() instanceof ResultException){
                         ResultException resultException = (ResultException) throwable.getCause();
-                        ToastUtils.showLong(resultException.getErrMsg());
+                        String error = resultException.getErrMsg();
+                        if (!TextUtils.isEmpty(error)){
+                            ToastUtils.showLong(error);
+                        }
                     }
                 });
     }
