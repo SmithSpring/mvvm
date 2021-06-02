@@ -1,5 +1,10 @@
 package com.lx.framework.utils.glide;
 
+import android.graphics.drawable.Drawable;
+import android.text.TextUtils;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.BitmapTransformation;
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 import com.bumptech.glide.load.resource.bitmap.CenterInside;
@@ -40,6 +45,17 @@ public class GlideManager {
             }
         }
         return INSTANCE;
+    }
+
+    public static void setImageUri(ImageView imageView, String url, Drawable placeholderRes) {
+        if (!TextUtils.isEmpty(url)) {
+            Glide.with(imageView.getContext())
+                    .load(url)
+                    .apply(new RequestOptions().placeholder(placeholderRes))
+                    .into(imageView);
+        }else {
+            imageView.setImageDrawable(placeholderRes);
+        }
     }
 
     /**
