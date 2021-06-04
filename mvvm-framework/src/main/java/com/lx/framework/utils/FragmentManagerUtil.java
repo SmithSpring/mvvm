@@ -40,11 +40,18 @@ public class FragmentManagerUtil implements RadioGroup.OnCheckedChangeListener {
         this.rgs = rgs;
         this.fragmentManager = fragmentManager;
         this.fragmentContainerId = fragmentContainerId;
-        //开启任务 默认显示第一页
-        FragmentTransaction ft = fragmentManager.beginTransaction();
-        ft.add(fragmentContainerId, fragments.get(0));
-        ft.commit();
         rgs.setOnCheckedChangeListener(this);
+    }
+
+    public void check(int i){
+        FragmentTransaction ft = fragmentManager.beginTransaction();
+        Fragment fragment = fragments.get(i);
+        if (fragment.isAdded()) {
+            fragment.onStart();
+        } else {
+            ft.add(fragmentContainerId, fragment);
+            ft.commit();
+        }
     }
 
 
