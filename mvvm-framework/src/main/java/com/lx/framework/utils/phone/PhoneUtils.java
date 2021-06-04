@@ -6,11 +6,11 @@ import android.net.Uri;
 import com.lx.framework.utils.Utils;
 
 public class PhoneUtils {
-    private static void callPhone(String phoneNumber) {
+    public static void callPhone(String phoneNumber) {
         call(Intent.ACTION_CALL, "tel:",phoneNumber);
     }
 
-    private static void sendSMS(String phoneNumber) {
+    public static void sendSMS(String phoneNumber) {
         call(Intent.ACTION_SENDTO, "smsto:",phoneNumber);
     }
 
