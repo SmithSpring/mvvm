@@ -40,18 +40,12 @@ public class FragmentManagerUtil implements RadioGroup.OnCheckedChangeListener {
         this.rgs = rgs;
         this.fragmentManager = fragmentManager;
         this.fragmentContainerId = fragmentContainerId;
-        rgs.setOnCheckedChangeListener(this);
-    }
-
-    public void check(int i){
         FragmentTransaction ft = fragmentManager.beginTransaction();
-        Fragment fragment = fragments.get(i);
-        if (fragment.isAdded()) {
-            fragment.onStart();
-        } else {
-            ft.add(fragmentContainerId, fragment);
-            ft.commit();
+        for (int i=0;i<fragments.size();i++){
+            ft.add(fragmentContainerId, fragments.get(i),i+"");
         }
+        ft.commit();
+        rgs.setOnCheckedChangeListener(this);
     }
 
 
@@ -76,12 +70,17 @@ public class FragmentManagerUtil implements RadioGroup.OnCheckedChangeListener {
                 FragmentTransaction ft = obtainFragmentTransaction(i);
                 //getCurrentFragment().onPause(); // 暂停当前tab
                 getCurrentFragment().onStop(); // 暂停当前tab
-                if (fragment.isAdded()) {
+                if (fragment.isAdded() && fragmentManager.findFragmentByTag(i + "") != null) {
                     fragment.onStart(); // 启动目标tab的fragment onStart()
                     // fragment.onResume(); // 启动目标tab的onResume()
+//                    ft.show(fragment);
                 } else {
-                    ft.add(fragmentContainerId, fragment);
-                    ft.commit();
+//                    ft.add(fragmentContainerId, fragment);
+//                    ft.commit();
+//                    fragmentManager.executePendingTransactions();
+                    ft.add(fragmentContainerId, fragment, i + "");
+                    ft.addToBackStack(null);
+
                 }
                 showTab(i); // 显示目标tab
                 break;
