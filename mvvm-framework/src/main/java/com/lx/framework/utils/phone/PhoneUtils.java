@@ -16,6 +16,7 @@ public class PhoneUtils {
 
     private static void call(String actionCall, String s,String phoneNumber) {
         Intent intent_call = new Intent(actionCall, Uri.parse(s + phoneNumber));
+        intent_call.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK );
         Utils.getContext().startActivity(intent_call);
     }
 }
