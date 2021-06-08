@@ -246,7 +246,14 @@ public final class SPUtils {
                 return DES.decryptDES(value, SECRET_KEY);
             } catch (Exception e) {
                 e.printStackTrace();
-                return new String(Base64.decode(value, Base64.DEFAULT));
+                String base64 = null;
+                try {
+                    base64 = new String(Base64.decode(value, Base64.DEFAULT));
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                    return value;
+                }
+                return base64;
             }
         } else {
             return new String(Base64.decode(value, Base64.DEFAULT));
