@@ -27,6 +27,10 @@ public final class StringUtils {
         return s == null || s.length() == 0;
     }
 
+    public static boolean isSpace(CharSequence s){
+        return TextUtils.isEmpty(s) || TextUtils.equals(s,"null") || TextUtils.equals(s,"NULL");
+    }
+
     /**
      * 动态改变文本中的某些字体颜色
      *

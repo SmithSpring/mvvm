@@ -10,9 +10,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.Charset;
 
-/**
- * Created by fengjiajie on 16/10/12.
- */
 public class PhoneNumberGeo {
 
   private static final String[] PHONE_NUMBER_TYPE = {null, "移动", "联通", "电信", "电信虚拟运营商", "联通虚拟运营商", "移动虚拟运营商"};
