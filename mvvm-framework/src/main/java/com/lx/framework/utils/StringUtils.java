@@ -45,6 +45,14 @@ public final class StringUtils {
         }
     }
 
+    public static long parseLong(String s){
+        if (isSpace(s)){
+            return 0L;
+        }else {
+            return Long.parseLong(s);
+        }
+    }
+
     public static int parseInt(String s){
         if (isSpace(s)){
             return 0;
