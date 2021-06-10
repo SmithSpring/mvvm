@@ -53,6 +53,14 @@ public final class StringUtils {
         }
     }
 
+    public static double parseDouble(String s){
+        if (isSpace(s)){
+            return 0f;
+        }else {
+            return Double.parseDouble(s);
+        }
+    }
+
     public static int parseInt(String s){
         if (isSpace(s)){
             return 0;
