@@ -62,6 +62,19 @@ public final class StringUtils {
     }
 
     /**
+     * 判断是否为正数
+     * @return   true  正数   false   负数
+     */
+    public static boolean sign(String s){
+        if (isSpace(s)){
+            return true;
+        }else {
+            int d = Integer.parseInt(s);
+            return d >= 0;
+        }
+    }
+
+    /**
      * 动态改变文本中的某些字体颜色
      *
      * @param str        文本
