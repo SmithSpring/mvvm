@@ -28,7 +28,29 @@ public final class StringUtils {
     }
 
     public static boolean isSpace(CharSequence s){
-        return TextUtils.isEmpty(s) || TextUtils.equals(s,"null") || TextUtils.equals(s,"NULL");
+        if (TextUtils.isEmpty(s)){
+            return true;
+        }else {
+            if (TextUtils.equals(s,"null") || TextUtils.equals(s,"NULL")){
+                return true;
+            }else return TextUtils.isEmpty(String.valueOf(s).replace(" ", ""));
+        }
+    }
+
+    public static String spaceInt(String s){
+        if (isSpace(s)){
+            return "0";
+        }else {
+            return s;
+        }
+    }
+
+    public static int parseInt(String s){
+        if (isSpace(s)){
+            return 0;
+        }else {
+            return Integer.parseInt(s);
+        }
     }
 
     /**
