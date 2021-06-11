@@ -29,6 +29,25 @@ public class LayoutManagers {
         };
     }
 
+    public static LayoutManagerFactory linearNoScroll(@Orientation final int orientation, final boolean reverseLayout) {
+        return new LayoutManagerFactory() {
+            @Override
+            public RecyclerView.LayoutManager create(RecyclerView recyclerView) {
+                return new LinearLayoutManager(recyclerView.getContext(),orientation,reverseLayout){
+                    @Override
+                    public boolean canScrollVertically() {
+                        return orientation != LinearLayoutManager.VERTICAL;
+                    }
+
+                    @Override
+                    public boolean canScrollHorizontally() {
+                        return orientation != LinearLayoutManager.HORIZONTAL;
+                    }
+                };
+            }
+        };
+    }
+
     /**
      * A {@link LinearLayoutManager} with the given orientation and reverseLayout.
      */
