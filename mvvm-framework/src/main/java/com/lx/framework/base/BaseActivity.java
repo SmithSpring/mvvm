@@ -20,6 +20,7 @@ import com.lx.framework.BR;
 import com.lx.framework.R;
 import com.lx.framework.bus.event.eventbus.EventBusUtil;
 import com.lx.framework.bus.event.eventbus.MessageEvent;
+import com.lx.framework.utils.SoftKeyboardUtil;
 import com.mumu.dialog.MMLoading;
 import com.trello.rxlifecycle4.components.support.RxAppCompatActivity;
 
@@ -245,6 +246,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         viewModel.getUC().getFinishEvent().observe(this, new Observer<Void>() {
             @Override
             public void onChanged(@Nullable Void v) {
+                SoftKeyboardUtil.hideSoftKeyboard(BaseActivity.this);
                 finish();
             }
         });
