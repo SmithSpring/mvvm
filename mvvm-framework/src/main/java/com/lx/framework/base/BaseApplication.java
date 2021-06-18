@@ -5,6 +5,7 @@ import android.app.Application;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.multidex.MultiDexApplication;
 import me.jessyan.autosize.AutoSizeConfig;
 import update.UpdateAppUtils;
 
@@ -17,7 +18,7 @@ import com.yanzhenjie.album.AlbumConfig;
  * Created by lx on 2017/6/15.
  */
 
-public class BaseApplication extends Application {
+public class BaseApplication extends MultiDexApplication {
     private static Application sInstance;
 
     @Override
