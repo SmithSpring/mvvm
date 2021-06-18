@@ -52,6 +52,8 @@ import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.functions.Function;
 import io.reactivex.rxjava3.schedulers.Schedulers;
+
+import com.lx.framework.base.IThrowable;
 import com.lx.framework.utils.compression.Luban;
 
 /**
@@ -938,7 +940,7 @@ public class ImageUtils {
      * android图片压缩工具
      * 压缩单张图片 RxJava 方式
      */
-    public static void compressWithRx(String url, Consumer consumer) {
+    public static void compressWithRx(String url, Consumer consumer){
 
         Luban.get(Utils.getContext())
                 .load(url)
@@ -950,7 +952,30 @@ public class ImageUtils {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
                         throwable.printStackTrace();
-                        ToastUtils.showLong(throwable.getMessage());
+                    }
+                })
+                .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends File>>() {
+                    @Override
+                    public ObservableSource<? extends File> apply(Throwable throwable) throws Exception {
+                        return Observable.empty();
+                    }
+                })
+                .subscribe(consumer);
+    }
+
+    public static void compressWithRx(String url, Consumer consumer, IThrowable iThrowable){
+
+        Luban.get(Utils.getContext())
+                .load(url)
+                .putGear(Luban.THIRD_GEAR)
+                .asObservable()
+                .subscribeOn(Schedulers.computation())
+                .observeOn(AndroidSchedulers.mainThread())
+                .doOnError(new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        throwable.printStackTrace();
+                        iThrowable.accept(throwable);
                     }
                 })
                 .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends File>>() {
