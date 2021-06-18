@@ -4,15 +4,15 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.multidex.MultiDexApplication;
-import me.jessyan.autosize.AutoSizeConfig;
-import update.UpdateAppUtils;
-
 import com.lx.framework.utils.Utils;
 import com.lx.framework.utils.album.GlideAlbumLoader;
 import com.yanzhenjie.album.Album;
 import com.yanzhenjie.album.AlbumConfig;
+
+import androidx.annotation.NonNull;
+import androidx.multidex.MultiDexApplication;
+import me.jessyan.autosize.AutoSizeConfig;
+import update.UpdateAppUtils;
 
 /**
  * Created by lx on 2017/6/15.
