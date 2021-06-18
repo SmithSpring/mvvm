@@ -950,6 +950,7 @@ public class ImageUtils {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
                         throwable.printStackTrace();
+                        ToastUtils.showLong(throwable.getMessage());
                     }
                 })
                 .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends File>>() {
