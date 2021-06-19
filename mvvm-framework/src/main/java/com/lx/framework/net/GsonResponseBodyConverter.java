@@ -36,7 +36,9 @@ final class GsonResponseBodyConverter < T > implements Converter<ResponseBody,
                 EntityResponse<String> errResponse = gson.fromJson(response, EntityResponse.class);
                 if (code == 10001) {
                     throw new ResultException(errResponse.getContent(), code);
-                } else {
+                } else if (code == 11008){
+                    throw new CrowdingException(errResponse.getContent(), code);
+                }else {
                     throw new ResultException(errResponse.getContent(), code);
                 }
             }
