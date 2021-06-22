@@ -1669,7 +1669,7 @@ com.lx.framework.R$dimen: int base1375dp
 com.lx.framework.R$dimen: int base3223dp
 com.lx.framework.R$dimen: int base487dp
 com.lx.framework.R$id: int iv_update_logo
-com.lx.framework.net.MyInterceptor: okhttp3.Response intercept(okhttp3.Interceptor$Chain)
+com.lx.framework.confusion.MyInterceptor: okhttp3.Response intercept(okhttp3.Interceptor$Chain)
 com.lx.framework.binding.viewadapter.recyclerview.ViewAdapter$1: void onScrolled(androidx.recyclerview.widget.RecyclerView,int,int)
 com.lx.framework.R$style: int Theme_MaterialComponents
 com.lx.framework.R$styleable: int Theme_textAppearanceListItem
@@ -3231,7 +3231,7 @@ com.lx.framework.binding.viewadapter.mswitch.ViewAdapter: void onCheckedChangeCo
 com.lx.framework.config.GlideOptions: com.bumptech.glide.request.RequestOptions fallback(int)
 com.lx.framework.R$dimen: int base2195dp
 com.lx.framework.widget.PinchImageView: int access$100(com.lx.framework.widget.PinchImageView)
-com.lx.framework.net.MyInterceptor: MyInterceptor(java.util.Map)
+com.lx.framework.confusion.MyInterceptor: MyInterceptor(java.util.Map)
 com.lx.framework.R$dimen: int base2853dp
 com.lx.framework.R$styleable: int MenuItem_android_id
 com.lx.framework.R$styleable: int NavigationView_itemBackground
@@ -4377,7 +4377,7 @@ com.lx.framework.R$drawable: int avd_show_password
 com.lx.framework.utils.compression.Luban: int[] getImageSize(java.lang.String)
 com.lx.framework.R$dimen: int base3916dp
 com.lx.framework.utils.FileUtils: java.util.List listFilesInDirWithFilter(java.lang.String,java.io.FileFilter,java.util.Comparator)
-com.lx.framework.net.MyInterceptor: java.util.Map headers
+com.lx.framework.confusion.MyInterceptor: java.util.Map headers
 com.lx.framework.R$dimen: int base399dp
 com.lx.framework.utils.KLog: void w(java.lang.String,java.lang.Object)
 com.lx.framework.utils.StringUtils: StringUtils()
@@ -8883,7 +8883,7 @@ com.lx.framework.bus.Messenger: void register(java.lang.Object,boolean,java.lang
 com.lx.framework.binding.viewadapter.view.ViewAdapter$3: com.lx.framework.binding.command.BindingCommand val$clickCommand
 com.lx.framework.R$dimen: int base1017dp
 com.lx.framework.R$dimen: int base3748dp
-com.lx.framework.net.MyInterceptor
+com.lx.framework.confusion.MyInterceptor
 com.lx.framework.R$dimen: int base2930dp
 com.lx.framework.R$dimen: int base1824dp
 com.lx.framework.R$dimen: int base3037dp

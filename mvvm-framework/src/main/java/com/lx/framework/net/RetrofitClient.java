@@ -2,6 +2,8 @@ package com.lx.framework.net;
 
 import android.text.TextUtils;
 
+import com.lx.framework.confusion.GsonDConverterFactory;
+import com.lx.framework.confusion.MyInterceptor;
 import com.lx.framework.http.cookie.CookieJarImpl;
 import com.lx.framework.http.cookie.store.PersistentCookieStore;
 import com.lx.framework.http.interceptor.CacheInterceptor;

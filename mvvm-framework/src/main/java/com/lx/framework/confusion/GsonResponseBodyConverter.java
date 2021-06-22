@@ -1,7 +1,9 @@
-package com.lx.framework.net;
+package com.lx.framework.confusion;
 
 import com.google.gson.Gson;
 import com.lx.framework.model.EntityResponse;
+import com.lx.framework.net.CrowdingException;
+import com.lx.framework.net.ResultException;
 import com.lx.framework.utils.KLog;
 
 import java.io.IOException;
