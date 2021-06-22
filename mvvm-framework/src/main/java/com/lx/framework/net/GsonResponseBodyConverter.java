@@ -1,4 +1,4 @@
-package com.lx.framework.confusion;
+package com.lx.framework.net;
 
 import com.google.gson.Gson;
 import com.lx.framework.model.EntityResponse;

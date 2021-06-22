@@ -32,14 +32,7 @@
 -keep class com.lx.framework.config.** { *; }
 -keep class com.lx.framework.crash.** { *; }
 -keep class com.lx.framework.http.** { *; }
--keep class com.lx.framework.net.CrowdingException { *; }
--keep class com.lx.framework.net.IMethod { *; }
--keep class com.lx.framework.net.HttpsUtils { *; }
--keep class com.lx.framework.net.IResponse { *; }
--keep class com.lx.framework.net.ResultException { *; }
--keep class com.lx.framework.net.RetrofitClient {
-   public <methods>;
-}
+-keep class com.lx.framework.net.** { *; }
 -keep class com.lx.framework.permission.** { *; }
 -keep class com.lx.framework.update.** { *; }
 -keep class com.lx.framework.utils.** { *; }
