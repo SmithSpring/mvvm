@@ -4,6 +4,7 @@ import androidx.databinding.BindingAdapter;
 
 import androidx.viewpager.widget.ViewPager;
 import com.lx.framework.binding.command.BindingCommand;
+import com.lx.framework.entity.ViewPagerDataWrapper;
 
 /**
  * Created by lx on 2017/6/18.
@@ -40,19 +41,5 @@ public class ViewAdapter {
             }
         });
 
-    }
-
-    public static class ViewPagerDataWrapper {
-        public float positionOffset;
-        public float position;
-        public int positionOffsetPixels;
-        public int state;
-
-        public ViewPagerDataWrapper(float position, float positionOffset, int positionOffsetPixels, int state) {
-            this.positionOffset = positionOffset;
-            this.position = position;
-            this.positionOffsetPixels = positionOffsetPixels;
-            this.state = state;
-        }
     }
 }
