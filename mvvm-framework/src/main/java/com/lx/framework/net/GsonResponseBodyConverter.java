@@ -41,7 +41,7 @@ final class GsonResponseBodyConverter < T > implements Converter<ResponseBody,
                 } else if (code == 11008){
                     throw new CrowdingException(errResponse.getContent(), code);
                 }else {
-                    throw new ResultException(errResponse.getContent(), code);
+                    throw new NetworkException(errResponse.getContent(), code);
                 }
             }
         } finally {
