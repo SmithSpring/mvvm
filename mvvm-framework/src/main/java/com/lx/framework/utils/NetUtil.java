@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-public class NetUtil  {
+public class NetUtil{
         private static final int NETWORK_NONE=1;
         //移动网络
         private static final int NETWORK_MOBILE=0;
