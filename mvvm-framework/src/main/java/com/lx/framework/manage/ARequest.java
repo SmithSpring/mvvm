@@ -31,6 +31,10 @@ public abstract class ARequest<T, K> {
      */
     @SuppressLint("CheckResult")
     public void request(Activity activity, BaseViewModel viewModel, Class<T> service, IMethod<T, K> method, IResponse<K> iResponse) {
+        requestMethod(activity, viewModel, service, method, iResponse);
+    }
+
+    private void requestMethod(Activity activity, BaseViewModel viewModel, Class<T> service, IMethod<T, K> method, IResponse<K> iResponse) {
         method.method(RetrofitClient.getInstance().create(service))
                 .compose(RxUtils.bindToLifecycle(viewModel.getLifecycleProvider())) // 请求与View周期同步
                 .compose(RxUtils.schedulersTransformer())
