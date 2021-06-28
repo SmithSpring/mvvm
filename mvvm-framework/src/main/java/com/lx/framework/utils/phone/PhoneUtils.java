@@ -65,6 +65,11 @@ public class PhoneUtils {
         }
     }
 
+    /**
+     *
+     * @param id   0即为卡1 ，1即为卡二
+     * @param telNum
+     */
     public static void callPhone(int id, String telNum) {
         try {
             TelecomManager telecomManager = null;
