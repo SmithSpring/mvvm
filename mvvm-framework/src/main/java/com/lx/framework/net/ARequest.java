@@ -1,20 +1,15 @@
-package com.lx.framework.manage;
+package com.lx.framework.net;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.text.TextUtils;
 
 import com.lx.framework.base.BaseViewModel;
-import com.lx.framework.confusion.RetrofitClient;
+import com.lx.framework.net.RetrofitClient;
 import com.lx.framework.http.ResponseThrowable;
-import com.lx.framework.net.CrowdingException;
 import com.lx.framework.net.IMethod;
 import com.lx.framework.net.IResponse;
-import com.lx.framework.net.NetworkException;
 import com.lx.framework.net.ResultException;
-import com.lx.framework.utils.NetUtil;
 import com.lx.framework.utils.RxUtils;
-import com.lx.framework.utils.ToastUtils;
 
 import io.reactivex.rxjava3.functions.Consumer;
 
@@ -31,10 +26,6 @@ public abstract class ARequest<T, K> {
      */
     @SuppressLint("CheckResult")
     public void request(Activity activity, BaseViewModel viewModel, Class<T> service, IMethod<T, K> method, IResponse<K> iResponse) {
-        requestMethod(activity, viewModel, service, method, iResponse);
-    }
-
-    private void requestMethod(Activity activity, BaseViewModel viewModel, Class<T> service, IMethod<T, K> method, IResponse<K> iResponse) {
         method.method(RetrofitClient.getInstance().create(service))
                 .compose(RxUtils.bindToLifecycle(viewModel.getLifecycleProvider())) // 请求与View周期同步
                 .compose(RxUtils.schedulersTransformer())

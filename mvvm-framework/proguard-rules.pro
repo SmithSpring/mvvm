@@ -35,7 +35,7 @@
 -keep class com.lx.framework.net.** { *; }
 -keep class com.lx.framework.entity.** { *; }
 -keep class com.lx.framework.model.** { *; }
--keepclassmembers class com.lx.framework.manage.ARequest{public *;}
+-keepclassmembers class com.lx.framework.net.ARequest{public *;}
 -keep class com.lx.framework.permission.** { *; }
 -keep class com.lx.framework.update.** { *; }
 -keep class com.lx.framework.utils.** { *; }

@@ -1,4 +1,4 @@
-package com.lx.framework.confusion;
+package com.lx.framework.net;
 
 import com.lx.framework.http.cookie.CookieJarImpl;
 import com.lx.framework.http.cookie.store.PersistentCookieStore;
