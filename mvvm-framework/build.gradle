@@ -107,5 +107,5 @@ dependencies {
     api 'com.github.SmithSpring:ArcProgressBar:v1.0.5'
     api 'com.android.support:multidex:1.0.3'
 
-    api(name: 'mvvm-framework-1.8.2', ext: 'aar')
+    api(name: 'mvvm-1.8.2', ext: 'aar')
 }
