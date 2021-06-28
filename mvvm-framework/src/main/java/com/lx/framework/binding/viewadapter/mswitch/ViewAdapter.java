@@ -21,6 +21,16 @@ public class ViewAdapter {
     }
 
     /**
+     * 设置是否可用
+     *
+     * @param mSwitch Switch控件
+     */
+    @BindingAdapter("switchEnable")
+    public static void setEnable(SwitchButton mSwitch, boolean isEnable) {
+        mSwitch.setEnabled(isEnable);
+    }
+
+    /**
      * Switch的状态改变监听
      *
      * @param mSwitch        Switch控件
