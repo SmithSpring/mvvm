@@ -57,6 +57,45 @@ public class PhoneUtils {
         return result;
     }
 
+    public static void call(int id, String telNum){
+        if (isMultiSim(Utils.getContext())){
+            callPhone(id,telNum);
+        }else {
+            callPhone(telNum);
+        }
+    }
+
+    public static void callPhone(int id, String telNum) {
+        try {
+            TelecomManager telecomManager = null;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                telecomManager = (TelecomManager) Utils.getContext().getSystemService(Context.TELECOM_SERVICE);
+            }
+            if (telecomManager != null) {
+                if (ActivityCompat.checkSelfPermission(Utils.getContext(), Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+                    return;
+                }
+                List<PhoneAccountHandle> phoneAccountHandleList = null;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    phoneAccountHandleList = telecomManager.getCallCapablePhoneAccounts();
+                }
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("tel:" + telNum));
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    intent.putExtra(TelecomManager.EXTRA_PHONE_ACCOUNT_HANDLE, phoneAccountHandleList.get(id));
+                }
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                Utils.getContext().startActivity(intent);
+            }else {
+                callPhone(telNum);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            callPhone(telNum);
+        }
+    }
+
     /**
      * 判断是否包含SIM卡
      *
@@ -71,18 +110,18 @@ public class PhoneUtils {
         return result;
     }
 
-    public static boolean testingSIM1(){
+    public static boolean testingSIM1() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
             return testingSIM(0);
-        }else {
+        } else {
             return SDCardUtils.isSDCardEnable();
         }
     }
 
-    public static boolean testingSIM2(){
+    public static boolean testingSIM2() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
             return testingSIM(1);
-        }else {
+        } else {
             return SDCardUtils.isSDCardEnable();
         }
     }
