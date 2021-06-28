@@ -35,6 +35,12 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     api fileTree(include: ['*.jar'], dir: 'libs')
     //support
@@ -100,4 +106,6 @@ dependencies {
     api 'com.github.zcweng:switch-button:0.0.3@aar'
     api 'com.github.SmithSpring:ArcProgressBar:v1.0.5'
     api 'com.android.support:multidex:1.0.3'
+
+    api(name: 'mvvm-framework-1.8.0', ext: 'aar')
 }
