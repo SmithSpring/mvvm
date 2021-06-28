@@ -39,10 +39,10 @@ public abstract class ARequest<T, K> {
                     iResponse.onError(throwable.message);
                     if (throwable.getCause() instanceof ResultException){
                         ResultException resultException = (ResultException) throwable.getCause();
-                        exceptionHandling(resultException.getErrMsg(),resultException.getErrCode());
+                        exceptionHandling(activity,resultException.getErrMsg(),resultException.getErrCode());
                     }
                 });
     }
 
-    public abstract void exceptionHandling(String error,int code);
+    public abstract void exceptionHandling(Activity activity,String error,int code);
 }
