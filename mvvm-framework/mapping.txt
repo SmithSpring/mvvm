@@ -1,8 +1,7 @@
 # compiler: R8
 # compiler_version: 2.0.99
-# pg_map_id: a3c1067
+# pg_map_id: ac75066
 # common_typos_disable
-androidx.databinding.DataBindingComponent -> a:
 com.bumptech.glide.GeneratedAppGlideModuleImpl -> com.bumptech.glide.GeneratedAppGlideModuleImpl:
     17:22:void <init>() -> <init>
     26:27:void applyOptions(android.content.Context,com.bumptech.glide.GlideBuilder) -> applyOptions
@@ -14,28 +13,10 @@ com.bumptech.glide.GeneratedAppGlideModuleImpl -> com.bumptech.glide.GeneratedAp
 com.bumptech.glide.GeneratedRequestManagerFactory -> com.bumptech.glide.GeneratedRequestManagerFactory:
     14:14:void <init>() -> <init>
     19:19:com.bumptech.glide.RequestManager build(com.bumptech.glide.Glide,com.bumptech.glide.manager.Lifecycle,com.bumptech.glide.manager.RequestManagerTreeNode,android.content.Context) -> build
-com.lx.framework.BR -> com.lx.framework.BR:
+com.lx.framework.BR -> com.lx.framework.a:
+    int viewModel -> a
     4:6:void <clinit>() -> <clinit>
     3:3:void <init>() -> <init>
-com.lx.framework.BuildConfig -> com.lx.framework.BuildConfig:
-    7:7:void <clinit>() -> <clinit>
-    6:6:void <init>() -> <init>
-com.lx.framework.DataBinderMapperImpl -> com.lx.framework.DataBinderMapperImpl:
-    26:31:void <clinit>() -> <clinit>
-    21:21:void <init>() -> <init>
-    93:97:java.util.List collectDependencies() -> collectDependencies
-    87:88:java.lang.String convertBrIdToString(int) -> convertBrIdToString
-    35:56:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View,int) -> getDataBinder
-    61:73:androidx.databinding.ViewDataBinding getDataBinder(androidx.databinding.DataBindingComponent,android.view.View[],int) -> getDataBinder
-    78:82:int getLayoutId(java.lang.String) -> getLayoutId
-com.lx.framework.DataBinderMapperImpl$InnerBrLookup -> com.lx.framework.DataBinderMapperImpl$InnerBrLookup:
-    101:106:void <clinit>() -> <clinit>
-    100:100:void <init>() -> <init>
-com.lx.framework.DataBinderMapperImpl$InnerLayoutIdLookup -> com.lx.framework.DataBinderMapperImpl$InnerLayoutIdLookup:
-    110:115:void <clinit>() -> <clinit>
-    109:109:void <init>() -> <init>
-com.lx.framework.DataBindingInfo -> com.lx.framework.DataBindingInfo:
-    6:6:void <init>() -> <init>
 com.lx.framework.base.AppManager -> com.lx.framework.base.AppManager:
     19:20:void <init>() -> <init>
     187:199:void AppExit() -> AppExit
@@ -56,103 +37,108 @@ com.lx.framework.base.AppManager -> com.lx.framework.base.AppManager:
     57:60:void removeActivity(android.app.Activity) -> removeActivity
     154:157:void removeFragment(androidx.fragment.app.Fragment) -> removeFragment
 com.lx.framework.base.BaseActivity -> com.lx.framework.base.BaseActivity:
-    42:42:void <init>() -> <init>
-    379:379:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
-    276:279:void dismissDialog() -> dismissDialog
-    90:90:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
-    364:364:void initData() -> initData
-    129:132:void initOrientation() -> initOrientation
-    334:334:void initParam() -> initParam
-    72:77:void initStatusBar() -> initStatusBar
-    349:349:int initVariableId() -> initVariableId
-    160:182:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
-    358:358:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
-    369:369:void initViewObservable() -> initViewObservable
-    113:113:boolean isRegisterEventBus() -> isRegisterEventBus
-    83:83:boolean isStatusBarEnabled() -> isStatusBarEnabled
-    52:69:void onCreate(android.os.Bundle) -> onCreate
-    141:153:void onDestroy() -> onDestroy
-    384:387:void onEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onEventBusCome
-    137:137:void onGlobalLayout() -> onGlobalLayout
-    391:394:void onStickyEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onStickyEventBusCome
-    403:403:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveEvent
-    412:412:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveStickyEvent
-    186:189:void refreshLayout() -> refreshLayout
-    198:251:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
-    254:255:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
-    258:273:void showDialog(java.lang.String) -> showDialog
-    287:288:void startActivity(java.lang.Class) -> startActivity
-    297:302:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
-    310:311:void startContainerActivity(java.lang.String) -> startContainerActivity
-    320:326:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
-    98:104:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
-    121:121:boolean statusBarDarkFont() -> statusBarDarkFont
+    45:45:void <init>() -> <init>
+    398:398:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
+    295:298:void dismissDialog() -> dismissDialog
+    93:93:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
+    383:383:void initData() -> initData
+    137:140:void initOrientation() -> initOrientation
+    353:353:void initParam() -> initParam
+    75:80:void initStatusBar() -> initStatusBar
+    368:368:int initVariableId() -> initVariableId
+    168:190:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
+    377:377:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
+    388:388:void initViewObservable() -> initViewObservable
+    117:117:boolean isRegisterEventBus() -> isRegisterEventBus
+    86:86:boolean isStatusBarEnabled() -> isStatusBarEnabled
+    55:72:void onCreate(android.os.Bundle) -> onCreate
+    149:161:void onDestroy() -> onDestroy
+    403:406:void onEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onEventBusCome
+    145:145:void onGlobalLayout() -> onGlobalLayout
+    410:413:void onStickyEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onStickyEventBusCome
+    422:422:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveEvent
+    431:431:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveStickyEvent
+    194:197:void refreshLayout() -> refreshLayout
+    206:260:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
+    263:264:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
+    267:268:void showDialog() -> showDialog
+    271:272:void showDialog(java.lang.String) -> showDialog
+    275:292:void showDialog(java.lang.String,boolean) -> showDialog
+    306:307:void startActivity(java.lang.Class) -> startActivity
+    316:321:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
+    329:330:void startContainerActivity(java.lang.String) -> startContainerActivity
+    339:345:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
+    121:121:int statusBarColor() -> statusBarColor
+    101:108:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
+    129:129:boolean statusBarDarkFont() -> statusBarDarkFont
 com.lx.framework.base.BaseActivity$1 -> com.lx.framework.base.BaseActivity$1:
-    198:198:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    198:198:void onChanged(java.lang.Object) -> onChanged
-    201:202:void onChanged(java.lang.String) -> onChanged
+    206:206:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    206:206:void onChanged(java.lang.Object) -> onChanged
+    209:210:void onChanged(java.lang.String) -> onChanged
 com.lx.framework.base.BaseActivity$2 -> com.lx.framework.base.BaseActivity$2:
-    205:205:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    205:205:void onChanged(java.lang.Object) -> onChanged
-    208:209:void onChanged(java.lang.Void) -> onChanged
+    213:213:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    213:213:void onChanged(java.lang.Object) -> onChanged
+    216:217:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseActivity$3 -> com.lx.framework.base.BaseActivity$3:
-    212:212:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    212:212:void onChanged(java.lang.Object) -> onChanged
-    215:218:void onChanged(java.util.Map) -> onChanged
-com.lx.framework.base.BaseActivity$4 -> com.lx.framework.base.BaseActivity$4:
     220:220:void <init>(com.lx.framework.base.BaseActivity) -> <init>
     220:220:void onChanged(java.lang.Object) -> onChanged
     223:226:void onChanged(java.util.Map) -> onChanged
+com.lx.framework.base.BaseActivity$4 -> com.lx.framework.base.BaseActivity$4:
+    228:228:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    228:228:void onChanged(java.lang.Object) -> onChanged
+    231:234:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseActivity$5 -> com.lx.framework.base.BaseActivity$5:
-    229:229:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    229:229:void onChanged(java.lang.Object) -> onChanged
-    232:235:void onChanged(java.util.Map) -> onChanged
+    237:237:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    237:237:void onChanged(java.lang.Object) -> onChanged
+    240:243:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseActivity$6 -> com.lx.framework.base.BaseActivity$6:
-    238:238:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    238:238:void onChanged(java.lang.Object) -> onChanged
-    241:242:void onChanged(java.lang.Void) -> onChanged
+    246:246:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    246:246:void onChanged(java.lang.Object) -> onChanged
+    249:251:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseActivity$7 -> com.lx.framework.base.BaseActivity$7:
-    245:245:void <init>(com.lx.framework.base.BaseActivity) -> <init>
-    245:245:void onChanged(java.lang.Object) -> onChanged
-    248:249:void onChanged(java.lang.Void) -> onChanged
+    254:254:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    254:254:void onChanged(java.lang.Object) -> onChanged
+    257:258:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseApplication -> com.lx.framework.base.BaseApplication:
-    16:16:void <init>() -> <init>
-    74:77:android.app.Application getInstance() -> getInstance
-    21:24:void onCreate() -> onCreate
-    32:68:void setApplication(android.app.Application) -> setApplication
+    21:21:void <init>() -> <init>
+    81:84:android.app.Application getInstance() -> getInstance
+    26:31:void onCreate() -> onCreate
+    39:75:void setApplication(android.app.Application) -> setApplication
 com.lx.framework.base.BaseApplication$1 -> com.lx.framework.base.BaseApplication$1:
-    36:36:void <init>() -> <init>
-    40:41:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
-    65:66:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
-    53:53:void onActivityPaused(android.app.Activity) -> onActivityPaused
-    49:49:void onActivityResumed(android.app.Activity) -> onActivityResumed
-    61:61:void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
-    45:45:void onActivityStarted(android.app.Activity) -> onActivityStarted
-    57:57:void onActivityStopped(android.app.Activity) -> onActivityStopped
+    43:43:void <init>() -> <init>
+    47:48:void onActivityCreated(android.app.Activity,android.os.Bundle) -> onActivityCreated
+    72:73:void onActivityDestroyed(android.app.Activity) -> onActivityDestroyed
+    60:60:void onActivityPaused(android.app.Activity) -> onActivityPaused
+    56:56:void onActivityResumed(android.app.Activity) -> onActivityResumed
+    68:68:void onActivitySaveInstanceState(android.app.Activity,android.os.Bundle) -> onActivitySaveInstanceState
+    52:52:void onActivityStarted(android.app.Activity) -> onActivityStarted
+    64:64:void onActivityStopped(android.app.Activity) -> onActivityStopped
 com.lx.framework.base.BaseFragment -> com.lx.framework.base.BaseFragment:
     32:32:void <init>() -> <init>
-    310:310:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.Fragment,java.lang.Class) -> createViewModel
-    191:194:void dismissDialog() -> dismissDialog
-    291:291:void initData() -> initData
-    261:261:void initParam() -> initParam
-    269:269:int initVariableId() -> initVariableId
+    320:320:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.Fragment,java.lang.Class) -> createViewModel
+    201:204:void dismissDialog() -> dismissDialog
+    301:301:void initData() -> initData
+    271:271:void initParam() -> initParam
+    279:279:int initVariableId() -> initVariableId
     89:109:void initViewDataBinding() -> initViewDataBinding
-    285:285:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
-    296:296:void initViewObservable() -> initViewObservable
-    299:299:boolean isBackPressed() -> isBackPressed
+    295:295:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
+    306:306:void initViewObservable() -> initViewObservable
+    309:309:boolean isBackPressed() -> isBackPressed
     41:43:void onCreate(android.os.Bundle) -> onCreate
     53:54:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
     47:48:void onDestroy() -> onDestroy
     59:68:void onDestroyView() -> onDestroyView
     72:83:void onViewCreated(android.view.View,android.os.Bundle) -> onViewCreated
-    253:256:void refreshLayout() -> refreshLayout
+    263:266:void refreshLayout() -> refreshLayout
     117:170:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
-    197:198:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
-    173:188:void showDialog(java.lang.String) -> showDialog
-    206:207:void startActivity(java.lang.Class) -> startActivity
-    216:221:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
-    229:230:void startContainerActivity(java.lang.String) -> startContainerActivity
-    239:245:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
+    207:208:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
+    173:174:void showDialog() -> showDialog
+    177:178:void showDialog(java.lang.String) -> showDialog
+    181:198:void showDialog(java.lang.String,boolean) -> showDialog
+    216:217:void startActivity(java.lang.Class) -> startActivity
+    226:231:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
+    239:240:void startContainerActivity(java.lang.String) -> startContainerActivity
+    249:255:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
 com.lx.framework.base.BaseFragment$1 -> com.lx.framework.base.BaseFragment$1:
     117:117:void <init>(com.lx.framework.base.BaseFragment) -> <init>
     117:117:void onChanged(java.lang.Object) -> onChanged
@@ -182,65 +168,68 @@ com.lx.framework.base.BaseFragment$7 -> com.lx.framework.base.BaseFragment$7:
     164:164:void onChanged(java.lang.Object) -> onChanged
     167:168:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseFragmentActivity -> com.lx.framework.base.BaseFragmentActivity:
-    40:40:void <init>() -> <init>
-    377:377:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
-    274:277:void dismissDialog() -> dismissDialog
-    88:88:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
-    362:362:void initData() -> initData
-    118:121:void initOrientation() -> initOrientation
-    332:332:void initParam() -> initParam
-    70:75:void initStatusBar() -> initStatusBar
-    347:347:int initVariableId() -> initVariableId
-    158:180:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
-    356:356:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
-    367:367:void initViewObservable() -> initViewObservable
-    150:150:boolean isRegisterEventBus() -> isRegisterEventBus
-    81:81:boolean isStatusBarEnabled() -> isStatusBarEnabled
-    50:67:void onCreate(android.os.Bundle) -> onCreate
-    130:142:void onDestroy() -> onDestroy
-    382:385:void onEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onEventBusCome
-    126:126:void onGlobalLayout() -> onGlobalLayout
-    389:392:void onStickyEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onStickyEventBusCome
-    401:401:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveEvent
-    410:410:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveStickyEvent
-    184:187:void refreshLayout() -> refreshLayout
-    196:249:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
-    252:253:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
-    256:271:void showDialog(java.lang.String) -> showDialog
-    285:286:void startActivity(java.lang.Class) -> startActivity
-    295:300:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
-    308:309:void startContainerActivity(java.lang.String) -> startContainerActivity
-    318:324:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
-    96:102:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
-    110:110:boolean statusBarDarkFont() -> statusBarDarkFont
+    41:41:void <init>() -> <init>
+    393:393:androidx.lifecycle.ViewModel createViewModel(androidx.fragment.app.FragmentActivity,java.lang.Class) -> createViewModel
+    290:293:void dismissDialog() -> dismissDialog
+    89:89:com.gyf.immersionbar.ImmersionBar getStatusBarConfig() -> getStatusBarConfig
+    378:378:void initData() -> initData
+    124:127:void initOrientation() -> initOrientation
+    348:348:void initParam() -> initParam
+    71:76:void initStatusBar() -> initStatusBar
+    363:363:int initVariableId() -> initVariableId
+    164:186:void initViewDataBinding(android.os.Bundle) -> initViewDataBinding
+    372:372:com.lx.framework.base.BaseViewModel initViewModel() -> initViewModel
+    383:383:void initViewObservable() -> initViewObservable
+    156:156:boolean isRegisterEventBus() -> isRegisterEventBus
+    82:82:boolean isStatusBarEnabled() -> isStatusBarEnabled
+    51:68:void onCreate(android.os.Bundle) -> onCreate
+    136:148:void onDestroy() -> onDestroy
+    398:401:void onEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onEventBusCome
+    132:132:void onGlobalLayout() -> onGlobalLayout
+    405:408:void onStickyEventBusCome(com.lx.framework.bus.event.eventbus.MessageEvent) -> onStickyEventBusCome
+    417:417:void receiveEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveEvent
+    426:426:void receiveStickyEvent(com.lx.framework.bus.event.eventbus.MessageEvent) -> receiveStickyEvent
+    190:193:void refreshLayout() -> refreshLayout
+    202:255:void registorUIChangeLiveDataCallBack() -> registorUIChangeLiveDataCallBack
+    258:259:void requestPermission(com.lx.framework.permission.IPermission,java.lang.String[]) -> requestPermission
+    262:263:void showDialog() -> showDialog
+    266:267:void showDialog(java.lang.String) -> showDialog
+    270:287:void showDialog(java.lang.String,boolean) -> showDialog
+    301:302:void startActivity(java.lang.Class) -> startActivity
+    311:316:void startActivity(java.lang.Class,android.os.Bundle) -> startActivity
+    324:325:void startContainerActivity(java.lang.String) -> startContainerActivity
+    334:340:void startContainerActivity(java.lang.String,android.os.Bundle) -> startContainerActivity
+    108:108:int statusBarColor() -> statusBarColor
+    97:104:com.gyf.immersionbar.ImmersionBar statusBarConfig() -> statusBarConfig
+    116:116:boolean statusBarDarkFont() -> statusBarDarkFont
 com.lx.framework.base.BaseFragmentActivity$1 -> com.lx.framework.base.BaseFragmentActivity$1:
-    196:196:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
-    196:196:void onChanged(java.lang.Object) -> onChanged
-    199:200:void onChanged(java.lang.String) -> onChanged
+    202:202:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    202:202:void onChanged(java.lang.Object) -> onChanged
+    205:206:void onChanged(java.lang.String) -> onChanged
 com.lx.framework.base.BaseFragmentActivity$2 -> com.lx.framework.base.BaseFragmentActivity$2:
-    203:203:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
-    203:203:void onChanged(java.lang.Object) -> onChanged
-    206:207:void onChanged(java.lang.Void) -> onChanged
+    209:209:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    209:209:void onChanged(java.lang.Object) -> onChanged
+    212:213:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseFragmentActivity$3 -> com.lx.framework.base.BaseFragmentActivity$3:
-    210:210:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
-    210:210:void onChanged(java.lang.Object) -> onChanged
-    213:216:void onChanged(java.util.Map) -> onChanged
+    216:216:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    216:216:void onChanged(java.lang.Object) -> onChanged
+    219:222:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseFragmentActivity$4 -> com.lx.framework.base.BaseFragmentActivity$4:
-    218:218:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
-    218:218:void onChanged(java.lang.Object) -> onChanged
-    221:224:void onChanged(java.util.Map) -> onChanged
+    224:224:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    224:224:void onChanged(java.lang.Object) -> onChanged
+    227:230:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseFragmentActivity$5 -> com.lx.framework.base.BaseFragmentActivity$5:
-    227:227:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
-    227:227:void onChanged(java.lang.Object) -> onChanged
-    230:233:void onChanged(java.util.Map) -> onChanged
+    233:233:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    233:233:void onChanged(java.lang.Object) -> onChanged
+    236:239:void onChanged(java.util.Map) -> onChanged
 com.lx.framework.base.BaseFragmentActivity$6 -> com.lx.framework.base.BaseFragmentActivity$6:
-    236:236:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
-    236:236:void onChanged(java.lang.Object) -> onChanged
-    239:240:void onChanged(java.lang.Void) -> onChanged
+    242:242:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    242:242:void onChanged(java.lang.Object) -> onChanged
+    245:246:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseFragmentActivity$7 -> com.lx.framework.base.BaseFragmentActivity$7:
-    243:243:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
-    243:243:void onChanged(java.lang.Object) -> onChanged
-    246:247:void onChanged(java.lang.Void) -> onChanged
+    249:249:void <init>(com.lx.framework.base.BaseFragmentActivity) -> <init>
+    249:249:void onChanged(java.lang.Object) -> onChanged
+    252:253:void onChanged(java.lang.Void) -> onChanged
 com.lx.framework.base.BaseModel -> com.lx.framework.base.BaseModel:
     8:9:void <init>() -> <init>
     14:14:void onCleared() -> onCleared
@@ -385,18 +374,16 @@ com.lx.framework.binding.viewadapter.listview.ViewAdapter$OnScrollListener$1 -> 
     75:75:void accept(java.lang.Object) -> accept
     78:79:void accept(java.lang.Integer) -> accept
 com.lx.framework.binding.viewadapter.mswitch.ViewAdapter -> com.lx.framework.binding.viewadapter.mswitch.ViewAdapter:
-    14:14:void <init>() -> <init>
-    33:41:void onCheckedChangeCommand(android.widget.Switch,com.lx.framework.binding.command.BindingCommand) -> onCheckedChangeCommand
-    22:23:void setSwitchState(android.widget.Switch,boolean) -> setSwitchState
-com.lx.framework.binding.viewadapter.mswitch.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.mswitch.ViewAdapter$1:
-    34:34:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
-    37:38:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    12:12:void <init>() -> <init>
+    32:32:void lambda$onCheckedChangeCommand$0(com.lx.framework.binding.command.BindingCommand,com.suke.widget.SwitchButton,boolean) -> a
+    31:34:void onCheckedChangeCommand(com.suke.widget.SwitchButton,com.lx.framework.binding.command.BindingCommand) -> onCheckedChangeCommand
+    20:21:void setSwitchState(com.suke.widget.SwitchButton,boolean) -> setSwitchState
 com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter -> com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter:
     13:13:void <init>() -> <init>
-    16:23:void onCheckedChangedCommand(android.widget.RadioGroup,com.lx.framework.binding.command.BindingCommand) -> onCheckedChangedCommand
+    16:26:void onCheckedChangedCommand(android.widget.RadioGroup,com.lx.framework.binding.command.BindingCommand,boolean) -> onCheckedChangedCommand
 com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.radiogroup.ViewAdapter$1:
-    16:16:void <init>(com.lx.framework.binding.command.BindingCommand) -> <init>
-    19:21:void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
+    16:16:void <init>(boolean,com.lx.framework.binding.command.BindingCommand) -> <init>
+    19:24:void onCheckedChanged(android.widget.RadioGroup,int) -> onCheckedChanged
 com.lx.framework.binding.viewadapter.recyclerview.DividerLine -> com.lx.framework.binding.viewadapter.recyclerview.DividerLine:
     16:20:void <clinit>() -> <clinit>
     26:41:void <init>(android.content.Context) -> <init>
@@ -420,26 +407,34 @@ com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode -> co
     31:31:com.lx.framework.binding.viewadapter.recyclerview.DividerLine$LineDrawMode[] values() -> values
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers:
     13:14:void <init>() -> <init>
-    48:48:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory grid(int) -> grid
-    60:60:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory grid(int,int,boolean) -> grid
+    67:67:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory grid(int) -> grid
+    79:79:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory grid(int,int,boolean) -> grid
     24:24:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory linear() -> linear
-    36:36:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory linear(int,boolean) -> linear
-    72:72:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory staggeredGrid(int,int) -> staggeredGrid
+    55:55:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory linear(int,boolean) -> linear
+    33:33:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory linearNoScroll(int,boolean) -> linearNoScroll
+    91:91:com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$LayoutManagerFactory staggeredGrid(int,int) -> staggeredGrid
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$1 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$1:
     24:24:void <init>() -> <init>
     27:27:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2:
-    36:36:void <init>(int,boolean) -> <init>
-    39:39:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+    33:33:void <init>(int,boolean) -> <init>
+    36:36:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2$1 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2$1:
+    36:36:void <init>(com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$2,android.content.Context,int,boolean) -> <init>
+    44:44:boolean canScrollHorizontally() -> canScrollHorizontally
+    39:39:boolean canScrollVertically() -> canScrollVertically
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$3 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$3:
-    48:48:void <init>(int) -> <init>
-    51:51:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+    55:55:void <init>(int,boolean) -> <init>
+    58:58:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$4 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$4:
-    60:60:void <init>(int,int,boolean) -> <init>
-    63:63:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+    67:67:void <init>(int) -> <init>
+    70:70:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
 com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$5 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$5:
-    72:72:void <init>(int,int) -> <init>
-    75:75:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+    79:79:void <init>(int,int,boolean) -> <init>
+    82:82:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
+com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$6 -> com.lx.framework.binding.viewadapter.recyclerview.LayoutManagers$6:
+    91:91:void <init>(int,int) -> <init>
+    94:94:androidx.recyclerview.widget.RecyclerView$LayoutManager create(androidx.recyclerview.widget.RecyclerView) -> create
 com.lx.framework.binding.viewadapter.recyclerview.LineManagers -> com.lx.framework.binding.viewadapter.recyclerview.LineManagers:
     10:11:void <init>() -> <init>
     19:19:com.lx.framework.binding.viewadapter.recyclerview.LineManagers$LineManagerFactory both() -> both
@@ -549,15 +544,13 @@ com.lx.framework.binding.viewadapter.viewgroup.ViewAdapter -> com.lx.framework.b
     15:15:void <init>() -> <init>
     19:28:void addViews(android.view.ViewGroup,me.tatarka.bindingcollectionadapter2.ItemBinding,androidx.databinding.ObservableList) -> addViews
 com.lx.framework.binding.viewadapter.viewpager.ViewAdapter -> com.lx.framework.binding.viewadapter.viewpager.ViewAdapter:
-    11:11:void <init>() -> <init>
-    17:43:void onScrollChangeCommand(androidx.viewpager.widget.ViewPager,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> onScrollChangeCommand
+    12:12:void <init>() -> <init>
+    18:44:void onScrollChangeCommand(androidx.viewpager.widget.ViewPager,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> onScrollChangeCommand
 com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$1 -> com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$1:
-    17:17:void <init>(com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> <init>
-    36:40:void onPageScrollStateChanged(int) -> onPageScrollStateChanged
-    22:25:void onPageScrolled(int,float,int) -> onPageScrolled
-    29:32:void onPageSelected(int) -> onPageSelected
-com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$ViewPagerDataWrapper -> com.lx.framework.binding.viewadapter.viewpager.ViewAdapter$ViewPagerDataWrapper:
-    51:56:void <init>(float,float,int,int) -> <init>
+    18:18:void <init>(com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand,com.lx.framework.binding.command.BindingCommand) -> <init>
+    37:41:void onPageScrollStateChanged(int) -> onPageScrollStateChanged
+    23:26:void onPageScrolled(int,float,int) -> onPageScrolled
+    30:33:void onPageSelected(int) -> onPageSelected
 com.lx.framework.binding.viewadapter.webview.ViewAdapter -> com.lx.framework.binding.viewadapter.webview.ViewAdapter:
     10:10:void <init>() -> <init>
     13:16:void loadHtml(android.webkit.WebView,java.lang.String) -> loadHtml
@@ -944,6 +937,77 @@ com.lx.framework.config.GlideRequests -> com.lx.framework.config.GlideRequests:
     167:172:void setRequestOptions(com.bumptech.glide.request.RequestOptions) -> setRequestOptions
 com.lx.framework.config.MyAppGlideModule -> com.lx.framework.config.MyAppGlideModule:
     7:7:void <init>() -> <init>
+com.lx.framework.confusion.GsonDConverterFactory -> a:
+    com.google.gson.Gson gson -> a
+    34:37:void <init>(com.google.gson.Gson) -> <init>
+    25:25:com.lx.framework.confusion.GsonDConverterFactory create() -> create
+    29:29:com.lx.framework.confusion.GsonDConverterFactory create(com.google.gson.Gson) -> create
+    44:45:retrofit2.Converter requestBodyConverter(java.lang.reflect.Type,java.lang.annotation.Annotation[],java.lang.annotation.Annotation[],retrofit2.Retrofit) -> requestBodyConverter
+    40:40:retrofit2.Converter responseBodyConverter(java.lang.reflect.Type,java.lang.annotation.Annotation[],retrofit2.Retrofit) -> responseBodyConverter
+com.lx.framework.confusion.GsonRequestBodyConverter -> b:
+    java.nio.charset.Charset UTF_8 -> d
+    com.google.gson.Gson gson -> a
+    com.google.gson.TypeAdapter adapter -> b
+    okhttp3.MediaType MEDIA_TYPE -> c
+    50:51:void <clinit>() -> <clinit>
+    56:59:void <init>(com.google.gson.Gson,com.google.gson.TypeAdapter) -> <init>
+    49:49:java.lang.Object convert(java.lang.Object) -> convert
+    63:68:okhttp3.RequestBody convert(java.lang.Object) -> convert
+com.lx.framework.confusion.GsonResponseBodyConverter -> c:
+    com.google.gson.Gson gson -> a
+    java.lang.reflect.Type type -> b
+    21:24:void <init>(com.google.gson.Gson,java.lang.reflect.Type) -> <init>
+    16:16:java.lang.Object convert(java.lang.Object) -> convert
+    30:49:java.lang.Object convert(okhttp3.ResponseBody) -> convert
+com.lx.framework.confusion.HttpsUtils -> d:
+    javax.net.ssl.X509TrustManager UnSafeTrustManager -> a
+    131:147:void <clinit>() -> <clinit>
+    25:25:void <init>() -> <init>
+    122:127:javax.net.ssl.X509TrustManager chooseTrustManager(javax.net.ssl.TrustManager[]) -> chooseTrustManager
+    33:33:com.lx.framework.confusion.HttpsUtils$SSLParams getSslSocketFactory() -> getSslSocketFactory
+    38:38:com.lx.framework.confusion.HttpsUtils$SSLParams getSslSocketFactory(javax.net.ssl.X509TrustManager) -> getSslSocketFactory
+    43:43:com.lx.framework.confusion.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream[]) -> getSslSocketFactory
+    48:48:com.lx.framework.confusion.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream,java.lang.String,java.io.InputStream[]) -> getSslSocketFactory
+    53:53:com.lx.framework.confusion.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream,java.lang.String,javax.net.ssl.X509TrustManager) -> getSslSocketFactory
+    57:77:com.lx.framework.confusion.HttpsUtils$SSLParams getSslSocketFactoryBase(javax.net.ssl.X509TrustManager,java.io.InputStream,java.lang.String,java.io.InputStream[]) -> getSslSocketFactoryBase
+    83:92:javax.net.ssl.KeyManager[] prepareKeyManager(java.io.InputStream,java.lang.String) -> prepareKeyManager
+    96:118:javax.net.ssl.TrustManager[] prepareTrustManager(java.io.InputStream[]) -> prepareTrustManager
+com.lx.framework.confusion.HttpsUtils$1 -> d$a:
+    131:131:void <init>() -> <init>
+    134:134:void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
+    138:138:void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
+    142:142:java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
+com.lx.framework.confusion.HttpsUtils$2 -> d$b:
+    147:147:void <init>() -> <init>
+    150:150:boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
+com.lx.framework.confusion.HttpsUtils$SSLParams -> d$c:
+    javax.net.ssl.X509TrustManager trustManager -> b
+    javax.net.ssl.SSLSocketFactory sSLSocketFactory -> a
+    27:27:void <init>() -> <init>
+com.lx.framework.confusion.MyInterceptor -> e:
+    java.util.Map headers -> a
+    16:18:void <init>(java.util.Map) -> <init>
+    22:52:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.confusion.RetrofitClient -> f:
+    java.io.File httpCacheDirectory -> a
+    retrofit2.Retrofit retrofit -> b
+    41:41:void <init>(com.lx.framework.confusion.RetrofitClient$1) -> <init>
+    58:59:void <init>() -> <init>
+    61:125:void <init>(java.lang.String,java.util.Map) -> <init>
+    41:41:void access$200(com.lx.framework.confusion.RetrofitClient,okhttp3.RequestBody) -> a
+    129:132:java.lang.Object create(java.lang.Class) -> create
+    137:142:java.lang.Object execute(io.reactivex.rxjava3.core.Observable,io.reactivex.rxjava3.core.Observer) -> execute
+    54:54:com.lx.framework.confusion.RetrofitClient getInstance() -> getInstance
+    146:158:void printParams(okhttp3.RequestBody) -> printParams
+com.lx.framework.confusion.RetrofitClient$1 -> f$a:
+    com.lx.framework.confusion.RetrofitClient this$0 -> a
+    87:87:void <init>(com.lx.framework.confusion.RetrofitClient) -> <init>
+    91:108:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
+com.lx.framework.confusion.RetrofitClient$SingletonHolder -> f$b:
+    com.lx.framework.confusion.RetrofitClient INSTANCE -> a
+    50:50:void <clinit>() -> <clinit>
+    49:49:void <init>() -> <init>
+    49:49:com.lx.framework.confusion.RetrofitClient access$100() -> a
 com.lx.framework.crash.CaocConfig -> com.lx.framework.crash.CaocConfig:
     32:53:void <init>() -> <init>
     32:32:int access$000(com.lx.framework.crash.CaocConfig) -> access$000
@@ -1062,68 +1126,32 @@ com.lx.framework.crash.CustomActivityOnCrash$2 -> com.lx.framework.crash.CustomA
     212:215:void onActivityStarted(android.app.Activity) -> onActivityStarted
     234:236:void onActivityStopped(android.app.Activity) -> onActivityStopped
 com.lx.framework.crash.DefaultErrorActivity -> com.lx.framework.crash.DefaultErrorActivity:
-    42:42:void <init>() -> <init>
-    42:42:void access$000(com.lx.framework.crash.DefaultErrorActivity) -> access$000
-    126:131:void copyErrorToClipboard() -> copyErrorToClipboard
-    122:122:int initContentView(android.os.Bundle) -> initContentView
-    57:118:void initData() -> initData
-    47:53:void initParam() -> initParam
+    41:41:void <init>() -> <init>
+    41:41:void access$000(com.lx.framework.crash.DefaultErrorActivity) -> access$000
+    125:130:void copyErrorToClipboard() -> copyErrorToClipboard
+    121:121:int initContentView(android.os.Bundle) -> initContentView
+    56:117:void initData() -> initData
+    46:52:void initParam() -> initParam
 com.lx.framework.crash.DefaultErrorActivity$1 -> com.lx.framework.crash.DefaultErrorActivity$1:
-    68:68:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
-    71:72:void onClick(android.view.View) -> onClick
+    67:67:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
+    70:71:void onClick(android.view.View) -> onClick
 com.lx.framework.crash.DefaultErrorActivity$2 -> com.lx.framework.crash.DefaultErrorActivity$2:
-    75:75:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
-    78:79:void onClick(android.view.View) -> onClick
+    74:74:void <init>(com.lx.framework.crash.DefaultErrorActivity,com.lx.framework.crash.CaocConfig) -> <init>
+    77:78:void onClick(android.view.View) -> onClick
 com.lx.framework.crash.DefaultErrorActivity$3 -> com.lx.framework.crash.DefaultErrorActivity$3:
-    86:86:void <init>(com.lx.framework.crash.DefaultErrorActivity) -> <init>
-    91:106:void onClick(android.view.View) -> onClick
+    85:85:void <init>(com.lx.framework.crash.DefaultErrorActivity) -> <init>
+    90:105:void onClick(android.view.View) -> onClick
 com.lx.framework.crash.DefaultErrorActivity$3$1 -> com.lx.framework.crash.DefaultErrorActivity$3$1:
-    96:96:void <init>(com.lx.framework.crash.DefaultErrorActivity$3) -> <init>
-    99:101:void onClick(android.content.DialogInterface,int) -> onClick
-com.lx.framework.databinding.ActivityContainerBinding -> com.lx.framework.databinding.ActivityContainerBinding:
-    27:29:void <init>(java.lang.Object,android.view.View,int,android.widget.FrameLayout) -> <init>
-    78:78:com.lx.framework.databinding.ActivityContainerBinding bind(android.view.View) -> bind
-    90:90:com.lx.framework.databinding.ActivityContainerBinding bind(android.view.View,java.lang.Object) -> bind
-    35:35:com.lx.framework.base.BaseViewModel getViewModel() -> getViewModel
-    41:41:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean) -> inflate
-    55:55:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object) -> inflate
-    60:60:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater) -> inflate
-    74:74:com.lx.framework.databinding.ActivityContainerBinding inflate(android.view.LayoutInflater,java.lang.Object) -> inflate
-com.lx.framework.databinding.ActivityContainerBindingImpl -> com.lx.framework.databinding.ActivityContainerBindingImpl:
-    15:17:void <clinit>() -> <clinit>
-    25:26:void <init>(androidx.databinding.DataBindingComponent,android.view.View) -> <init>
-    28:90:void <init>(androidx.databinding.DataBindingComponent,android.view.View,java.lang.Object[]) -> <init>
-    80:86:void executeBindings() -> executeBindings
-    47:52:boolean hasPendingBindings() -> hasPendingBindings
-    39:43:void invalidateAll() -> invalidateAll
-    73:75:boolean onFieldChange(int,java.lang.Object,int) -> onFieldChange
-    57:64:boolean setVariable(int,java.lang.Object) -> setVariable
-    68:69:void setViewModel(com.lx.framework.base.BaseViewModel) -> setViewModel
-com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding -> com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding:
-    36:40:void <init>(java.lang.Object,android.view.View,int,android.widget.ImageView,android.widget.Button,android.widget.Button) -> <init>
-    91:91:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding bind(android.view.View) -> bind
-    104:104:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding bind(android.view.View,java.lang.Object) -> bind
-    46:46:com.lx.framework.base.BaseViewModel getViewModel() -> getViewModel
-    52:52:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean) -> inflate
-    67:67:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object) -> inflate
-    73:73:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater) -> inflate
-    87:87:com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBinding inflate(android.view.LayoutInflater,java.lang.Object) -> inflate
-com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBindingImpl -> com.lx.framework.databinding.CustomactivityoncrashDefaultErrorActivityBindingImpl:
-    15:20:void <clinit>() -> <clinit>
-    30:31:void <init>(androidx.databinding.DataBindingComponent,android.view.View) -> <init>
-    33:98:void <init>(androidx.databinding.DataBindingComponent,android.view.View,java.lang.Object[]) -> <init>
-    88:94:void executeBindings() -> executeBindings
-    55:60:boolean hasPendingBindings() -> hasPendingBindings
-    47:51:void invalidateAll() -> invalidateAll
-    81:83:boolean onFieldChange(int,java.lang.Object,int) -> onFieldChange
-    65:72:boolean setVariable(int,java.lang.Object) -> setVariable
-    76:77:void setViewModel(com.lx.framework.base.BaseViewModel) -> setViewModel
+    95:95:void <init>(com.lx.framework.crash.DefaultErrorActivity$3) -> <init>
+    98:100:void onClick(android.content.DialogInterface,int) -> onClick
+com.lx.framework.entity.ViewPagerDataWrapper -> com.lx.framework.entity.ViewPagerDataWrapper:
+    9:14:void <init>(float,float,int,int) -> <init>
 com.lx.framework.http.ApiDisposableObserver -> com.lx.framework.http.ApiDisposableObserver:
     14:14:void <init>() -> <init>
     20:20:void onComplete() -> onComplete
     24:33:void onError(java.lang.Throwable) -> onError
-    49:50:void onNext(java.lang.Object) -> onNext
-    37:45:void onStart() -> onStart
+    47:48:void onNext(java.lang.Object) -> onNext
+    37:43:void onStart() -> onStart
 com.lx.framework.http.DownLoadManager -> com.lx.framework.http.DownLoadManager:
     30:32:void <init>() -> <init>
     63:73:void buildNetWork() -> buildNetWork
@@ -1294,48 +1322,34 @@ com.lx.framework.http.interceptor.logging.Printer -> com.lx.framework.http.inter
     55:77:void printJsonRequest(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder,okhttp3.Request) -> printJsonRequest
     81:93:void printJsonResponse(com.lx.framework.http.interceptor.logging.LoggingInterceptor$Builder,long,boolean,int,java.lang.String,java.lang.String,java.util.List) -> printJsonResponse
     154:158:java.lang.String slashSegments(java.util.List) -> slashSegments
-com.lx.framework.net.HttpsUtils -> com.lx.framework.net.HttpsUtils:
-    131:147:void <clinit>() -> <clinit>
-    25:25:void <init>() -> <init>
-    122:127:javax.net.ssl.X509TrustManager chooseTrustManager(javax.net.ssl.TrustManager[]) -> chooseTrustManager
-    33:33:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory() -> getSslSocketFactory
-    38:38:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(javax.net.ssl.X509TrustManager) -> getSslSocketFactory
-    43:43:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream[]) -> getSslSocketFactory
-    48:48:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream,java.lang.String,java.io.InputStream[]) -> getSslSocketFactory
-    53:53:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactory(java.io.InputStream,java.lang.String,javax.net.ssl.X509TrustManager) -> getSslSocketFactory
-    57:77:com.lx.framework.net.HttpsUtils$SSLParams getSslSocketFactoryBase(javax.net.ssl.X509TrustManager,java.io.InputStream,java.lang.String,java.io.InputStream[]) -> getSslSocketFactoryBase
-    83:92:javax.net.ssl.KeyManager[] prepareKeyManager(java.io.InputStream,java.lang.String) -> prepareKeyManager
-    96:118:javax.net.ssl.TrustManager[] prepareTrustManager(java.io.InputStream[]) -> prepareTrustManager
-com.lx.framework.net.HttpsUtils$1 -> com.lx.framework.net.HttpsUtils$1:
-    131:131:void <init>() -> <init>
-    134:134:void checkClientTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkClientTrusted
-    138:138:void checkServerTrusted(java.security.cert.X509Certificate[],java.lang.String) -> checkServerTrusted
-    142:142:java.security.cert.X509Certificate[] getAcceptedIssuers() -> getAcceptedIssuers
-com.lx.framework.net.HttpsUtils$2 -> com.lx.framework.net.HttpsUtils$2:
-    147:147:void <init>() -> <init>
-    150:150:boolean verify(java.lang.String,javax.net.ssl.SSLSession) -> verify
-com.lx.framework.net.HttpsUtils$SSLParams -> com.lx.framework.net.HttpsUtils$SSLParams:
+com.lx.framework.manage.ARequest -> com.lx.framework.manage.ARequest:
     27:27:void <init>() -> <init>
-com.lx.framework.net.MyInterceptor -> com.lx.framework.net.MyInterceptor:
-    16:18:void <init>(java.util.Map) -> <init>
-    22:52:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
-com.lx.framework.net.RetrofitClient -> com.lx.framework.net.RetrofitClient:
-    42:42:void <init>(com.lx.framework.net.RetrofitClient$1) -> <init>
-    64:65:void <init>() -> <init>
-    67:129:void <init>(java.lang.String,java.util.Map) -> <init>
-    42:42:void access$200(com.lx.framework.net.RetrofitClient,okhttp3.RequestBody) -> access$200
-    133:136:java.lang.Object create(java.lang.Class) -> create
-    141:146:java.lang.Object execute(io.reactivex.rxjava3.core.Observable,io.reactivex.rxjava3.core.Observer) -> execute
-    60:60:com.lx.framework.net.RetrofitClient getInstance() -> getInstance
-    56:57:void init(java.lang.String) -> init
-    150:162:void printParams(okhttp3.RequestBody) -> printParams
-com.lx.framework.net.RetrofitClient$1 -> com.lx.framework.net.RetrofitClient$1:
-    93:93:void <init>(com.lx.framework.net.RetrofitClient) -> <init>
-    97:114:okhttp3.Response intercept(okhttp3.Interceptor$Chain) -> intercept
-com.lx.framework.net.RetrofitClient$SingletonHolder -> com.lx.framework.net.RetrofitClient$SingletonHolder:
-    52:52:void <clinit>() -> <clinit>
-    51:51:void <init>() -> <init>
-    51:51:com.lx.framework.net.RetrofitClient access$100() -> access$100
+    43:63:void lambda$request$0(com.lx.framework.net.IResponse,com.lx.framework.http.ResponseThrowable) -> a
+    34:65:void request(android.app.Activity,com.lx.framework.base.BaseViewModel,java.lang.Class,com.lx.framework.net.IMethod,com.lx.framework.net.IResponse) -> request
+com.lx.framework.model.EntityResponse -> com.lx.framework.model.EntityResponse:
+    3:3:void <init>() -> <init>
+    8:8:int getCode() -> getCode
+    16:16:java.lang.Object getContent() -> getContent
+    12:13:void setCode(int) -> setCode
+    20:21:void setContent(java.lang.Object) -> setContent
+com.lx.framework.net.CrowdingException -> com.lx.framework.net.CrowdingException:
+    10:13:void <init>(java.lang.String,int) -> <init>
+    24:24:int getErrCode() -> getErrCode
+    16:16:java.lang.String getErrMsg() -> getErrMsg
+    28:29:void setErrCode(int) -> setErrCode
+    20:21:void setErrMsg(java.lang.String) -> setErrMsg
+com.lx.framework.net.NetworkException -> com.lx.framework.net.NetworkException:
+    10:13:void <init>(java.lang.String,int) -> <init>
+    24:24:int getErrCode() -> getErrCode
+    16:16:java.lang.String getErrMsg() -> getErrMsg
+    28:29:void setErrCode(int) -> setErrCode
+    20:21:void setErrMsg(java.lang.String) -> setErrMsg
+com.lx.framework.net.ResultException -> com.lx.framework.net.ResultException:
+    10:13:void <init>(java.lang.String,int) -> <init>
+    24:24:int getErrCode() -> getErrCode
+    16:16:java.lang.String getErrMsg() -> getErrMsg
+    28:29:void setErrCode(int) -> setErrCode
+    20:21:void setErrMsg(java.lang.String) -> setErrMsg
 com.lx.framework.permission.RxPermission -> com.lx.framework.permission.RxPermission:
     16:16:void <init>() -> <init>
     71:76:boolean hasAlwaysDeniedPermission(androidx.fragment.app.FragmentActivity,java.util.List) -> hasAlwaysDeniedPermission
@@ -1370,13 +1384,17 @@ com.lx.framework.update.XUpdate$Inner -> com.lx.framework.update.XUpdate$Inner:
     23:23:com.lx.framework.update.XUpdate access$100() -> access$100
 com.lx.framework.utils.AppInfoUtil -> com.lx.framework.utils.AppInfoUtil:
     10:10:void <init>() -> <init>
-    47:73:int compareVersion(java.lang.String,java.lang.String) -> compareVersion
+    48:73:int compareVersion(java.lang.String,java.lang.String) -> compareVersion
     13:22:int getLocalVersion(android.content.Context) -> getLocalVersion
     29:38:java.lang.String getLocalVersionName(android.content.Context) -> getLocalVersionName
 com.lx.framework.utils.CloseUtils -> com.lx.framework.utils.CloseUtils:
     12:13:void <init>() -> <init>
     22:32:void closeIO(java.io.Closeable[]) -> closeIO
     40:49:void closeIOQuietly(java.io.Closeable[]) -> closeIOQuietly
+com.lx.framework.utils.Configure -> com.lx.framework.utils.Configure:
+    8:9:void <init>() -> <init>
+    17:20:java.lang.String getUrl() -> getUrl
+    13:14:void setUrl(java.lang.String) -> setUrl
 com.lx.framework.utils.Constant -> com.lx.framework.utils.Constant:
     3:3:void <init>() -> <init>
 com.lx.framework.utils.ConvertUtils -> com.lx.framework.utils.ConvertUtils:
@@ -1393,14 +1411,14 @@ com.lx.framework.utils.ConvertUtils -> com.lx.framework.utils.ConvertUtils:
     532:532:android.graphics.drawable.Drawable bytes2Drawable(byte[]) -> bytes2Drawable
     44:52:java.lang.String bytes2HexString(byte[]) -> bytes2HexString
     349:350:java.io.InputStream bytes2InputStream(byte[]) -> bytes2InputStream
-    371:382:java.io.OutputStream bytes2OutputStream(byte[]) -> bytes2OutputStream
+    371:381:java.io.OutputStream bytes2OutputStream(byte[]) -> bytes2OutputStream
     101:107:byte[] chars2Bytes(char[]) -> chars2Bytes
     562:563:int dp2px(float) -> dp2px
     484:501:android.graphics.Bitmap drawable2Bitmap(android.graphics.drawable.Drawable) -> drawable2Bitmap
     522:522:byte[] drawable2Bytes(android.graphics.drawable.Drawable,android.graphics.Bitmap$CompressFormat) -> drawable2Bytes
     85:90:int hex2Dec(char) -> hex2Dec
     64:75:byte[] hexString2Bytes(java.lang.String) -> hexString2Bytes
-    303:317:java.io.ByteArrayOutputStream input2OutputStream(java.io.InputStream) -> input2OutputStream
+    303:316:java.io.ByteArrayOutputStream input2OutputStream(java.io.InputStream) -> input2OutputStream
     338:339:byte[] inputStream2Bytes(java.io.InputStream) -> inputStream2Bytes
     393:398:java.lang.String inputStream2String(java.io.InputStream,java.lang.String) -> inputStream2String
     606:612:boolean isSpace(java.lang.String) -> isSpace
@@ -1417,11 +1435,31 @@ com.lx.framework.utils.ConvertUtils -> com.lx.framework.utils.ConvertUtils:
     444:449:java.io.OutputStream string2OutputStream(java.lang.String,java.lang.String) -> string2OutputStream
     200:200:long timeSpan2Millis(long,int) -> timeSpan2Millis
     542:552:android.graphics.Bitmap view2Bitmap(android.view.View) -> view2Bitmap
+com.lx.framework.utils.CopyPasteUtils -> com.lx.framework.utils.CopyPasteUtils:
+    12:13:void <clinit>() -> <clinit>
+    8:8:void <init>() -> <init>
+    51:59:void clearClipboard() -> clearClipboard
+    21:29:void copy(java.lang.String) -> copy
+    35:44:java.lang.String getClipContent() -> getClipContent
 com.lx.framework.utils.DES -> com.lx.framework.utils.DES:
     13:13:void <clinit>() -> <clinit>
     11:11:void <init>() -> <init>
     30:40:java.lang.String decryptDES(java.lang.String,java.lang.String) -> decryptDES
     17:26:java.lang.String encryptDES(java.lang.String,java.lang.String) -> encryptDES
+com.lx.framework.utils.DpiUtils -> com.lx.framework.utils.DpiUtils:
+    6:6:void <init>() -> <init>
+    9:10:int dip2px(android.content.Context,int) -> dip2px
+    13:14:int dip2px(android.content.Context,float) -> dip2px
+    17:18:int px2sp(android.content.Context,float) -> px2sp
+    21:22:int sp2px(android.content.Context,float) -> sp2px
+com.lx.framework.utils.FileSizeUtils -> com.lx.framework.utils.FileSizeUtils:
+    7:7:void <init>() -> <init>
+    104:119:java.lang.String FormetFileSize(long) -> FormetFileSize
+    130:148:double formatFileSize(long,int) -> formatFileSize
+    43:55:java.lang.String getAutoFileOrFilesSize(java.lang.String) -> getAutoFileOrFilesSize
+    21:33:double getFileOrFilesSize(java.lang.String,int) -> getFileOrFilesSize
+    65:74:long getFileSize(java.io.File) -> getFileSize
+    85:94:long getFileSizes(java.io.File) -> getFileSizes
 com.lx.framework.utils.FileUtils -> com.lx.framework.utils.FileUtils:
     32:32:void <clinit>() -> <clinit>
     66:67:void <init>() -> <init>
@@ -1508,70 +1546,79 @@ com.lx.framework.utils.FileUtils$3 -> com.lx.framework.utils.FileUtils$3:
     520:520:void <init>() -> <init>
     523:523:boolean accept(java.io.File) -> accept
 com.lx.framework.utils.ImageUtils -> com.lx.framework.utils.ImageUtils:
-    734:734:void <clinit>() -> <clinit>
-    61:61:void <init>() -> <init>
-    607:608:android.graphics.drawable.Drawable bitmapToDrawable(android.graphics.Bitmap) -> bitmapToDrawable
-    886:896:java.io.File checkTargetCacheDir(java.lang.String) -> checkTargetCacheDir
-    779:785:java.io.File compressBitmap(java.lang.String,java.lang.String,java.lang.String) -> compressBitmap
-    848:860:android.graphics.Bitmap compressImage(android.graphics.Bitmap) -> compressImage
-    916:935:void compressWithRx(java.util.List,io.reactivex.rxjava3.core.Observer) -> compressWithRx
-    943:962:void compressWithRx(java.lang.String,io.reactivex.rxjava3.functions.Consumer) -> compressWithRx
-    869:876:java.io.File convertToFile(android.graphics.Bitmap,java.lang.String,java.lang.String) -> convertToFile
-    904:907:java.io.File createFile(java.io.File,java.lang.String,java.lang.String) -> createFile
-    410:428:void createImageThumbnail(android.content.Context,java.lang.String,java.lang.String,int,int) -> createImageThumbnail
-    566:597:android.graphics.Bitmap createReflectionImageWithOrigin(android.graphics.Bitmap) -> createReflectionImageWithOrigin
-    517:525:android.graphics.Bitmap drawableToBitmap(android.graphics.drawable.Drawable) -> drawableToBitmap
-    297:313:java.lang.String getAbsoluteImagePath(android.app.Activity,android.net.Uri) -> getAbsoluteImagePath
-    271:286:java.lang.String getAbsolutePathFromNoStandardUri(android.net.Uri) -> getAbsolutePathFromNoStandardUri
-    167:182:android.graphics.Bitmap getBitmap(android.content.Context,java.lang.String) -> getBitmap
-    223:238:android.graphics.Bitmap getBitmapByFile(java.io.File) -> getBitmapByFile
-    192:192:android.graphics.Bitmap getBitmapByPath(java.lang.String) -> getBitmapByPath
-    197:213:android.graphics.Bitmap getBitmapByPath(java.lang.String,android.graphics.BitmapFactory$Options) -> getBitmapByPath
-    260:260:java.lang.String getCamerPath() -> getCamerPath
-    720:731:java.lang.String getImagePath(android.net.Uri,android.app.Activity) -> getImagePath
-    618:635:java.lang.String getImageType(java.io.File) -> getImageType
-    646:654:java.lang.String getImageType(java.io.InputStream) -> getImageType
-    666:678:java.lang.String getImageType(byte[]) -> getImageType
-    358:374:java.lang.String getLatestImage(android.app.Activity) -> getLatestImage
-    539:556:android.graphics.Bitmap getRoundedCornerBitmap(android.graphics.Bitmap,float) -> getRoundedCornerBitmap
-    248:251:java.lang.String getTempFileName() -> getTempFileName
-    706:709:boolean isBMP(byte[]) -> isBMP
-    689:692:boolean isGIF(byte[]) -> isGIF
-    682:685:boolean isJPEG(byte[]) -> isJPEG
-    697:700:boolean isPNG(byte[]) -> isPNG
-    327:344:android.graphics.Bitmap loadImgThumbnail(android.app.Activity,java.lang.String,int) -> loadImgThumbnail
-    348:349:android.graphics.Bitmap loadImgThumbnail(java.lang.String,int,int) -> loadImgThumbnail
-    739:767:android.graphics.Bitmap loadPicasaImageFromGalley(android.net.Uri,android.app.Activity) -> loadPicasaImageFromGalley
-    484:507:android.graphics.Bitmap reDrawBitMap(android.app.Activity,android.graphics.Bitmap) -> reDrawBitMap
-    822:841:android.graphics.Bitmap revitionImageSize(java.io.File) -> revitionImageSize
-    130:145:void saveBackgroundImage(android.content.Context,java.lang.String,android.graphics.Bitmap,int) -> saveBackgroundImage
-    87:88:void saveImage(android.content.Context,java.lang.String,android.graphics.Bitmap) -> saveImage
-    92:102:void saveImage(android.content.Context,java.lang.String,android.graphics.Bitmap,int) -> saveImage
-    111:126:void saveImageToSD(android.content.Context,java.lang.String,android.graphics.Bitmap,int) -> saveImageToSD
-    455:472:android.graphics.Bitmap scaleBitmap(android.graphics.Bitmap) -> scaleBitmap
-    385:389:int[] scaleImageSize(int[],int) -> scaleImageSize
-    151:157:void scanPhoto(android.content.Context,java.lang.String) -> scanPhoto
-    439:450:android.graphics.Bitmap zoomBitmap(android.graphics.Bitmap,int,int) -> zoomBitmap
-    799:817:android.graphics.Bitmap zoomBitmap(android.graphics.Bitmap,float,float) -> zoomBitmap
+    736:736:void <clinit>() -> <clinit>
+    63:63:void <init>() -> <init>
+    609:610:android.graphics.drawable.Drawable bitmapToDrawable(android.graphics.Bitmap) -> bitmapToDrawable
+    888:898:java.io.File checkTargetCacheDir(java.lang.String) -> checkTargetCacheDir
+    781:787:java.io.File compressBitmap(java.lang.String,java.lang.String,java.lang.String) -> compressBitmap
+    850:862:android.graphics.Bitmap compressImage(android.graphics.Bitmap) -> compressImage
+    918:937:void compressWithRx(java.util.List,io.reactivex.rxjava3.core.Observer) -> compressWithRx
+    945:964:void compressWithRx(java.lang.String,io.reactivex.rxjava3.functions.Consumer) -> compressWithRx
+    968:988:void compressWithRx(java.lang.String,io.reactivex.rxjava3.functions.Consumer,com.lx.framework.base.IThrowable) -> compressWithRx
+    871:878:java.io.File convertToFile(android.graphics.Bitmap,java.lang.String,java.lang.String) -> convertToFile
+    906:909:java.io.File createFile(java.io.File,java.lang.String,java.lang.String) -> createFile
+    412:430:void createImageThumbnail(android.content.Context,java.lang.String,java.lang.String,int,int) -> createImageThumbnail
+    568:599:android.graphics.Bitmap createReflectionImageWithOrigin(android.graphics.Bitmap) -> createReflectionImageWithOrigin
+    519:527:android.graphics.Bitmap drawableToBitmap(android.graphics.drawable.Drawable) -> drawableToBitmap
+    299:315:java.lang.String getAbsoluteImagePath(android.app.Activity,android.net.Uri) -> getAbsoluteImagePath
+    273:288:java.lang.String getAbsolutePathFromNoStandardUri(android.net.Uri) -> getAbsolutePathFromNoStandardUri
+    169:184:android.graphics.Bitmap getBitmap(android.content.Context,java.lang.String) -> getBitmap
+    225:240:android.graphics.Bitmap getBitmapByFile(java.io.File) -> getBitmapByFile
+    194:194:android.graphics.Bitmap getBitmapByPath(java.lang.String) -> getBitmapByPath
+    199:215:android.graphics.Bitmap getBitmapByPath(java.lang.String,android.graphics.BitmapFactory$Options) -> getBitmapByPath
+    262:262:java.lang.String getCamerPath() -> getCamerPath
+    722:733:java.lang.String getImagePath(android.net.Uri,android.app.Activity) -> getImagePath
+    620:636:java.lang.String getImageType(java.io.File) -> getImageType
+    648:656:java.lang.String getImageType(java.io.InputStream) -> getImageType
+    668:680:java.lang.String getImageType(byte[]) -> getImageType
+    360:376:java.lang.String getLatestImage(android.app.Activity) -> getLatestImage
+    541:558:android.graphics.Bitmap getRoundedCornerBitmap(android.graphics.Bitmap,float) -> getRoundedCornerBitmap
+    250:253:java.lang.String getTempFileName() -> getTempFileName
+    708:711:boolean isBMP(byte[]) -> isBMP
+    691:694:boolean isGIF(byte[]) -> isGIF
+    684:687:boolean isJPEG(byte[]) -> isJPEG
+    699:702:boolean isPNG(byte[]) -> isPNG
+    329:346:android.graphics.Bitmap loadImgThumbnail(android.app.Activity,java.lang.String,int) -> loadImgThumbnail
+    350:351:android.graphics.Bitmap loadImgThumbnail(java.lang.String,int,int) -> loadImgThumbnail
+    741:769:android.graphics.Bitmap loadPicasaImageFromGalley(android.net.Uri,android.app.Activity) -> loadPicasaImageFromGalley
+    486:509:android.graphics.Bitmap reDrawBitMap(android.app.Activity,android.graphics.Bitmap) -> reDrawBitMap
+    824:843:android.graphics.Bitmap revitionImageSize(java.io.File) -> revitionImageSize
+    132:147:void saveBackgroundImage(android.content.Context,java.lang.String,android.graphics.Bitmap,int) -> saveBackgroundImage
+    89:90:void saveImage(android.content.Context,java.lang.String,android.graphics.Bitmap) -> saveImage
+    94:104:void saveImage(android.content.Context,java.lang.String,android.graphics.Bitmap,int) -> saveImage
+    113:128:void saveImageToSD(android.content.Context,java.lang.String,android.graphics.Bitmap,int) -> saveImageToSD
+    457:474:android.graphics.Bitmap scaleBitmap(android.graphics.Bitmap) -> scaleBitmap
+    387:391:int[] scaleImageSize(int[],int) -> scaleImageSize
+    153:159:void scanPhoto(android.content.Context,java.lang.String) -> scanPhoto
+    441:452:android.graphics.Bitmap zoomBitmap(android.graphics.Bitmap,int,int) -> zoomBitmap
+    801:819:android.graphics.Bitmap zoomBitmap(android.graphics.Bitmap,float,float) -> zoomBitmap
 com.lx.framework.utils.ImageUtils$1 -> com.lx.framework.utils.ImageUtils$1:
-    747:747:void <init>(android.app.Activity,android.net.Uri) -> <init>
-    752:761:void run() -> run
+    749:749:void <init>(android.app.Activity,android.net.Uri) -> <init>
+    754:763:void run() -> run
 com.lx.framework.utils.ImageUtils$2 -> com.lx.framework.utils.ImageUtils$2:
-    928:928:void <init>() -> <init>
-    928:928:java.lang.Object apply(java.lang.Object) -> apply
-    931:931:io.reactivex.rxjava3.core.ObservableSource apply(java.lang.Throwable) -> apply
+    930:930:void <init>() -> <init>
+    930:930:java.lang.Object apply(java.lang.Object) -> apply
+    933:933:io.reactivex.rxjava3.core.ObservableSource apply(java.lang.Throwable) -> apply
 com.lx.framework.utils.ImageUtils$3 -> com.lx.framework.utils.ImageUtils$3:
-    922:922:void <init>() -> <init>
-    922:922:void accept(java.lang.Object) -> accept
-    925:926:void accept(java.lang.Throwable) -> accept
+    924:924:void <init>() -> <init>
+    924:924:void accept(java.lang.Object) -> accept
+    927:928:void accept(java.lang.Throwable) -> accept
 com.lx.framework.utils.ImageUtils$4 -> com.lx.framework.utils.ImageUtils$4:
-    955:955:void <init>() -> <init>
-    955:955:java.lang.Object apply(java.lang.Object) -> apply
-    958:958:io.reactivex.rxjava3.core.ObservableSource apply(java.lang.Throwable) -> apply
+    957:957:void <init>() -> <init>
+    957:957:java.lang.Object apply(java.lang.Object) -> apply
+    960:960:io.reactivex.rxjava3.core.ObservableSource apply(java.lang.Throwable) -> apply
 com.lx.framework.utils.ImageUtils$5 -> com.lx.framework.utils.ImageUtils$5:
-    949:949:void <init>() -> <init>
-    949:949:void accept(java.lang.Object) -> accept
-    952:953:void accept(java.lang.Throwable) -> accept
+    951:951:void <init>() -> <init>
+    951:951:void accept(java.lang.Object) -> accept
+    954:955:void accept(java.lang.Throwable) -> accept
+com.lx.framework.utils.ImageUtils$6 -> com.lx.framework.utils.ImageUtils$6:
+    981:981:void <init>() -> <init>
+    981:981:java.lang.Object apply(java.lang.Object) -> apply
+    984:984:io.reactivex.rxjava3.core.ObservableSource apply(java.lang.Throwable) -> apply
+com.lx.framework.utils.ImageUtils$7 -> com.lx.framework.utils.ImageUtils$7:
+    974:974:void <init>(com.lx.framework.base.IThrowable) -> <init>
+    974:974:void accept(java.lang.Object) -> accept
+    977:979:void accept(java.lang.Throwable) -> accept
 com.lx.framework.utils.InputMethodUtils -> com.lx.framework.utils.InputMethodUtils:
     7:7:void <init>() -> <init>
     34:36:void hideInputMethod(android.app.Activity) -> hideInputMethod
@@ -1603,6 +1650,17 @@ com.lx.framework.utils.KLog -> com.lx.framework.utils.KLog:
     68:69:void w() -> w
     72:73:void w(java.lang.Object) -> w
     76:77:void w(java.lang.String,java.lang.Object) -> w
+com.lx.framework.utils.MemoryLeakHandler -> com.lx.framework.utils.MemoryLeakHandler:
+    14:16:void <init>(com.lx.framework.base.BaseActivity) -> <init>
+    20:23:void handleMessage(android.os.Message) -> handleMessage
+com.lx.framework.utils.NetUtil -> com.lx.framework.utils.NetUtil:
+    7:7:void <init>() -> <init>
+    15:36:int getNetWorkStart(android.content.Context) -> getNetWorkStart
+com.lx.framework.utils.ReflectUtil -> com.lx.framework.utils.ReflectUtil:
+    6:6:void <init>() -> <init>
+    22:39:java.lang.reflect.Field getAccessibleField(java.lang.Object,java.lang.String) -> getAccessibleField
+    43:46:void makeAccessible(java.lang.reflect.Field) -> makeAccessible
+    8:19:void setFieldValue(java.lang.Object,java.lang.String,java.lang.Object) -> setFieldValue
 com.lx.framework.utils.RegexUtils -> com.lx.framework.utils.RegexUtils:
     16:17:void <init>() -> <init>
     154:161:java.util.List getMatches(java.lang.String,java.lang.CharSequence) -> getMatches
@@ -1662,43 +1720,110 @@ com.lx.framework.utils.SPUtils -> com.lx.framework.utils.SPUtils:
     22:45:void <init>(java.lang.String) -> <init>
     127:132:boolean clear() -> clear
     112:112:boolean contains(java.lang.String) -> contains
-    241:252:java.lang.String decryptDES(java.lang.String) -> decryptDES
-    175:183:java.lang.String encryptDES(java.lang.String) -> encryptDES
+    255:280:java.lang.String decryptDES(java.lang.String) -> decryptDES
+    175:197:java.lang.String encryptDES(java.lang.String) -> encryptDES
     62:62:java.lang.Object get(java.lang.String,java.lang.Object) -> get
     137:140:java.util.Map getAll() -> getAll
-    189:196:java.lang.Object getEntity(java.lang.Class,java.lang.Object) -> getEntity
+    203:210:java.lang.Object getEntity(java.lang.Class,java.lang.Object) -> getEntity
     29:29:com.lx.framework.utils.SPUtils getInstance() -> getInstance
     34:40:com.lx.framework.utils.SPUtils getInstance(java.lang.String) -> getInstance
-    258:261:java.lang.String getKey(java.lang.Class) -> getKey
-    201:212:java.util.List getList(java.lang.Class) -> getList
+    286:289:java.lang.String getKey(java.lang.Class) -> getKey
+    215:226:java.util.List getList(java.lang.Class) -> getList
     90:107:java.lang.Object getValue(java.lang.String,java.lang.Object) -> getValue
     48:54:boolean isSpace(java.lang.String) -> isSpace
-    267:270:java.lang.String objTostr(java.lang.Object) -> objTostr
+    295:298:java.lang.String objTostr(java.lang.Object) -> objTostr
     58:59:void put(java.lang.String,java.lang.Object) -> put
     117:122:boolean remove(java.lang.String) -> remove
     143:153:boolean saveEntity(java.lang.Object) -> saveEntity
     158:170:boolean saveList(java.lang.Class,java.util.List) -> saveList
     67:85:boolean saveValue(java.lang.String,java.lang.Object) -> saveValue
-    277:280:java.lang.Object strToobj(java.lang.String,java.lang.Class) -> strToobj
+    305:308:java.lang.Object strToobj(java.lang.String,java.lang.Class) -> strToobj
 com.lx.framework.utils.SPUtils$ParameterizedTypeImpl -> com.lx.framework.utils.SPUtils$ParameterizedTypeImpl:
-    219:221:void <init>(com.lx.framework.utils.SPUtils,java.lang.Class) -> <init>
-    225:225:java.lang.reflect.Type[] getActualTypeArguments() -> getActualTypeArguments
-    235:235:java.lang.reflect.Type getOwnerType() -> getOwnerType
-    230:230:java.lang.reflect.Type getRawType() -> getRawType
+    233:235:void <init>(com.lx.framework.utils.SPUtils,java.lang.Class) -> <init>
+    239:239:java.lang.reflect.Type[] getActualTypeArguments() -> getActualTypeArguments
+    249:249:java.lang.reflect.Type getOwnerType() -> getOwnerType
+    244:244:java.lang.reflect.Type getRawType() -> getRawType
+com.lx.framework.utils.SignaturesUtils -> com.lx.framework.utils.SignaturesUtils:
+    12:12:void <init>() -> <init>
+    18:18:java.lang.String getMD5(android.content.Context) -> getMD5
+    14:14:java.lang.String getSHA1(android.content.Context) -> getSHA1
+    22:22:java.lang.String getSHA256(android.content.Context) -> getSHA256
+    29:48:java.lang.String getSign(android.content.Context,java.lang.String) -> getSign
+com.lx.framework.utils.SoftKeyboardUtil -> com.lx.framework.utils.SoftKeyboardUtil:
+    10:10:void <init>() -> <init>
+    16:21:void hideSoftKeyboard(android.app.Activity) -> hideSoftKeyboard
+    27:34:void hideSoftKeyboard(android.content.Context,java.util.List) -> hideSoftKeyboard
 com.lx.framework.utils.StringUtils -> com.lx.framework.utils.StringUtils:
-    9:10:void <init>() -> <init>
-    57:69:boolean equals(java.lang.CharSequence,java.lang.CharSequence) -> equals
-    80:80:boolean equalsIgnoreCase(java.lang.String,java.lang.String) -> equalsIgnoreCase
-    20:20:boolean isEmpty(java.lang.CharSequence) -> isEmpty
-    40:46:boolean isSpace(java.lang.String) -> isSpace
-    30:30:boolean isTrimEmpty(java.lang.String) -> isTrimEmpty
-    100:100:int length(java.lang.CharSequence) -> length
-    121:122:java.lang.String lowerFirstLetter(java.lang.String) -> lowerFirstLetter
-    90:90:java.lang.String null2Length0(java.lang.String) -> null2Length0
-    132:142:java.lang.String reverse(java.lang.String) -> reverse
-    152:163:java.lang.String toDBC(java.lang.String) -> toDBC
-    173:184:java.lang.String toSBC(java.lang.String) -> toSBC
-    110:111:java.lang.String upperFirstLetter(java.lang.String) -> upperFirstLetter
+    16:17:void <init>() -> <init>
+    135:147:boolean equals(java.lang.CharSequence,java.lang.CharSequence) -> equals
+    173:173:boolean equalsIgnoreCase(java.lang.String,java.lang.String) -> equalsIgnoreCase
+    95:98:android.text.SpannableStringBuilder getRepayNumBuilder(java.lang.String,int,int,int) -> getRepayNumBuilder
+    27:27:boolean isEmpty(java.lang.CharSequence) -> isEmpty
+    31:36:boolean isSpace(java.lang.CharSequence) -> isSpace
+    118:124:boolean isSpace(java.lang.String) -> isSpace
+    108:108:boolean isTrimEmpty(java.lang.String) -> isTrimEmpty
+    193:193:int length(java.lang.CharSequence) -> length
+    214:215:java.lang.String lowerFirstLetter(java.lang.String) -> lowerFirstLetter
+    183:183:java.lang.String null2Length0(java.lang.String) -> null2Length0
+    57:60:double parseDouble(java.lang.String) -> parseDouble
+    65:68:int parseInt(java.lang.String) -> parseInt
+    49:52:long parseLong(java.lang.String) -> parseLong
+    157:161:java.lang.String removeDecimal(java.lang.String) -> removeDecimal
+    225:235:java.lang.String reverse(java.lang.String) -> reverse
+    77:81:boolean sign(java.lang.String) -> sign
+    41:44:java.lang.String spaceInt(java.lang.String) -> spaceInt
+    245:256:java.lang.String toDBC(java.lang.String) -> toDBC
+    266:277:java.lang.String toSBC(java.lang.String) -> toSBC
+    203:204:java.lang.String upperFirstLetter(java.lang.String) -> upperFirstLetter
+com.lx.framework.utils.TimeUtils -> com.lx.framework.utils.TimeUtils:
+    19:351:void <clinit>() -> <clinit>
+    14:14:void <init>() -> <init>
+    34:34:java.lang.String dateToStr(java.util.Date,java.text.SimpleDateFormat) -> dateToStr
+    62:62:java.lang.String f_long_2_str(java.lang.String) -> f_long_2_str
+    70:70:java.lang.String f_long_2_str(long) -> f_long_2_str
+    74:74:java.lang.String f_long_2_str(long,java.text.SimpleDateFormat) -> f_long_2_str
+    39:44:long f_str_2_long(java.lang.String) -> f_str_2_long
+    49:54:long f_str_2_long(java.lang.String,java.text.SimpleDateFormat) -> f_str_2_long
+    513:522:java.lang.String getBranch(long,java.lang.StringBuilder) -> getBranch
+    237:244:java.lang.String getChatSimpleDate(java.lang.String) -> getChatSimpleDate
+    164:164:java.lang.String getCurrentTime() -> getCurrentTime
+    174:174:java.lang.String getCurrentTimeMask(long) -> getCurrentTimeMask
+    118:124:int getDayOfMonth(java.lang.String) -> getDayOfMonth
+    441:449:java.lang.String getFormatDateMsg(long) -> getFormatDateMsg
+    128:136:int getHours(java.lang.String) -> getHours
+    140:148:int getMinutes(java.lang.String) -> getMinutes
+    101:107:int getMonth(java.lang.String) -> getMonth
+    152:160:int getSeconds(java.lang.String) -> getSeconds
+    197:204:java.lang.String getSimpleDate(java.lang.String) -> getSimpleDate
+    213:220:java.lang.String getSimpleDateTime(java.lang.String) -> getSimpleDateTime
+    225:232:java.lang.String getSimpleTime(java.lang.String) -> getSimpleTime
+    431:436:long getSpecialBeginTime(android.widget.TextView,long) -> getSpecialBeginTime
+    249:256:java.lang.String getTimeHM(java.lang.String) -> getTimeHM
+    261:262:java.lang.String getTimeMMdd(long) -> getTimeMMdd
+    85:90:int getYear(java.lang.String) -> getYear
+    340:346:java.lang.Boolean is24Hh(android.content.Context) -> is24Hh
+    362:362:java.lang.String long_to_yMdHm_st12r(long) -> long_to_yMdHm_st12r
+    355:355:java.lang.String long_to_yMdHm_str(long) -> long_to_yMdHm_str
+    66:66:java.lang.String s_long_2_str(long) -> s_long_2_str
+    25:30:long s_str_2_long(java.lang.String) -> s_str_2_long
+    459:480:java.lang.String setFormatDate(long) -> setFormatDate
+    287:287:long sk_time_current_time() -> sk_time_current_time
+    270:270:java.lang.String sk_time_friendly_format2(long) -> sk_time_friendly_format2
+    314:327:java.lang.String sk_time_long_to_chat_time_str(android.content.Context,long) -> sk_time_long_to_chat_time_str
+    297:301:java.lang.String sk_time_long_to_hm_str(long) -> sk_time_long_to_hm_str
+    306:310:java.lang.String sk_time_long_to_hm_str12(long) -> sk_time_long_to_hm_str12
+    274:274:java.lang.String sk_time_s_long_2_str(long) -> sk_time_s_long_2_str
+    283:283:long sk_time_s_str_2_long(java.lang.String) -> sk_time_s_str_2_long
+    279:279:java.lang.String sk_time_ss_long_2_str(long) -> sk_time_ss_long_2_str
+    368:372:long sk_time_yMdHm_str_to_long(java.lang.String) -> sk_time_yMdHm_str_to_long
+    58:58:java.lang.String ss_long_2_str(long) -> ss_long_2_str
+    490:507:java.lang.String strToTime(double) -> strToTime
+    527:549:java.lang.String timeToStr(android.content.Context,long) -> timeToStr
+    397:402:int yMdHm_getDayOfMonth(java.lang.String) -> yMdHm_getDayOfMonth
+    407:412:int yMdHm_getHours(java.lang.String) -> yMdHm_getHours
+    417:422:int yMdHm_getMinutes(java.lang.String) -> yMdHm_getMinutes
+    387:392:int yMdHm_getMonth(java.lang.String) -> yMdHm_getMonth
+    377:382:int yMdHm_getYear(java.lang.String) -> yMdHm_getYear
 com.lx.framework.utils.ToastUtils -> com.lx.framework.utils.ToastUtils:
     32:39:void <clinit>() -> <clinit>
     41:42:void <init>() -> <init>
@@ -1769,10 +1894,31 @@ com.lx.framework.utils.ToastUtils$8 -> com.lx.framework.utils.ToastUtils$8:
 com.lx.framework.utils.ToastUtils$9 -> com.lx.framework.utils.ToastUtils$9:
     316:316:void <init>() -> <init>
     319:320:void run() -> run
+com.lx.framework.utils.TransitionTime -> com.lx.framework.utils.TransitionTime:
+    18:20:void <clinit>() -> <clinit>
+    22:24:void <init>(long) -> <init>
+    190:197:java.lang.String DateToWeek(long) -> DateToWeek
+    120:127:java.lang.String convertTimeFirstStyle(long) -> convertTimeFirstStyle
+    50:58:java.lang.String dataFormart(java.lang.String) -> dataFormart
+    62:71:java.lang.String dataFormartMd(java.lang.String) -> dataFormartMd
+    88:96:java.lang.String dataFormartMdt(java.lang.String) -> dataFormartMdt
+    100:109:java.lang.String dataFormartT(java.lang.String) -> dataFormartT
+    75:84:java.lang.String dataFormartYM(java.lang.String) -> dataFormartYM
+    39:39:java.lang.String getBeforeYesterdayData() -> getBeforeYesterdayData
+    114:114:java.lang.String getDate(long) -> getDate
+    144:164:java.lang.String getDisplayTimeAndDesc(android.content.Context,long) -> getDisplayTimeAndDesc
+    44:45:long getNow() -> getNow
+    28:28:java.lang.String getTodayData() -> getTodayData
+    34:34:java.lang.String getYesData() -> getYesData
+    169:178:java.lang.String stringDataWek(java.lang.String) -> stringDataWek
 com.lx.framework.utils.Utils -> com.lx.framework.utils.Utils:
     17:18:void <init>() -> <init>
     36:39:android.content.Context getContext() -> getContext
     27:28:void init(android.content.Context) -> init
+com.lx.framework.utils.album.GlideAlbumLoader -> com.lx.framework.utils.album.GlideAlbumLoader:
+    23:23:void <init>() -> <init>
+    27:44:void load(android.widget.ImageView,com.yanzhenjie.album.AlbumFile) -> load
+    49:55:void load(android.widget.ImageView,java.lang.String) -> load
 com.lx.framework.utils.compression.Luban -> com.lx.framework.utils.compression.Luban:
     34:34:void <clinit>() -> <clinit>
     42:48:void <init>(java.io.File) -> <init>
@@ -1864,6 +2010,61 @@ com.lx.framework.utils.constant.RegexConstants -> com.lx.framework.utils.constan
     7:7:void <init>() -> <init>
 com.lx.framework.utils.constant.TimeConstants -> com.lx.framework.utils.constant.TimeConstants:
     13:13:void <init>() -> <init>
+com.lx.framework.utils.glide.GlideManager -> com.lx.framework.utils.glide.GlideManager:
+    34:37:void <init>() -> <init>
+    170:183:com.bumptech.glide.load.resource.bitmap.BitmapTransformation createBitmapTransformation(com.lx.framework.utils.glide.GlideType,int) -> createBitmapTransformation
+    40:47:com.lx.framework.utils.glide.GlideManager getInstance() -> getInstance
+    136:136:java.lang.String getKeyWithRequestOptions(int,com.lx.framework.utils.glide.GlideType,int) -> getKeyWithRequestOptions
+    146:146:java.lang.String getKeyWithTransformation(com.lx.framework.utils.glide.GlideType,int) -> getKeyWithTransformation
+    74:74:com.bumptech.glide.request.RequestOptions getRequestOptions() -> getRequestOptions
+    88:88:com.bumptech.glide.request.RequestOptions getRequestOptions(int) -> getRequestOptions
+    116:125:com.bumptech.glide.request.RequestOptions getRequestOptions(int,com.lx.framework.utils.glide.GlideType,int) -> getRequestOptions
+    81:81:com.bumptech.glide.request.RequestOptions getRequestOptionsWithAvatar() -> getRequestOptionsWithAvatar
+    102:102:com.bumptech.glide.request.RequestOptions getRequestOptionsWithRadius(int,int) -> getRequestOptionsWithRadius
+    95:95:com.bumptech.glide.request.RequestOptions getRequestOptionsWithRadiusRes(int,int) -> getRequestOptionsWithRadiusRes
+    109:109:com.bumptech.glide.request.RequestOptions getRequestOptionsWithType(int,com.lx.framework.utils.glide.GlideType) -> getRequestOptionsWithType
+    157:163:com.bumptech.glide.load.resource.bitmap.BitmapTransformation getTransformation(com.lx.framework.utils.glide.GlideType,int) -> getTransformation
+    51:59:void setImageUri(android.widget.ImageView,java.lang.String,android.graphics.drawable.Drawable) -> setImageUri
+com.lx.framework.utils.glide.GlideManager$1 -> com.lx.framework.utils.glide.GlideManager$1:
+    170:170:void <clinit>() -> <clinit>
+com.lx.framework.utils.glide.GlideRoundTransformCenterCrop -> com.lx.framework.utils.glide.GlideRoundTransformCenterCrop:
+    23:24:void <init>() -> <init>
+    26:28:void <init>(int) -> <init>
+    38:51:android.graphics.Bitmap roundCrop(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap) -> roundCrop
+    32:33:android.graphics.Bitmap transform(com.bumptech.glide.load.engine.bitmap_recycle.BitmapPool,android.graphics.Bitmap,int,int) -> transform
+com.lx.framework.utils.glide.GlideType -> com.lx.framework.utils.glide.GlideType:
+    9:22:void <clinit>() -> <clinit>
+    26:28:void <init>(java.lang.String,int,java.lang.String) -> <init>
+    9:9:java.lang.Object getKey() -> getKey
+    35:35:java.lang.String getKey() -> getKey
+    43:43:java.lang.String getValue() -> getValue
+    9:9:com.lx.framework.utils.glide.GlideType valueOf(java.lang.String) -> valueOf
+    9:9:com.lx.framework.utils.glide.GlideType[] values() -> values
+com.lx.framework.utils.phone.PhoneNumberGeo -> com.lx.framework.utils.phone.PhoneNumberGeo:
+    15:15:void <clinit>() -> <clinit>
+    13:13:void <init>(android.content.Context,com.lx.framework.utils.phone.PhoneNumberGeo$1) -> <init>
+    61:66:void <init>(android.content.Context) -> <init>
+    58:58:com.lx.framework.utils.phone.PhoneNumberGeo getInstance(android.content.Context) -> getInstance
+    26:44:void initData(android.content.Context) -> initData
+    75:134:java.lang.String lookup(java.lang.String,boolean) -> lookup
+com.lx.framework.utils.phone.PhoneNumberGeo$Inner -> com.lx.framework.utils.phone.PhoneNumberGeo$Inner:
+    46:46:void <init>() -> <init>
+    46:46:com.lx.framework.utils.phone.PhoneNumberGeo access$100(android.content.Context) -> access$100
+    50:53:com.lx.framework.utils.phone.PhoneNumberGeo getInstance(android.content.Context) -> getInstance
+com.lx.framework.utils.phone.PhoneUtils -> com.lx.framework.utils.phone.PhoneUtils:
+    26:26:void <init>() -> <init>
+    36:43:void call(java.lang.String,java.lang.String,java.lang.String) -> call
+    28:29:void callPhone(java.lang.String) -> callPhone
+    66:71:boolean hasSimCard(android.content.Context) -> hasSimCard
+    46:57:boolean isMultiSim(android.content.Context) -> isMultiSim
+    32:33:void sendSMS(java.lang.String) -> sendSMS
+    92:122:boolean testingSIM(int) -> testingSIM
+    75:78:boolean testingSIM1() -> testingSIM1
+    83:86:boolean testingSIM2() -> testingSIM2
+com.lx.framework.utils.phone.Sim1SignalStrengthsListener -> com.lx.framework.utils.phone.Sim1SignalStrengthsListener:
+    13:15:void <init>(int) -> <init>
+    24:31:int getSignalStrengthsLevel(android.telephony.SignalStrength) -> getSignalStrengthsLevel
+    19:21:void onSignalStrengthsChanged(android.telephony.SignalStrength) -> onSignalStrengthsChanged
 com.lx.framework.widget.ControlDistributeLinearLayout -> com.lx.framework.widget.ControlDistributeLinearLayout:
     17:23:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
     26:27:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
@@ -1871,6 +2072,31 @@ com.lx.framework.widget.ControlDistributeLinearLayout -> com.lx.framework.widget
     42:42:boolean isDistributeEvent() -> isDistributeEvent
     38:38:boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
     46:47:void setDistributeEvent(boolean) -> setDistributeEvent
+com.lx.framework.widget.KeyboardLayout -> com.lx.framework.widget.KeyboardLayout:
+    23:24:void <init>(android.content.Context) -> <init>
+    27:28:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    19:34:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    16:16:int access$102(com.lx.framework.widget.KeyboardLayout,int) -> access$102
+    16:16:boolean access$202(com.lx.framework.widget.KeyboardLayout,boolean) -> access$202
+    16:16:com.lx.framework.widget.KeyboardLayout$KeyboardLayoutListener access$300(com.lx.framework.widget.KeyboardLayout) -> access$300
+    54:54:int getKeyboardHeight() -> getKeyboardHeight
+    41:41:com.lx.framework.widget.KeyboardLayout$KeyboardLayoutListener getKeyboardListener() -> getKeyboardListener
+    45:45:boolean isKeyboardActive() -> isKeyboardActive
+    37:38:void setKeyboardListener(com.lx.framework.widget.KeyboardLayout$KeyboardLayoutListener) -> setKeyboardListener
+com.lx.framework.widget.KeyboardLayout$KeyboardOnGlobalChangeListener -> com.lx.framework.widget.KeyboardLayout$KeyboardOnGlobalChangeListener:
+    65:67:void <init>(com.lx.framework.widget.KeyboardLayout) -> <init>
+    65:65:void <init>(com.lx.framework.widget.KeyboardLayout,com.lx.framework.widget.KeyboardLayout$1) -> <init>
+    70:75:int getScreenHeight() -> getScreenHeight
+    80:94:void onGlobalLayout() -> onGlobalLayout
+com.lx.framework.widget.NoScrollViewPager -> com.lx.framework.widget.NoScrollViewPager:
+    11:16:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    11:20:void <init>(android.content.Context) -> <init>
+    42:45:boolean onInterceptTouchEvent(android.view.MotionEvent) -> onInterceptTouchEvent
+    34:37:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    28:29:void scrollTo(int,int) -> scrollTo
+    50:51:void setCurrentItem(int,boolean) -> setCurrentItem
+    55:56:void setCurrentItem(int) -> setCurrentItem
+    23:24:void setNoScroll(boolean) -> setNoScroll
 com.lx.framework.widget.PinchImageView -> com.lx.framework.widget.PinchImageView:
     102:775:void <init>(android.content.Context) -> <init>
     102:775:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
@@ -1964,3 +2190,7 @@ com.lx.framework.widget.PinchImageView$ScaleAnimator -> com.lx.framework.widget.
     1282:1283:void <init>(com.lx.framework.widget.PinchImageView,android.graphics.Matrix,android.graphics.Matrix) -> <init>
     1261:1301:void <init>(com.lx.framework.widget.PinchImageView,android.graphics.Matrix,android.graphics.Matrix,long) -> <init>
     1306:1315:void onAnimationUpdate(android.animation.ValueAnimator) -> onAnimationUpdate
+com.lx.framework.widget.WrapContentHeightViewPager -> com.lx.framework.widget.WrapContentHeightViewPager:
+    9:10:void <init>(android.content.Context) -> <init>
+    13:14:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    18:29:void onMeasure(int,int) -> onMeasure

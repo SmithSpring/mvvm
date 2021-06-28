@@ -1,9 +1,11 @@
-package com.lx.framework.net;
+package com.lx.framework.confusion;
 
 import com.google.gson.Gson;
 import com.lx.framework.model.EntityResponse;
 import com.lx.framework.net.CrowdingException;
+import com.lx.framework.net.NetworkException;
 import com.lx.framework.net.ResultException;
+import com.lx.framework.utils.Configure;
 import com.lx.framework.utils.KLog;
 
 import java.io.IOException;
@@ -31,18 +33,19 @@ final class GsonResponseBodyConverter < T > implements Converter<ResponseBody,
             // 这里的type实际类型是 LoginUserEntity<User>  User就是user字段的对象。
             EntityResponse result = gson.fromJson(response, EntityResponse.class);
             int code = result.getCode();
-            if (code == 10000) {
+            if (code == /*10000*/Configure.getCode()) {
                 return gson.fromJson(response, type);
             } else {
                 KLog.d("HttpManager", "err==：" + response);
                 EntityResponse<String> errResponse = gson.fromJson(response, EntityResponse.class);
-                if (code == 10001) {
+                /*if (code == 10001) {
                     throw new ResultException(errResponse.getContent(), code);
                 } else if (code == 11008){
                     throw new CrowdingException(errResponse.getContent(), code);
                 }else {
                     throw new NetworkException(errResponse.getContent(), code);
-                }
+                }*/
+                throw new ResultException(errResponse.getContent(), code);
             }
         } finally {
             value.close();

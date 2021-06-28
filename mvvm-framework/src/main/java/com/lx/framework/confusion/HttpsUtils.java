@@ -1,5 +1,5 @@
 
-package com.lx.framework.net;
+package com.lx.framework.confusion;
 
 import java.io.IOException;
 import java.io.InputStream;

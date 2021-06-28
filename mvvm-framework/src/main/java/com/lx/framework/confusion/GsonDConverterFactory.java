@@ -1,4 +1,4 @@
-package com.lx.framework.net;
+package com.lx.framework.confusion;
 
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;

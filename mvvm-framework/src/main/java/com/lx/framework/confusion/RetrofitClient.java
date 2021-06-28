@@ -1,10 +1,9 @@
-package com.lx.framework.net;
-
-import android.text.TextUtils;
+package com.lx.framework.confusion;
 
 import com.lx.framework.http.cookie.CookieJarImpl;
 import com.lx.framework.http.cookie.store.PersistentCookieStore;
 import com.lx.framework.http.interceptor.CacheInterceptor;
+import com.lx.framework.utils.Configure;
 import com.lx.framework.utils.KLog;
 import com.lx.framework.utils.Utils;
 
@@ -21,7 +20,6 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.core.Observer;
 import io.reactivex.rxjava3.schedulers.Schedulers;
-import okhttp3.Cache;
 import okhttp3.ConnectionPool;
 import okhttp3.Interceptor;
 import okhttp3.MediaType;
@@ -40,47 +38,38 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class RetrofitClient {
     private static final int DEFAULT_TIMEOUT = 20;
-    private static final int CACHE_TIMEOUT = 10 * 1024 * 1024;
-    public static String baseUrl;
+//    private static final int CACHE_TIMEOUT = 10 * 1024 * 1024;
 
     private static Retrofit retrofit;
 
     private File httpCacheDirectory;
 
     private static class SingletonHolder {
-        private static RetrofitClient INSTANCE = new RetrofitClient();
+        private static final RetrofitClient INSTANCE = new RetrofitClient();
     }
     
-    public static void init(String url){
-        baseUrl = url;
-    }
-
     public static RetrofitClient getInstance() {
         return SingletonHolder.INSTANCE;
     }
 
     private RetrofitClient() {
-        this(baseUrl, null);
+        this(null);
     }
 
-    private RetrofitClient(String url, Map<String, String> headers) {
-
-        if (TextUtils.isEmpty(url)) {
-            url = baseUrl;
-        }
+    private RetrofitClient(Map<String, String> headers) {
 
         if (httpCacheDirectory == null) {
             httpCacheDirectory = new File(Utils.getContext().getCacheDir(), "lx_cache");
         }
 
 
-        try {
+      /*  try {
             Cache cache = null;
             if (cache == null) {
                 cache = new Cache(httpCacheDirectory, CACHE_TIMEOUT);
             }
         } catch (Exception e) {
-        }
+        }*/
         HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory();
         //                .cache(cache)
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -124,7 +113,7 @@ public class RetrofitClient {
 //                .addConverterFactory(GsonConverterFactory.create())      //默认的解析
                 .addConverterFactory(GsonDConverterFactory.create())      //自定义解析
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-                .baseUrl(url)
+                .baseUrl(Configure.getUrl())
                 .build();
 
     }
@@ -151,7 +140,7 @@ public class RetrofitClient {
         Buffer buffer = new Buffer();
         try {
             body.writeTo(buffer);
-            Charset charset = Charset.forName("UTF-8");
+            Charset charset = UTF_8;
             MediaType contentType = body.contentType();
             if (contentType != null) {
                 charset = contentType.charset(UTF_8);
