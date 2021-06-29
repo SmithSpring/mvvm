@@ -57,8 +57,8 @@ public class PhoneUtils {
         return result;
     }
 
-    public static void call(int id, String telNum){
-        if (isMultiSim(Utils.getContext())){
+    public static void call(int id, String telNum,boolean isAuto){
+        if (isAuto && isMultiSim(Utils.getContext())){
             callPhone(id,telNum);
         }else {
             callPhone(telNum);
