@@ -32,10 +32,13 @@
 -keep class com.lx.framework.config.** { *; }
 -keep class com.lx.framework.crash.** { *; }
 -keep class com.lx.framework.http.** { *; }
--keep class com.lx.framework.net.** { *; }
+#-keep class com.lx.framework.net.** { *; }
 -keep class com.lx.framework.entity.** { *; }
 -keep class com.lx.framework.model.** { *; }
--keepclassmembers class com.lx.framework.net.ARequest{public *;}
+-keepclassmembers class com.lx.framework.net.ARequest
+-keepclassmembers class com.lx.framework.net.ResultException
+-keepclassmembers class com.lx.framework.net.IMethod
+-keepclassmembers class com.lx.framework.net.IResponse
 -keep class com.lx.framework.permission.** { *; }
 -keep class com.lx.framework.update.** { *; }
 -keep class com.lx.framework.utils.** { *; }
