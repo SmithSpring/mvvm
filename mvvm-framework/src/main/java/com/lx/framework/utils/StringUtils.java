@@ -49,7 +49,12 @@ public final class StringUtils {
         if (isSpace(s)){
             return 0L;
         }else {
-            return Long.parseLong(s);
+            try {
+                return Long.parseLong(s);
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+                return 0L;
+            }
         }
     }
 
@@ -57,7 +62,12 @@ public final class StringUtils {
         if (isSpace(s)){
             return 0f;
         }else {
-            return Double.parseDouble(s);
+            try {
+                return Double.parseDouble(s);
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+                return 0f;
+            }
         }
     }
 
@@ -65,7 +75,12 @@ public final class StringUtils {
         if (isSpace(s)){
             return 0;
         }else {
-            return Integer.parseInt(s);
+            try {
+                return Integer.parseInt(s);
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+                return 0;
+            }
         }
     }
 
@@ -77,7 +92,12 @@ public final class StringUtils {
         if (isSpace(s)){
             return true;
         }else {
-            int d = Integer.parseInt(s);
+            int d = 0;
+            try {
+                d = Integer.parseInt(s);
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
             return d >= 0;
         }
     }
