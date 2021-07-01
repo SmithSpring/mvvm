@@ -5,6 +5,7 @@ import android.app.Activity;
 
 import com.lx.framework.base.BaseViewModel;
 import com.lx.framework.http.ResponseThrowable;
+import com.lx.framework.utils.NetUtil;
 import com.lx.framework.utils.RxUtils;
 
 import io.reactivex.rxjava3.functions.Consumer;
@@ -22,17 +23,21 @@ public abstract class ARequest<T, K> {
      */
     @SuppressLint("CheckResult")
     public void request(Activity activity, BaseViewModel viewModel, Class<T> service, IMethod<T, K> method, IResponse<K> iResponse) {
-        method.method(RetrofitClient.getInstance().create(service))
-                .compose(RxUtils.bindToLifecycle(viewModel.getLifecycleProvider())) // 请求与View周期同步
-                .compose(RxUtils.schedulersTransformer())
-                .compose(RxUtils.exceptionTransformer())
-                .subscribe((Consumer<K>) iResponse::onSuccess, (Consumer<ResponseThrowable>) throwable -> {
-                    iResponse.onError(throwable.message);
-                    if (throwable.getCause() instanceof ResultException){
-                        ResultException resultException = (ResultException) throwable.getCause();
-                        exceptionHandling(activity,resultException.getErrMsg(),resultException.getErrCode());
-                    }
-                });
+        if (NetUtil.getNetWorkStart(activity) == 1){
+            exceptionHandling(activity,"网络异常",-1);
+        }else {
+            method.method(RetrofitClient.getInstance().create(service))
+                    .compose(RxUtils.bindToLifecycle(viewModel.getLifecycleProvider())) // 请求与View周期同步
+                    .compose(RxUtils.schedulersTransformer())
+                    .compose(RxUtils.exceptionTransformer())
+                    .subscribe((Consumer<K>) iResponse::onSuccess, (Consumer<ResponseThrowable>) throwable -> {
+                        iResponse.onError(throwable.message);
+                        if (throwable.getCause() instanceof ResultException){
+                            ResultException resultException = (ResultException) throwable.getCause();
+                            exceptionHandling(activity,resultException.getErrMsg(),resultException.getErrCode());
+                        }
+                    });
+        }
     }
 
     public abstract void exceptionHandling(Activity activity,String error,int code);
