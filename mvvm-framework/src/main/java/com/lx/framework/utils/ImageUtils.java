@@ -920,18 +920,8 @@ public class ImageUtils {
                 .asListObservable()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnError(new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) throws Exception {
-                        throwable.printStackTrace();
-                    }
-                })
-                .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends File>>() {
-                    @Override
-                    public ObservableSource<? extends File> apply(Throwable throwable) throws Exception {
-                        return Observable.empty();
-                    }
-                })
+                .doOnError(Throwable::printStackTrace)
+                .onErrorResumeNext(throwable -> Observable.empty())
                 .subscribe(observer);
     }
 
@@ -947,18 +937,8 @@ public class ImageUtils {
                 .asObservable()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnError(new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) throws Exception {
-                        throwable.printStackTrace();
-                    }
-                })
-                .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends File>>() {
-                    @Override
-                    public ObservableSource<? extends File> apply(Throwable throwable) throws Exception {
-                        return Observable.empty();
-                    }
-                })
+                .doOnError(Throwable::printStackTrace)
+                .onErrorResumeNext(throwable -> Observable.empty())
                 .subscribe(consumer);
     }
 
@@ -970,19 +950,11 @@ public class ImageUtils {
                 .asObservable()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnError(new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) throws Exception {
-                        throwable.printStackTrace();
-                        iThrowable.accept(throwable);
-                    }
+                .doOnError(throwable -> {
+                    throwable.printStackTrace();
+                    iThrowable.accept(throwable);
                 })
-                .onErrorResumeNext(new Function<Throwable, ObservableSource<? extends File>>() {
-                    @Override
-                    public ObservableSource<? extends File> apply(Throwable throwable) throws Exception {
-                        return Observable.empty();
-                    }
-                })
+                .onErrorResumeNext(throwable -> Observable.empty())
                 .subscribe(consumer);
     }
 
