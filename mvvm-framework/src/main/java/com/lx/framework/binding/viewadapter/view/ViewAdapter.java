@@ -1,9 +1,11 @@
 package com.lx.framework.binding.viewadapter.view;
 
 import android.annotation.SuppressLint;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.jakewharton.rxbinding4.view.RxView;
 import com.lx.framework.binding.command.BindingCommand;
@@ -200,5 +202,10 @@ public class ViewAdapter {
                 padding,
                 padding,
                 padding);
+    }
+
+    @BindingAdapter("android:textSize")
+    public static void setTextSize(TextView textView,float textSize){
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSize);
     }
 }
