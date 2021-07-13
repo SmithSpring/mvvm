@@ -243,28 +243,34 @@ public class Luban {
 
     public Observable<File> asListObservable() {
         if (gear == FIRST_GEAR)
-            return Observable.fromIterable(mListFile).map(s -> {
-                if (TextUtils.isEmpty(s)) {
-                    return null;
-                } else {
-                    File file = AlbumUtils.getFile(Utils.getContext(),s);
-                    if (file.exists()) {
-                        return firstCompress(file);
-                    } else {
+            return Observable.fromIterable(mListFile).map(new Function<String, File>() {
+                @Override
+                public File apply(String s) throws Exception {
+                    if (TextUtils.isEmpty(s)) {
                         return null;
+                    } else {
+                        File file = AlbumUtils.getFile(Utils.getContext(),s);
+                        if (file.exists()) {
+                            return firstCompress(file);
+                        } else {
+                            return null;
+                        }
                     }
                 }
             });
         else if (gear == THIRD_GEAR)
-            return Observable.fromIterable(mListFile).map(s -> {
-                if (TextUtils.isEmpty(s)) {
-                    return null;
-                } else {
-                    File file = AlbumUtils.getFile(Utils.getContext(),s);
-                    if (file.exists()) {
-                        return thirdCompress(file);
-                    } else {
+            return Observable.fromIterable(mListFile).map(new Function<String, File>() {
+                @Override
+                public File apply(String s) throws Exception {
+                    if (TextUtils.isEmpty(s)) {
                         return null;
+                    } else {
+                        File file = AlbumUtils.getFile(Utils.getContext(),s);
+                        if (file.exists()) {
+                            return thirdCompress(file);
+                        } else {
+                            return null;
+                        }
                     }
                 }
             });
