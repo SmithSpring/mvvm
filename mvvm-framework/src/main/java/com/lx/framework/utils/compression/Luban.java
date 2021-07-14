@@ -108,7 +108,7 @@ public class Luban {
                     .map(new Function<String, File>() {
                         @Override
                         public File apply(String s) throws Exception {
-                            File file = AlbumUtils.getFile(Utils.getContext(),new File(s));
+                            File file = new File(s);
                             return firstCompress(file);
                         }
                     })
@@ -143,7 +143,7 @@ public class Luban {
                     .map(new Function<String, File>() {
                         @Override
                         public File apply(String s) throws Exception {
-                            File file = AlbumUtils.getFile(Utils.getContext(),new File(s));
+                            File file = new File(s);
                             return thirdCompress(file);
                         }
                     })
@@ -213,7 +213,7 @@ public class Luban {
                     if (TextUtils.isEmpty(s) || s.contains("http")) {
                         return null;
                     } else {
-                        File file = AlbumUtils.getFile(Utils.getContext(),new File(s));
+                        File file = new File(s);
                         if (file.exists()) {
                             return firstCompress(file);
                         } else {
@@ -229,7 +229,7 @@ public class Luban {
                     if (TextUtils.isEmpty(s) || s.contains("http")) {
                         return null;
                     } else {
-                        File file = AlbumUtils.getFile(Utils.getContext(),new File(s));
+                        File file = new File(s);
                         if (file.exists()) {
                             return thirdCompress(file);
                         } else {
@@ -249,7 +249,7 @@ public class Luban {
                     if (TextUtils.isEmpty(s)) {
                         return null;
                     } else {
-                        File file = AlbumUtils.getFile(Utils.getContext(),new File(s));
+                        File file = new File(s);
                         if (file.exists()) {
                             return firstCompress(file);
                         } else {
@@ -265,7 +265,7 @@ public class Luban {
                     if (TextUtils.isEmpty(s)) {
                         return null;
                     } else {
-                        File file = AlbumUtils.getFile(Utils.getContext(),new File(s));
+                        File file = new File(s);
                         if (file.exists()) {
                             return thirdCompress(file);
                         } else {
