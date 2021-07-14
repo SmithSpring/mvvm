@@ -1201,7 +1201,7 @@ public class FileUtils {
      * 判断公有目录文件是否存在，自Android Q开始，公有目录File API都失效，
      * 不能直接通过new File(path).exists();判断公有目录文件是否存在
      */
-    public static boolean isAndroidQFileExists(Context context, String path){
+    public static boolean isAndroidQFileExists(Context context, String path) {
         AssetFileDescriptor afd = null;
         ContentResolver cr = context.getContentResolver();
         try {
@@ -1218,7 +1218,7 @@ public class FileUtils {
             }
         } catch (FileNotFoundException e) {
             return false;
-        }finally {
+        } finally {
             try {
                 if (afd != null) {
                     afd.close();
@@ -1232,18 +1232,18 @@ public class FileUtils {
 
     //从私有目录copy到公有目录
     @RequiresApi(api = Build.VERSION_CODES.Q)
-    public static void copyToDownloadAndroidQ(Context context, String sourcePath, String fileName, String saveDirName){
+    public static void copyToDownloadAndroidQ(Context context, String sourcePath, String fileName, String saveDirName) {
         ContentValues values = new ContentValues();
         values.put(MediaStore.Downloads.DISPLAY_NAME, fileName);
         values.put(MediaStore.Downloads.MIME_TYPE, "application/vnd.android.package-archive");
-        values.put(MediaStore.Downloads.RELATIVE_PATH, "Download/" + saveDirName.replaceAll("/","") + "/");
+        values.put(MediaStore.Downloads.RELATIVE_PATH, "Download/" + saveDirName.replaceAll("/", "") + "/");
 
         Uri external = null;
         external = MediaStore.Downloads.EXTERNAL_CONTENT_URI;
         ContentResolver resolver = context.getContentResolver();
 
         Uri insertUri = resolver.insert(external, values);
-        if(insertUri == null) {
+        if (insertUri == null) {
             return;
         }
 
@@ -1253,7 +1253,7 @@ public class FileUtils {
         OutputStream os = null;
         try {
             os = resolver.openOutputStream(insertUri);
-            if(os == null){
+            if (os == null) {
                 return;
             }
             int read;
@@ -1267,7 +1267,7 @@ public class FileUtils {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 if (is != null) {
                     is.close();
@@ -1350,10 +1350,10 @@ public class FileUtils {
         return result;
     }
 
-    public static boolean currentVersionLessThan29(){
+    public static boolean currentVersionLessThan29() {
         boolean flag = true;
         //若是自己是大于等于 29  而且开启沙盒 则返回false 走适配沙盒分支
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q  &&
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q &&
                 !isExternalStorageLegacy()) {
             flag = false;
         }
@@ -1364,7 +1364,170 @@ public class FileUtils {
      * @return
      */
     @RequiresApi(api = Build.VERSION_CODES.Q)
-    private static boolean isExternalStorageLegacy(){
+    private static boolean isExternalStorageLegacy() {
         return Environment.isExternalStorageLegacy();
+    }
+
+    /**
+     * AndroidQ以上保存图片到公共目录
+     *
+     * @param imageName    图片名称
+     * @param imageType    图片类型
+     * @param relativePath 缓存路径
+     */
+
+    private static Uri insertImageFileIntoMediaStore(String imageName, String imageType,
+
+                                                     String relativePath) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+            return null;
+
+        }
+
+        if (TextUtils.isEmpty(relativePath)) {
+            return null;
+
+        }
+
+        Uri insertUri = null;
+
+        ContentResolver resolver = Utils.getContext().getContentResolver();
+
+//设置文件参数到ContentValues中
+
+        ContentValues values = new ContentValues();
+
+//设置文件名
+
+        values.put(MediaStore.Images.Media.DISPLAY_NAME, imageName);
+
+//设置文件描述，这里以文件名代替
+
+        values.put(MediaStore.Images.Media.DESCRIPTION, imageName);
+
+//设置文件类型为image/*
+
+        values.put(MediaStore.Images.Media.MIME_TYPE, "image/" + imageType);
+
+//注意：MediaStore.Images.Media.RELATIVE_PATH需要targetSdkVersion=29,
+
+//故该方法只可在Android10的手机上执行
+
+        values.put(MediaStore.Images.Media.RELATIVE_PATH, relativePath);
+
+//EXTERNAL_CONTENT_URI代表外部存储器
+
+        Uri external = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+
+//insertUri表示文件保存的uri路径
+
+        insertUri = resolver.insert(external, values);
+
+        return insertUri;
+
+    }
+
+
+    public static boolean copyFile(String sourceFilePath, final Uri insertUri) {
+        if (insertUri == null) {
+            return false;
+
+        }
+
+        ContentResolver resolver = Utils.getContext().getContentResolver();
+
+        InputStream is = null;//输入流
+
+        OutputStream os = null;//输出流
+
+        try {
+            os = resolver.openOutputStream(insertUri);
+
+            if (os == null) {
+                return false;
+
+            }
+
+            File sourceFile = new File(sourceFilePath);
+
+            if (sourceFile.exists()) { // 文件存在时
+
+                is = new FileInputStream(sourceFile); // 读入原文件
+
+//输入流读取文件，输出流写入指定目录
+
+                return copyFileWithStream(os, is);
+
+            }
+
+            return false;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return false;
+
+        } finally {
+            try {
+                if (is != null) {
+                    is.close();
+
+                }
+
+                if (os != null) {
+                    os.close();
+
+                }
+
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+
+        }
+
+    }
+
+    private static boolean copyFileWithStream(OutputStream os, InputStream is) {
+        if (os == null || is == null) {
+            return false;
+
+        }
+
+        int read = 0;
+
+        while (true) {
+            try {
+                byte[] buffer = new byte[1444];
+
+                while ((read = is.read(buffer)) != -1) {
+                    os.write(buffer, 0, read);
+
+                    os.flush();
+
+                }
+
+                return true;
+
+            } catch (IOException e) {
+                e.printStackTrace();
+
+                return false;
+
+            } finally {
+                try {
+                    os.close();
+
+                    is.close();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+
+                }
+
+            }
+
+        }
+
     }
 }
