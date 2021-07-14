@@ -1,12 +1,15 @@
 package com.lx.framework.utils;
 
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
 import android.os.StatFs;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 
 import java.io.BufferedInputStream;
@@ -17,6 +20,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.security.DigestInputStream;
 import java.security.MessageDigest;
@@ -27,6 +31,8 @@ import java.util.Comparator;
 import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
+
+import androidx.annotation.RequiresApi;
 
 public class FileUtils {
     private static final String LINE_SEP = System.getProperty("line.separator");
@@ -1189,5 +1195,176 @@ public class FileUtils {
 
     public interface OnReplaceListener {
         boolean onReplace(File srcFile, File destFile);
+    }
+
+    /**
+     * 判断公有目录文件是否存在，自Android Q开始，公有目录File API都失效，
+     * 不能直接通过new File(path).exists();判断公有目录文件是否存在
+     */
+    public static boolean isAndroidQFileExists(Context context, String path){
+        AssetFileDescriptor afd = null;
+        ContentResolver cr = context.getContentResolver();
+        try {
+            Uri uri = Uri.parse(path);
+            afd = cr.openAssetFileDescriptor(uri, "r");
+            if (afd == null) {
+                return false;
+            } else {
+                try {
+                    afd.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        } catch (FileNotFoundException e) {
+            return false;
+        }finally {
+            try {
+                if (afd != null) {
+                    afd.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return true;
+    }
+
+    //从私有目录copy到公有目录
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    public static void copyToDownloadAndroidQ(Context context, String sourcePath, String fileName, String saveDirName){
+        ContentValues values = new ContentValues();
+        values.put(MediaStore.Downloads.DISPLAY_NAME, fileName);
+        values.put(MediaStore.Downloads.MIME_TYPE, "application/vnd.android.package-archive");
+        values.put(MediaStore.Downloads.RELATIVE_PATH, "Download/" + saveDirName.replaceAll("/","") + "/");
+
+        Uri external = null;
+        external = MediaStore.Downloads.EXTERNAL_CONTENT_URI;
+        ContentResolver resolver = context.getContentResolver();
+
+        Uri insertUri = resolver.insert(external, values);
+        if(insertUri == null) {
+            return;
+        }
+
+        String mFilePath = insertUri.toString();
+
+        InputStream is = null;
+        OutputStream os = null;
+        try {
+            os = resolver.openOutputStream(insertUri);
+            if(os == null){
+                return;
+            }
+            int read;
+            File sourceFile = new File(sourcePath);
+            if (sourceFile.exists()) { // 文件存在时
+                is = new FileInputStream(sourceFile); // 读入原文件
+                byte[] buffer = new byte[1444];
+                while ((read = is.read(buffer)) != -1) {
+                    os.write(buffer, 0, read);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                if (is != null) {
+                    is.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (os != null) {
+                    os.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    /**
+     * 通过MediaStore保存，兼容AndroidQ，保存成功自动添加到相册数据库，无需再发送广播告诉系统插入相册
+     *
+     * @param context      context
+     * @param sourceFile   源文件
+     * @param saveFileName 保存的文件名
+     * @param saveDirName  picture子目录
+     * @return 成功或者失败
+     */
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    public static boolean saveImageWithAndroidQ(Context context,
+                                                File sourceFile,
+                                                String saveFileName,
+                                                String saveDirName) {
+
+        ContentValues values = new ContentValues();
+        values.put(MediaStore.Images.Media.DESCRIPTION, "This is an image");
+        values.put(MediaStore.Images.Media.DISPLAY_NAME, saveFileName);
+        values.put(MediaStore.Images.Media.MIME_TYPE, "image/png");
+        values.put(MediaStore.Images.Media.TITLE, "Image.png");
+        values.put(MediaStore.Images.Media.RELATIVE_PATH, "Pictures/" + saveDirName);
+
+        Uri external = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
+        ContentResolver resolver = context.getContentResolver();
+
+        Uri insertUri = resolver.insert(external, values);
+        BufferedInputStream inputStream = null;
+        OutputStream os = null;
+        boolean result = false;
+        try {
+            inputStream = new BufferedInputStream(new FileInputStream(sourceFile));
+            if (insertUri != null) {
+                os = resolver.openOutputStream(insertUri);
+            }
+            if (os != null) {
+                byte[] buffer = new byte[1024 * 4];
+                int len;
+                while ((len = inputStream.read(buffer)) != -1) {
+                    os.write(buffer, 0, len);
+                }
+                os.flush();
+            }
+            result = true;
+        } catch (IOException e) {
+            result = false;
+        } finally {
+            try {
+                if (os != null) {
+                    os.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+
+    public static boolean currentVersionLessThan29(){
+        boolean flag = true;
+        //若是自己是大于等于 29  而且开启沙盒 则返回false 走适配沙盒分支
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q  &&
+                !isExternalStorageLegacy()) {
+            flag = false;
+        }
+        return flag;
+    }
+
+    /**
+     * @return
+     */
+    @RequiresApi(api = Build.VERSION_CODES.Q)
+    private static boolean isExternalStorageLegacy(){
+        return Environment.isExternalStorageLegacy();
     }
 }
