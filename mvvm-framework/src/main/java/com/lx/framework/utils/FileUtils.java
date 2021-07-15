@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -33,6 +34,7 @@ import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
 
 import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 
 public class FileUtils {
     private static final String LINE_SEP = System.getProperty("line.separator");
@@ -1529,5 +1531,13 @@ public class FileUtils {
 
         }
 
+    }
+
+    public String getSdCard(){
+        if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q){
+            return ContextCompat.getExternalFilesDirs(Utils.getContext(), null)[0].getAbsolutePath();
+        }else {
+            return Environment.getExternalStorageDirectory().getAbsolutePath();
+        }
     }
 }
