@@ -101,7 +101,7 @@ public class RetrofitClient {
                         KLog.e("Interceptor", "----------请求耗时:" + duration + "毫秒----------");
                         return response.newBuilder().body(okhttp3.ResponseBody.create(mediaType, content)).build();
                     }
-                }).addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                }).addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.HEADERS))
                 .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .connectionPool(new ConnectionPool(8, 15, TimeUnit.SECONDS))
