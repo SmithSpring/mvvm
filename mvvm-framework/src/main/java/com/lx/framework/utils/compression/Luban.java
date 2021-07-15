@@ -9,6 +9,7 @@ import android.os.Build;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.lx.framework.utils.FileUtils;
 import com.lx.framework.utils.Utils;
 import com.yanzhenjie.album.util.AlbumUtils;
 
@@ -215,7 +216,7 @@ public class Luban {
                         return null;
                     } else {
                         File file = new File(s);
-                        if (file.exists()) {
+                        if (FileUtils.isFileExists(file)) {
                             return firstCompress(file);
                         } else {
                             return null;
@@ -231,7 +232,7 @@ public class Luban {
                         return null;
                     } else {
                         File file = new File(s);
-                        if (file.exists()) {
+                        if (FileUtils.isFileExists(file)) {
                             return thirdCompress(file);
                         } else {
                             return null;
@@ -251,7 +252,7 @@ public class Luban {
                         return null;
                     } else {
                         File file = new File(s);
-                        if (file.exists()) {
+                        if (FileUtils.isFileExists(file)) {
                             return firstCompress(file);
                         } else {
                             return null;
@@ -267,7 +268,7 @@ public class Luban {
                         return null;
                     } else {
                         File file = new File(s);
-                        if (file.exists()) {
+                        if (FileUtils.isFileExists(file)) {
                             return thirdCompress(file);
                         } else {
                             return null;
