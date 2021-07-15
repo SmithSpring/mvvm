@@ -1533,7 +1533,7 @@ public class FileUtils {
 
     }
 
-    public String getSdCard(){
+    public static String getSdCard(){
         if (Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q){
             return ContextCompat.getExternalFilesDirs(Utils.getContext(), null)[0].getAbsolutePath();
         }else {
