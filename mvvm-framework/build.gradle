@@ -90,7 +90,7 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
     api rootProject.ext.dependencies["XUpdate"]
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
-    api 'com.github.mamumu:mmDialog:1.2.0'
+    implementation 'com.github.mamumu:mmDialog:1.2.0'
     api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-15'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
     api 'org.greenrobot:eventbus:3.2.0'
