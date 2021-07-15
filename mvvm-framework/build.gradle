@@ -45,14 +45,14 @@ dependencies {
     api rootProject.ext.dependencies.rxjava
     api rootProject.ext.dependencies.rxandroid
     //rx管理View的生命周期
-    implementation(rootProject.ext.dependencies.rxlifecycle) {
+    api(rootProject.ext.dependencies.rxlifecycle) {
         exclude group: 'com.android.support'
     }
-    implementation(rootProject.ext.dependencies["rxlifecycle-components"]) {
+    api(rootProject.ext.dependencies["rxlifecycle-components"]) {
         exclude group: 'com.android.support'
     }
     //rxbinding
-    implementation(rootProject.ext.dependencies.rxbinding) {
+    api(rootProject.ext.dependencies.rxbinding) {
         exclude group: 'com.android.support'
     }
     //rx权限请求
@@ -86,7 +86,7 @@ dependencies {
         exclude group: 'com.android.support'
     }
     //Google LiveData和ViewModel组件
-    implementation rootProject.ext.dependencies["lifecycle-extensions"]
+    api rootProject.ext.dependencies["lifecycle-extensions"]
     annotationProcessor rootProject.ext.dependencies["lifecycle-compiler"]
     api rootProject.ext.dependencies["XUpdate"]
     implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
