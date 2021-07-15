@@ -101,4 +101,5 @@ dependencies {
     api 'com.github.SmithSpring:ArcProgressBar:v1.0.8'
     api 'com.android.support:multidex:1.0.3'
     api 'com.github.xiaohaibin:XBanner:1.7.9'
+    implementation 'com.blankj:swipe-panel:1.2'
 }

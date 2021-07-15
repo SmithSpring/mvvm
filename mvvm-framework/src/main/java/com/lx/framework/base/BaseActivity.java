@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 
+import com.blankj.swipepanel.SwipePanel;
 import com.gyf.immersionbar.ImmersionBar;
 import com.lx.framework.BR;
 import com.lx.framework.R;
@@ -15,6 +16,7 @@ import com.lx.framework.bus.event.eventbus.MessageEvent;
 import com.lx.framework.permission.IPermission;
 import com.lx.framework.permission.RxPermission;
 import com.lx.framework.utils.Constant;
+import com.lx.framework.utils.DpiUtils;
 import com.lx.framework.utils.SoftKeyboardUtil;
 import com.mumu.dialog.MMLoading;
 import com.trello.rxlifecycle4.components.support.RxAppCompatActivity;
@@ -60,6 +62,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         initStatusBar();
         //页面数据初始化方法
         initData();
+        initSwipeBack();
         if (isRegisterEventBus()) {
             EventBusUtil.register(this);
         }
@@ -75,6 +78,27 @@ public abstract class BaseActivity<V extends ViewDataBinding, VM extends BaseVie
         if (isStatusBarEnabled()) {
             statusBarConfig().init();
         }
+    }
+
+    private void initSwipeBack() {
+        if (isSwipeBack()) {
+            final SwipePanel swipeLayout = new SwipePanel(this);
+            swipeLayout.setLeftDrawable(R.drawable.common_back);
+            swipeLayout.setLeftEdgeSize(DpiUtils.dip2px(BaseActivity.this,16));
+            swipeLayout.setLeftSwipeColor(getResources().getColor(R.color.colorPrimary));
+            swipeLayout.wrapView(findViewById(android.R.id.content));
+            swipeLayout.setOnFullSwipeListener(new SwipePanel.OnFullSwipeListener() {
+                @Override
+                public void onFullSwipe(int direction) {
+                    swipeLayout.close(direction);
+                    finish();
+                }
+            });
+        }
+    }
+
+    public boolean isSwipeBack() {
+        return true;
     }
 
     /**
