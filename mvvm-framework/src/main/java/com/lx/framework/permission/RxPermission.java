@@ -16,7 +16,7 @@ import io.reactivex.rxjava3.functions.Consumer;
 public class RxPermission {
 
     public static void requestPermission(final Object object, final IPermission iPermission, final String... permission){
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (object instanceof FragmentActivity){
                 if (hasAlwaysDeniedPermission((FragmentActivity) object, Arrays.asList(permission))){
                     iPermission.onGranted();
