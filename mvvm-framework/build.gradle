@@ -52,7 +52,7 @@ dependencies {
         exclude group: 'com.android.support'
     }
     //rxbinding
-    api(rootProject.ext.dependencies.rxbinding) {
+    implementation(rootProject.ext.dependencies.rxbinding) {
         exclude group: 'com.android.support'
     }
     //rx权限请求
