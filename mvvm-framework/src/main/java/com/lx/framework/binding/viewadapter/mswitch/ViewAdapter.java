@@ -39,7 +39,12 @@ public class ViewAdapter {
     @BindingAdapter("onCheckedChangeCommand")
     public static void onCheckedChangeCommand(final SwitchButton mSwitch, final BindingCommand<Boolean> changeListener) {
         if (changeListener != null) {
-            mSwitch.setOnCheckedChangeListener((view, isChecked) -> changeListener.execute(isChecked));
+            mSwitch.setOnCheckedChangeListener((view, isChecked) -> {
+                if(!view.isPressed()) {
+                    return;
+                }
+                changeListener.execute(isChecked);
+            });
         }
     }
 }
