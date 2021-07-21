@@ -2,6 +2,8 @@ package com.lx.framework.utils;
 
 import android.graphics.drawable.Drawable;
 
+import java.util.Objects;
+
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.StringRes;
@@ -32,5 +34,9 @@ public class UIUtils {
 
     public static String getString(@StringRes int id,Object... formatArgs){
         return Utils.getContext().getResources().getString(id,formatArgs);
+    }
+
+    public static boolean equals(Drawable drawable,@DrawableRes int id){
+        return Objects.equals(drawable.getConstantState(), Objects.requireNonNull(ContextCompat.getDrawable(Utils.getContext(), id)).getConstantState());
     }
 }
